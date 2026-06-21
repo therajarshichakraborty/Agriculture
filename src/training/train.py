@@ -1,4 +1,4 @@
-import torch
+import torch 
 from torch.utils.data import DataLoader
 from src.config.config import *
 from src.data.loader import FruitDataset
