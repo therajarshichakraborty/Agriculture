@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const socialLinks = [
-  { href: portfolio.github, icon: GitBranch, label: "GitHub", handle: "@alexjohnson" },
-  { href: portfolio.linkedin, icon: Link2, label: "LinkedIn", handle: "in/alexjohnson" },
-  { href: portfolio.twitter, icon: X, label: "Twitter / X", handle: "@alexjohnson" },
+  { href: portfolio.github, icon: GitBranch, label: "GitHub", handle: portfolio.githubHandle },
+  { href: portfolio.linkedin, icon: Link2, label: "LinkedIn", handle: portfolio.linkedinHandle },
+  { href: portfolio.twitter, icon: X, label: "Twitter / X", handle: portfolio.twitterHandle },
   { href: `mailto:${portfolio.email}`, icon: Mail, label: "Email", handle: portfolio.email },
 ];
 
