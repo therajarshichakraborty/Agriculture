@@ -14,7 +14,7 @@ export function ContactForm() {
   const [form, setForm] = React.useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
 
   const handleChange = (
@@ -46,7 +46,8 @@ export function ContactForm() {
         </div>
         <h3 className="text-xl font-semibold text-foreground">Message sent!</h3>
         <p className="text-muted-foreground max-w-sm">
-          Thanks for reaching out. I&apos;ll get back to you as soon as possible.
+          Thanks for reaching out. I&apos;ll get back to you as soon as
+          possible.
         </p>
         <Button
           variant="outline"
@@ -72,10 +73,7 @@ export function ContactForm() {
       {/* Name + Email row */}
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
-          <label
-            htmlFor="name"
-            className="text-sm font-medium text-foreground"
-          >
+          <label htmlFor="name" className="text-sm font-medium text-foreground">
             Name
           </label>
           <Input

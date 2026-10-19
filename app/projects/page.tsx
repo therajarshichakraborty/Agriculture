@@ -4,7 +4,7 @@ import { portfolio } from "@/src/config/portfolio";
 
 export const metadata: Metadata = {
   title: `Projects — ${portfolio.name}`,
-  description: `Explore projects built by ${portfolio.name}, ${portfolio.role}.`,
+  description: `Explore projects built by ${portfolio.name}, ${portfolio.role}.`
 };
 
 export default function ProjectsPage() {

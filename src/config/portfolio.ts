@@ -11,7 +11,8 @@ export const portfolio = {
   role: "Full-Stack TypeScript Developer & AI Engineer",
   location: "Kolkata, West Bengal, India",
   bio: "Software Engineer at Brand Voy and Computer Science undergrad at Techno Main Salt Lake (Class of 2027). Focused on designing and developing scalable, production-grade applications with clean architecture, high performance, and strong System Design principles, with deep enthusiasm for Gen & Agentic AI.",
-  shortBio: "Full-Stack TypeScript Developer & AI Engineer with a strong focus on building scalable, production-grade applications.",
+  shortBio:
+    "Full-Stack TypeScript Developer & AI Engineer with a strong focus on building scalable, production-grade applications.",
   avatar: "https://github.com/therajarshichakraborty.png", // Direct link to GitHub avatar, with fallback in UI
   available: true, // "Available for work" badge
 
@@ -82,7 +83,7 @@ export const portfolio = {
     "React Native",
     "Expo",
     "Android Studio",
-    "Tailwind CSS",
+    "Tailwind CSS"
   ],
 
   // Tech stack logos shown in the animated strip
@@ -103,7 +104,7 @@ export const portfolio = {
     { name: "PyTorch" },
     { name: "AWS" },
     { name: "Tailwind CSS" },
-    { name: "Git" },
+    { name: "Git" }
   ],
 
   // ----------------------------------------------------------
@@ -126,12 +127,12 @@ export const portfolio = {
         "Turborepo",
         "Prisma",
         "RabbitMQ",
-        "Socket.io",
+        "Socket.io"
       ],
       github: "https://github.com/therajarshichakraborty/openstack",
       live: "https://github.com/therajarshichakraborty/openstack",
       category: "Open Source",
-      featured: true,
+      featured: true
     },
     {
       id: 2,
@@ -148,12 +149,12 @@ export const portfolio = {
         "Tailwind CSS",
         "Shadcn UI",
         "OpenAI",
-        "Better-auth",
+        "Better-auth"
       ],
       github: "https://github.com/therajarshichakraborty/ApexZero",
       live: "https://github.com/therajarshichakraborty/ApexZero",
       category: "AI",
-      featured: true,
+      featured: true
     },
     {
       id: 3,
@@ -169,12 +170,12 @@ export const portfolio = {
         "Prisma",
         "OpenAI",
         "Tailwind CSS",
-        "Express",
+        "Express"
       ],
       github: "https://github.com/therajarshichakraborty/Zenith-CLI",
       live: "https://github.com/therajarshichakraborty/Zenith-CLI",
       category: "AI",
-      featured: true,
+      featured: true
     },
     {
       id: 4,
@@ -189,12 +190,12 @@ export const portfolio = {
         "FumaDocs",
         "Tailwind CSS",
         "Shadcn UI",
-        "Magic UI",
+        "Magic UI"
       ],
       github: "https://github.com/therajarshichakraborty/Synapse-UI",
       live: "https://synapse-ui-dev.vercel.app/",
       category: "UI",
-      featured: true,
+      featured: true
     },
     {
       id: 5,
@@ -210,12 +211,12 @@ export const portfolio = {
         "PostgreSQL",
         "Drizzle",
         "Tailwind CSS",
-        "Vite",
+        "Vite"
       ],
       github: "https://github.com/therajarshichakraborty/SocketPoll",
       live: "https://socket-poll.vercel.app/",
       category: "Web",
-      featured: false,
+      featured: false
     },
     {
       id: 6,
@@ -229,12 +230,12 @@ export const portfolio = {
         "Groq API",
         "Streamlit",
         "Pydantic",
-        "LLM Integration",
+        "LLM Integration"
       ],
       github: "https://github.com/therajarshichakraborty/LinkedUp",
       live: "https://linkedup-xyz.streamlit.app/",
       category: "AI",
-      featured: false,
+      featured: false
     },
     {
       id: 7,
@@ -248,13 +249,13 @@ export const portfolio = {
         "DOM Manipulation",
         "Tailwind CSS",
         "Express",
-        "NPM",
+        "NPM"
       ],
       github: "https://github.com/therajarshichakraborty/Mini-TailwindCSS",
       live: "https://mini-tailwindcss.netlify.app/",
       category: "Open Source",
-      featured: false,
-    },
+      featured: false
+    }
   ],
 
   // ----------------------------------------------------------
@@ -275,8 +276,8 @@ export const portfolio = {
         "Real-Time Data",
         "High-Volume Data",
         "REST APIs",
-        "Localization",
-      ],
+        "Localization"
+      ]
     },
     {
       company: "Techno Main Salt Lake",
@@ -291,9 +292,9 @@ export const portfolio = {
         "Algorithms",
         "Data Structures",
         "System Design",
-        "PostgreSQL",
-      ],
-    },
+        "PostgreSQL"
+      ]
+    }
   ],
 
   // ----------------------------------------------------------
@@ -305,24 +306,23 @@ export const portfolio = {
       degree: "B.Tech in Computer Science and Engineering",
       period: "2023 — Present",
       description:
-        "Academic Progress: GPA 8.136 / 10. Comprehensive coursework covering Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Machine Learning, Cryptography & Network Security, and System Design. Published IEEE researcher at CIACON 2026.",
+        "Academic Progress: GPA 8.136 / 10. Comprehensive coursework covering Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Machine Learning, Cryptography & Network Security, and System Design. Published IEEE researcher at CIACON 2026."
     },
     {
       institution: "West Bengal Council of Higher Secondary Education",
       degree: "Higher Secondary (XII) — Pure Science",
       period: "2020 — 2023",
       description:
-        "Grade: A+ (81.2% marks in +2 examination). Captain of the School Cricket Team, leading the team in inter-school tournaments. Rigorous foundation in Mathematics, Physics, Chemistry, and Biology combined with leadership and strategic discipline.",
-    },
+        "Grade: A+ (81.2% marks in +2 examination). Captain of the School Cricket Team, leading the team in inter-school tournaments. Rigorous foundation in Mathematics, Physics, Chemistry, and Biology combined with leadership and strategic discipline."
+    }
   ],
 
   // ----------------------------------------------------------
   // Project filter categories
   // ----------------------------------------------------------
-  categories: ["All", "AI", "Open Source", "UI", "Web"],
+  categories: ["All", "AI", "Open Source", "UI", "Web"]
 } as const;
 
 export type Project = (typeof portfolio.projects)[number];
 export type Experience = (typeof portfolio.experience)[number];
 export type Education = (typeof portfolio.education)[number];
-

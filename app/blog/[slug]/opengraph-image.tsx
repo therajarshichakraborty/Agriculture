@@ -16,13 +16,13 @@ const getFontData = async () => {
     const [cabinetGrotesk, clashDisplay] = await Promise.all([
       fetch(
         new URL(
-          "../../../../public/fonts/CabinetGrotesk-Medium.ttf",
+          "../../../public/fonts/CabinetGrotesk-Medium.ttf",
           import.meta.url
         )
       ).then((res) => res.arrayBuffer()),
       fetch(
         new URL(
-          "../../../../public/fonts/ClashDisplay-Semibold.ttf",
+          "../../../public/fonts/ClashDisplay-Semibold.ttf",
           import.meta.url
         )
       ).then((res) => res.arrayBuffer())

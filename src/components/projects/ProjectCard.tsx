@@ -84,11 +84,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </Link>
           </Button>
           <Button asChild size="sm" className="flex-1">
-            <Link
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={project.live} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-3.5 w-3.5" />
               Live
             </Link>

@@ -8,12 +8,12 @@ import { portfolio } from "@/src/config/portfolio";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${portfolio.name} — ${portfolio.role}`,
     description: portfolio.shortBio,
-    type: "website",
-  },
+    type: "website"
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

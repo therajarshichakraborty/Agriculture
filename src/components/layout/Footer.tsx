@@ -7,7 +7,7 @@ const socialLinks = [
   { href: portfolio.github, icon: GitBranch, label: "GitHub" },
   { href: portfolio.linkedin, icon: Link2, label: "LinkedIn" },
   { href: portfolio.twitter, icon: X, label: "Twitter" },
-  { href: portfolio.kofi, icon: Coffee, label: "Ko-fi" },
+  { href: portfolio.kofi, icon: Coffee, label: "Ko-fi" }
 ];
 
 export function Footer() {

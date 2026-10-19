@@ -7,14 +7,34 @@ import { Separator } from "@/src/components/ui/separator";
 
 export const metadata: Metadata = {
   title: `Contact — ${portfolio.name}`,
-  description: `Get in touch with ${portfolio.name}.`,
+  description: `Get in touch with ${portfolio.name}.`
 };
 
 const socialLinks = [
-  { href: portfolio.github, icon: GitBranch, label: "GitHub", handle: portfolio.githubHandle },
-  { href: portfolio.linkedin, icon: Link2, label: "LinkedIn", handle: portfolio.linkedinHandle },
-  { href: portfolio.twitter, icon: X, label: "Twitter / X", handle: portfolio.twitterHandle },
-  { href: `mailto:${portfolio.email}`, icon: Mail, label: "Email", handle: portfolio.email },
+  {
+    href: portfolio.github,
+    icon: GitBranch,
+    label: "GitHub",
+    handle: portfolio.githubHandle
+  },
+  {
+    href: portfolio.linkedin,
+    icon: Link2,
+    label: "LinkedIn",
+    handle: portfolio.linkedinHandle
+  },
+  {
+    href: portfolio.twitter,
+    icon: X,
+    label: "Twitter / X",
+    handle: portfolio.twitterHandle
+  },
+  {
+    href: `mailto:${portfolio.email}`,
+    icon: Mail,
+    label: "Email",
+    handle: portfolio.email
+  }
 ];
 
 export default function ContactPage() {

@@ -41,12 +41,16 @@ export function Education() {
               {/* Content */}
               <div className="flex-1 space-y-1">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="font-semibold text-foreground">{edu.degree}</h3>
+                  <h3 className="font-semibold text-foreground">
+                    {edu.degree}
+                  </h3>
                   <span className="text-xs font-medium text-muted-foreground border border-border rounded-full px-2.5 py-0.5 w-fit">
                     {edu.period}
                   </span>
                 </div>
-                <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                <p className="text-sm text-muted-foreground">
+                  {edu.institution}
+                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed pt-1">
                   {edu.description}
                 </p>

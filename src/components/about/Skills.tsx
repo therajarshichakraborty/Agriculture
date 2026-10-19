@@ -34,7 +34,10 @@ export function Skills() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.04, duration: 0.3 }}
               >
-                <Badge variant="outline" className="px-3 py-1.5 text-sm font-medium">
+                <Badge
+                  variant="outline"
+                  className="px-3 py-1.5 text-sm font-medium"
+                >
                   {skill}
                 </Badge>
               </motion.div>

@@ -44,7 +44,5 @@ function TechItem({ name }: { name: string }) {
 }
 
 function TechDot() {
-  return (
-    <span className="h-1.5 w-1.5 rounded-full bg-foreground/30" />
-  );
+  return <span className="h-1.5 w-1.5 rounded-full bg-foreground/30" />;
 }

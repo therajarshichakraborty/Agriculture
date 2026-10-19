@@ -49,7 +49,9 @@ export function Experience() {
                   <h3 className="font-semibold text-foreground">{exp.role}</h3>
                   <div className="flex items-center gap-2 mt-0.5">
                     <Briefcase className="h-3.5 w-3.5 text-muted-foreground" />
-                    <span className="text-sm text-muted-foreground">{exp.company}</span>
+                    <span className="text-sm text-muted-foreground">
+                      {exp.company}
+                    </span>
                   </div>
                 </div>
                 <div className="flex flex-col items-start gap-1 sm:items-end mt-1 sm:mt-0">
