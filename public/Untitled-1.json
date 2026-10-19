@@ -1,0 +1,2608 @@
+{
+  "knownSymbols": {
+    "ContributionsChart": [
+      {
+        "name": "ContributionsChart",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\ContributionsChart.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "React": [
+      {
+        "name": "React",
+        "module": "react",
+        "isDefault": true,
+        "asDefinition": "* as React"
+      },
+      {
+        "name": "React",
+        "module": "@/components/ui/svgs/react",
+        "isDefault": false
+      }
+    ],
+    "{ useState": [
+      {
+        "name": "{ useState",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "content": [
+      {
+        "name": "content",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\global.d.ts",
+        "isDefault": true
+      }
+    ],
+    "defineConfig": [
+      {
+        "name": "defineConfig",
+        "module": "@content-collections/core",
+        "isDefault": false
+      },
+      {
+        "name": "defineConfig",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\content-collections.ts",
+        "isDefault": true
+      }
+    ],
+    "defineCollection": [
+      {
+        "name": "defineCollection",
+        "module": "@content-collections/core",
+        "isDefault": false
+      }
+    ],
+    "compileMDX": [
+      {
+        "name": "compileMDX",
+        "module": "@content-collections/mdx",
+        "isDefault": false
+      }
+    ],
+    "remarkGfm": [
+      {
+        "name": "remarkGfm",
+        "module": "remark-gfm",
+        "isDefault": true
+      }
+    ],
+    "z": [
+      {
+        "name": "z",
+        "module": "zod",
+        "isDefault": false
+      }
+    ],
+    "the": [
+      {
+        "name": "the",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\validator.ts",
+        "isDefault": false
+      }
+    ],
+    "type { ResolvingMetadata": [
+      {
+        "name": "type { ResolvingMetadata",
+        "module": "next/dist/lib/metadata/types/metadata-interface.js",
+        "isDefault": true
+      },
+      {
+        "name": "type { ResolvingMetadata",
+        "module": "next/types.js",
+        "isDefault": true
+      }
+    ],
+    "ResolvingViewport": [
+      {
+        "name": "ResolvingViewport",
+        "module": "next/dist/lib/metadata/types/metadata-interface.js",
+        "isDefault": true
+      },
+      {
+        "name": "ResolvingViewport",
+        "module": "next/types.js",
+        "isDefault": true
+      }
+    ],
+    "type { NextRequest": [
+      {
+        "name": "type { NextRequest",
+        "module": "next/server.js",
+        "isDefault": true
+      }
+    ],
+    "ParamsOf": [
+      {
+        "name": "ParamsOf",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\routes.d.ts",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "type": [
+      {
+        "name": "type",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\magicui\\dock.tsx",
+        "isDefault": false
+      }
+    ],
+    "Page": [
+      {
+        "name": "Page",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\routes.d.ts",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Layout": [
+      {
+        "name": "Layout",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\routes.d.ts",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "async": [
+      {
+        "name": "async",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\api\\github-commits\\route.ts",
+        "isDefault": true
+      }
+    ],
+    "getStrokeLengths": [
+      {
+        "name": "getStrokeLengths",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\utils\\math.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "LeetCodeStats": [
+      {
+        "name": "LeetCodeStats",
+        "module": "@/types/leetcode",
+        "isDefault": false
+      },
+      {
+        "name": "LeetCodeStats",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\types.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "Contest": [
+      {
+        "name": "Contest",
+        "module": "@/types/leetcode",
+        "isDefault": false
+      },
+      {
+        "name": "Contest",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\types\\leetcode.d.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "ContestChartData": [
+      {
+        "name": "ContestChartData",
+        "module": "@/types/leetcode",
+        "isDefault": false
+      },
+      {
+        "name": "ContestChartData",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\types\\leetcode.d.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "mdxComponents": [
+      {
+        "name": "mdxComponents",
+        "module": "@/mdx-components",
+        "isDefault": false
+      },
+      {
+        "name": "mdxComponents",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\mdx-components.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "CodeBlock": [
+      {
+        "name": "CodeBlock",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\mdx\\code-block.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "CodeBlock",
+        "module": "@/components/mdx/code-block",
+        "isDefault": false
+      }
+    ],
+    "MediaContainer": [
+      {
+        "name": "MediaContainer",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\mdx\\media-container.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "MediaContainer",
+        "module": "@/components/mdx/media-container",
+        "isDefault": false
+      }
+    ],
+    "type { ComponentProps": [
+      {
+        "name": "type { ComponentProps",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "cn": [
+      {
+        "name": "cn",
+        "module": "@/lib/utils",
+        "isDefault": false
+      },
+      {
+        "name": "cn",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\utils.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "formatDate": [
+      {
+        "name": "formatDate",
+        "module": "@/lib/utils",
+        "isDefault": false
+      },
+      {
+        "name": "formatDate",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\utils.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "type ClassValue": [
+      {
+        "name": "type ClassValue",
+        "module": "clsx",
+        "isDefault": false
+      }
+    ],
+    "clsx": [
+      {
+        "name": "clsx",
+        "module": "clsx",
+        "isDefault": false
+      }
+    ],
+    "twMerge": [
+      {
+        "name": "twMerge",
+        "module": "tailwind-merge",
+        "isDefault": false
+      }
+    ],
+    "remarkCodeMeta": [
+      {
+        "name": "remarkCodeMeta",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\remark-code-meta.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "PaginationOptions": [
+      {
+        "name": "PaginationOptions",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\pagination.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "PaginationResult": [
+      {
+        "name": "PaginationResult",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\pagination.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "paginate": [
+      {
+        "name": "paginate",
+        "module": "@/lib/pagination",
+        "isDefault": false
+      },
+      {
+        "name": "paginate",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\pagination.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "getPaginationMeta": [
+      {
+        "name": "getPaginationMeta",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\pagination.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "normalizePage": [
+      {
+        "name": "normalizePage",
+        "module": "@/lib/pagination",
+        "isDefault": false
+      },
+      {
+        "name": "normalizePage",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\pagination.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "transformContestData": [
+      {
+        "name": "transformContestData",
+        "module": "@/lib/leetcode/transformContestData",
+        "isDefault": false
+      },
+      {
+        "name": "transformContestData",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\lib\\leetcode\\transformContestData.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "DATA": [
+      {
+        "name": "DATA",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\resume.tsx",
+        "type": "const",
+        "isDefault": false
+      },
+      {
+        "name": "DATA",
+        "module": "@/data/resume",
+        "isDefault": false
+      }
+    ],
+    "ReactMarkdown": [
+      {
+        "name": "ReactMarkdown",
+        "module": "react-markdown",
+        "isDefault": true
+      }
+    ],
+    "Icons": [
+      {
+        "name": "Icons",
+        "module": "@/components/icons",
+        "isDefault": false
+      },
+      {
+        "name": "Icons",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\icons.tsx",
+        "type": "const",
+        "isDefault": false
+      },
+      {
+        "name": "Icons",
+        "module": "lucide-react",
+        "isDefault": true,
+        "asDefinition": "* as Icons"
+      }
+    ],
+    "HomeIcon": [
+      {
+        "name": "HomeIcon",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "NotebookIcon": [
+      {
+        "name": "NotebookIcon",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Code": [
+      {
+        "name": "Code",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ProjectStatus": [
+      {
+        "name": "ProjectStatus",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ProjectCategory": [
+      {
+        "name": "ProjectCategory",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "TechBadge": [
+      {
+        "name": "TechBadge",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "ProjectStat": [
+      {
+        "name": "ProjectStat",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "ProjectFeature": [
+      {
+        "name": "ProjectFeature",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "ProjectLink": [
+      {
+        "name": "ProjectLink",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "ProjectData": [
+      {
+        "name": "ProjectData",
+        "module": "@/data/projects",
+        "isDefault": false
+      },
+      {
+        "name": "ProjectData",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "TECH_COLORS": [
+      {
+        "name": "TECH_COLORS",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "skills": [
+      {
+        "name": "skills",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "PROJECTS": [
+      {
+        "name": "PROJECTS",
+        "module": "@/data/projects",
+        "isDefault": false
+      },
+      {
+        "name": "PROJECTS",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\projects.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "useContestData": [
+      {
+        "name": "useContestData",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\hooks\\useContestData.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "useEffect": [
+      {
+        "name": "useEffect",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "useState": [
+      {
+        "name": "useState",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "getContestData": [
+      {
+        "name": "getContestData",
+        "module": "@/lib/leetcode/getContestData",
+        "isDefault": false
+      }
+    ],
+    "JourneyItem": [
+      {
+        "name": "JourneyItem",
+        "module": "@/data/journey",
+        "isDefault": false
+      },
+      {
+        "name": "JourneyItem",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\journey.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "JOURNEY_DATA": [
+      {
+        "name": "JOURNEY_DATA",
+        "module": "@/data/journey",
+        "isDefault": false
+      },
+      {
+        "name": "JOURNEY_DATA",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\journey.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "Topic": [
+      {
+        "name": "Topic",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "Topic",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "Achievement": [
+      {
+        "name": "Achievement",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "Achievement",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "Activity": [
+      {
+        "name": "Activity",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "DSAMetrics": [
+      {
+        "name": "DSAMetrics",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "DSAMetrics",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "DailyGoal": [
+      {
+        "name": "DailyGoal",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\DailyGoal.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "dsaMetrics": [
+      {
+        "name": "dsaMetrics",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "dsaMetrics",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "dailyGoal": [
+      {
+        "name": "dailyGoal",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "dailyGoal",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "dsaAchievements": [
+      {
+        "name": "dsaAchievements",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "dsaAchievements",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "recentActivities": [
+      {
+        "name": "recentActivities",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "recentActivities",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "dsaTopics": [
+      {
+        "name": "dsaTopics",
+        "module": "@/data/dsa",
+        "isDefault": false
+      },
+      {
+        "name": "dsaTopics",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\data\\dsa.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "GithubContributionBadge": [
+      {
+        "name": "GithubContributionBadge",
+        "module": "@/components/github-contribution-badge",
+        "isDefault": true
+      },
+      {
+        "name": "GithubContributionBadge",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\github-contribution-badge.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "useCallback": [
+      {
+        "name": "useCallback",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "useRef": [
+      {
+        "name": "useRef",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "useMemo": [
+      {
+        "name": "useMemo",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "GithubCommits": [
+      {
+        "name": "GithubCommits",
+        "module": "@/components/github-commits",
+        "isDefault": true
+      },
+      {
+        "name": "GithubCommits",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\github-commits.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "GitCommit": [
+      {
+        "name": "GitCommit",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ExternalLink": [
+      {
+        "name": "ExternalLink",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Marquee": [
+      {
+        "name": "Marquee",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\marquee.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "Marquee",
+        "module": "@/components/ui/marquee",
+        "isDefault": false
+      }
+    ],
+    "Button": [
+      {
+        "name": "Button",
+        "module": "@/components/ui/button",
+        "isDefault": false
+      }
+    ],
+    "Experience": [
+      {
+        "name": "Experience",
+        "module": "@/components/experience",
+        "isDefault": true
+      },
+      {
+        "name": "Experience",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\experience.tsx",
+        "isDefault": true
+      }
+    ],
+    "Badge": [
+      {
+        "name": "Badge",
+        "module": "@/components/ui/badge",
+        "isDefault": false
+      }
+    ],
+    "MapPin": [
+      {
+        "name": "MapPin",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Building2": [
+      {
+        "name": "Building2",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Calendar": [
+      {
+        "name": "Calendar",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ChevronDown": [
+      {
+        "name": "ChevronDown",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Image": [
+      {
+        "name": "Image",
+        "module": "next/image",
+        "isDefault": true
+      }
+    ],
+    "motion": [
+      {
+        "name": "motion",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "AnimatePresence": [
+      {
+        "name": "AnimatePresence",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "Link": [
+      {
+        "name": "Link",
+        "module": "next/link",
+        "isDefault": true
+      }
+    ],
+    "cacheLife": [
+      {
+        "name": "cacheLife",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\cache-life.d.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "unstable_cacheTag": [
+      {
+        "name": "unstable_cacheTag",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\cache-life.d.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "unstable_cacheLife": [
+      {
+        "name": "unstable_cacheLife",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\cache-life.d.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "cacheTag": [
+      {
+        "name": "cacheTag",
+        "module": "next/dist/server/use-cache/cache-tag",
+        "isDefault": false
+      }
+    ],
+    "PageProps": [
+      {
+        "name": "PageProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\app\\layout.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "LayoutProps": [
+      {
+        "name": "LayoutProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.next\\dev\\types\\app\\layout.ts",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "type { PrefetchForTypeCheckInternal": [
+      {
+        "name": "type { PrefetchForTypeCheckInternal",
+        "module": "next/dist/build/segment-config/app/app-segment-config.js",
+        "isDefault": true
+      }
+    ],
+    "sitemap": [
+      {
+        "name": "sitemap",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\sitemap.ts",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "MetadataRoute": [
+      {
+        "name": "MetadataRoute",
+        "module": "next",
+        "isDefault": false
+      }
+    ],
+    "allPosts": [
+      {
+        "name": "allPosts",
+        "module": "content-collections",
+        "isDefault": false
+      }
+    ],
+    "robots": [
+      {
+        "name": "robots",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\robots.ts",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Education": [
+      {
+        "name": "Education",
+        "module": "@/components/education",
+        "isDefault": true
+      },
+      {
+        "name": "Education",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\education.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "ChevronRight": [
+      {
+        "name": "ChevronRight",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ProjectsPage": [
+      {
+        "name": "ProjectsPage",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\projects\\page.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "BlurFade": [
+      {
+        "name": "BlurFade",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\magicui\\blur-fade.tsx",
+        "isDefault": true
+      },
+      {
+        "name": "BlurFade",
+        "module": "@/components/magicui/blur-fade",
+        "isDefault": true
+      }
+    ],
+    "ProjectArchitectureDiagram": [
+      {
+        "name": "ProjectArchitectureDiagram",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\project-architecture-diagram.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "ProjectArchitectureDiagram",
+        "module": "@/components/project-architecture-diagram",
+        "isDefault": false
+      }
+    ],
+    "Typescript": [
+      {
+        "name": "Typescript",
+        "module": "@/components/ui/svgs/typescript",
+        "isDefault": false
+      }
+    ],
+    "Nodejs": [
+      {
+        "name": "Nodejs",
+        "module": "@/components/ui/svgs/nodejs",
+        "isDefault": false
+      }
+    ],
+    "Python": [
+      {
+        "name": "Python",
+        "module": "@/components/ui/svgs/python",
+        "isDefault": false
+      }
+    ],
+    "Golang": [
+      {
+        "name": "Golang",
+        "module": "@/components/ui/svgs/golang",
+        "isDefault": false
+      }
+    ],
+    "Docker": [
+      {
+        "name": "Docker",
+        "module": "@/components/ui/svgs/docker",
+        "isDefault": false
+      }
+    ],
+    "Kubernetes": [
+      {
+        "name": "Kubernetes",
+        "module": "@/components/ui/svgs/kubernetes",
+        "isDefault": false
+      }
+    ],
+    "Java": [
+      {
+        "name": "Java",
+        "module": "@/components/ui/svgs/java",
+        "isDefault": false
+      }
+    ],
+    "React as ReactIcon": [
+      {
+        "name": "React as ReactIcon",
+        "module": "@/components/ui/svgs/react",
+        "isDefault": false
+      }
+    ],
+    "Postgres": [
+      {
+        "name": "Postgres",
+        "module": "@/components/ui/svgs/postgresql",
+        "isDefault": false
+      }
+    ],
+    "CPP": [
+      {
+        "name": "CPP",
+        "module": "@/components/ui/svgs/c++",
+        "isDefault": false
+      }
+    ],
+    "Express": [
+      {
+        "name": "Express",
+        "module": "@/components/ui/svgs/express",
+        "isDefault": false
+      }
+    ],
+    "MongoDB": [
+      {
+        "name": "MongoDB",
+        "module": "@/components/ui/svgs/mongodb",
+        "isDefault": false
+      }
+    ],
+    "NumPy": [
+      {
+        "name": "NumPy",
+        "module": "@/components/ui/svgs/numpy",
+        "isDefault": false
+      }
+    ],
+    "Pandas": [
+      {
+        "name": "Pandas",
+        "module": "@/components/ui/svgs/pandas",
+        "isDefault": false
+      }
+    ],
+    "SkLearn": [
+      {
+        "name": "SkLearn",
+        "module": "@/components/ui/svgs/sk-learn",
+        "isDefault": false
+      }
+    ],
+    "Pytorch": [
+      {
+        "name": "Pytorch",
+        "module": "@/components/ui/svgs/pytorch",
+        "isDefault": false
+      }
+    ],
+    "Tailwind": [
+      {
+        "name": "Tailwind",
+        "module": "@/components/ui/svgs/tailwind",
+        "isDefault": false
+      }
+    ],
+    "Git": [
+      {
+        "name": "Git",
+        "module": "@/components/ui/svgs/git",
+        "isDefault": false
+      }
+    ],
+    "Prisma": [
+      {
+        "name": "Prisma",
+        "module": "@/components/ui/svgs/prisma",
+        "isDefault": false
+      }
+    ],
+    "JavaScript": [
+      {
+        "name": "JavaScript",
+        "module": "@/components/ui/svgs/js",
+        "isDefault": false
+      }
+    ],
+    "NextJs": [
+      {
+        "name": "NextJs",
+        "module": "@/components/ui/svgs/nextjs",
+        "isDefault": false
+      }
+    ],
+    "Csharp": [
+      {
+        "name": "Csharp",
+        "module": "@/components/ui/svgs/csharp",
+        "isDefault": false
+      }
+    ],
+    "Redis": [
+      {
+        "name": "Redis",
+        "module": "@/components/ui/svgs/redis",
+        "isDefault": false
+      }
+    ],
+    "NestJs": [
+      {
+        "name": "NestJs",
+        "module": "@/components/ui/svgs/nestjs",
+        "isDefault": false
+      }
+    ],
+    "TRPC": [
+      {
+        "name": "TRPC",
+        "module": "@/components/ui/svgs/trpc",
+        "isDefault": false
+      }
+    ],
+    "Drizzle": [
+      {
+        "name": "Drizzle",
+        "module": "@/components/ui/svgs/drizzle",
+        "isDefault": false
+      }
+    ],
+    "LangChain": [
+      {
+        "name": "LangChain",
+        "module": "@/components/ui/svgs/langchain",
+        "isDefault": false
+      }
+    ],
+    "metadata": [
+      {
+        "name": "metadata",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\blog\\page.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ProjectsLayout": [
+      {
+        "name": "ProjectsLayout",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\projects\\layout.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "type { Metadata": [
+      {
+        "name": "type { Metadata",
+        "module": "next",
+        "isDefault": true
+      }
+    ],
+    "BlurFadeText": [
+      {
+        "name": "BlurFadeText",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\magicui\\blur-fade-text.tsx",
+        "isDefault": true
+      },
+      {
+        "name": "BlurFadeText",
+        "module": "@/components/magicui/blur-fade-text",
+        "isDefault": true
+      }
+    ],
+    "Markdown": [
+      {
+        "name": "Markdown",
+        "module": "react-markdown",
+        "isDefault": true
+      }
+    ],
+    "ContactSection": [
+      {
+        "name": "ContactSection",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\section\\contact-section.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "ContactSection",
+        "module": "@/components/section/contact-section",
+        "isDefault": true
+      }
+    ],
+    "HackathonsSection": [
+      {
+        "name": "HackathonsSection",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\section\\hackathons-section.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "HackathonsSection",
+        "module": "@/components/section/hackathons-section",
+        "isDefault": true
+      }
+    ],
+    "ProjectsSection": [
+      {
+        "name": "ProjectsSection",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\section\\projects-section.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "ProjectsSection",
+        "module": "@/components/section/projects-section",
+        "isDefault": true
+      }
+    ],
+    "WorkSection": [
+      {
+        "name": "WorkSection",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\section\\work-section.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "WorkSection",
+        "module": "@/components/section/work-section",
+        "isDefault": true
+      }
+    ],
+    "ArrowUpRight": [
+      {
+        "name": "ArrowUpRight",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "FileDown": [
+      {
+        "name": "FileDown",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Eye": [
+      {
+        "name": "Eye",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "TestScores": [
+      {
+        "name": "TestScores",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\test-scores.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "TestScores",
+        "module": "@/components/test-scores",
+        "isDefault": true
+      }
+    ],
+    "Skills": [
+      {
+        "name": "Skills",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\skills.tsx",
+        "isDefault": true
+      },
+      {
+        "name": "Skills",
+        "module": "@/components/skills",
+        "isDefault": true
+      }
+    ],
+    "Gallery": [
+      {
+        "name": "Gallery",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\gallery.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "Gallery",
+        "module": "@/components/ui/gallery",
+        "isDefault": true
+      }
+    ],
+    "HireMeSection": [
+      {
+        "name": "HireMeSection",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\section\\hire-me.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "HireMeSection",
+        "module": "@/components/section/hire-me",
+        "isDefault": true
+      }
+    ],
+    "ContestRatingChart": [
+      {
+        "name": "ContestRatingChart",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\charts\\ContestRatingChart.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "ContestRatingChart",
+        "module": "@/components/charts/ContestRatingChart",
+        "isDefault": true
+      }
+    ],
+    "BrandCard": [
+      {
+        "name": "BrandCard",
+        "module": "@/components/gptCard/brandCard",
+        "isDefault": true
+      }
+    ],
+    "MarqueeDemo": [
+      {
+        "name": "MarqueeDemo",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\magicui\\marquee-demo.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "MarqueeDemo",
+        "module": "@/components/magicui/marquee-demo",
+        "isDefault": false
+      }
+    ],
+    "MultilingualGreeting": [
+      {
+        "name": "MultilingualGreeting",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\multilingual-greeting.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "MultilingualGreeting",
+        "module": "@/components/multilingual-greeting",
+        "isDefault": true
+      }
+    ],
+    "HeroAvatarOrbit": [
+      {
+        "name": "HeroAvatarOrbit",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\hero-avatar-orbit.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "HeroAvatarOrbit",
+        "module": "@/components/hero-avatar-orbit",
+        "isDefault": true
+      }
+    ],
+    "ProjectCarousel": [
+      {
+        "name": "ProjectCarousel",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\21stdotdev\\project-carausal.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "ProjectCarousel",
+        "module": "@/components/21stdotdev/project-carausal",
+        "isDefault": false
+      }
+    ],
+    "Publications": [
+      {
+        "name": "Publications",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\publications.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "Publications",
+        "module": "@/components/publications",
+        "isDefault": true
+      }
+    ],
+    "DeveloperCodeCard": [
+      {
+        "name": "DeveloperCodeCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\developer-code-card.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Check": [
+      {
+        "name": "Check",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Copy": [
+      {
+        "name": "Copy",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Code2": [
+      {
+        "name": "Code2",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Sparkles": [
+      {
+        "name": "Sparkles",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "runtime": [
+      {
+        "name": "runtime",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\blog\\opengraph-image.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "alt": [
+      {
+        "name": "alt",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\blog\\opengraph-image.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "size": [
+      {
+        "name": "size",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\blog\\opengraph-image.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "contentType": [
+      {
+        "name": "contentType",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\blog\\opengraph-image.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ImageResponse": [
+      {
+        "name": "ImageResponse",
+        "module": "next/og",
+        "isDefault": false
+      }
+    ],
+    "CoverImage": [
+      {
+        "name": "CoverImage",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\Cover.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "useTheme": [
+      {
+        "name": "useTheme",
+        "module": "next-themes",
+        "isDefault": false
+      }
+    ],
+    "SearchBar": [
+      {
+        "name": "SearchBar",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\SearchBar.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "{ useRef": [
+      {
+        "name": "{ useRef",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "Search": [
+      {
+        "name": "Search",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "TopicCard": [
+      {
+        "name": "TopicCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\TopicCard.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "RecentActivity": [
+      {
+        "name": "RecentActivity",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\RecentActivity.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Play": [
+      {
+        "name": "Play",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ProgressOverview": [
+      {
+        "name": "ProgressOverview",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\ProgressOverview.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Flame": [
+      {
+        "name": "Flame",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "CheckCircle2": [
+      {
+        "name": "CheckCircle2",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Award": [
+      {
+        "name": "Award",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "DSAPanel": [
+      {
+        "name": "DSAPanel",
+        "module": "@/components/dsa/DSAPanel",
+        "isDefault": true
+      },
+      {
+        "name": "DSAPanel",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\DSAPanel.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Brain": [
+      {
+        "name": "Brain",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ChevronLeft": [
+      {
+        "name": "ChevronLeft",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "X": [
+      {
+        "name": "X",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Separator": [
+      {
+        "name": "Separator",
+        "module": "@/components/ui/separator",
+        "isDefault": false
+      }
+    ],
+    "DSAHeader": [
+      {
+        "name": "DSAHeader",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\DSAHeader.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "{ useEffect": [
+      {
+        "name": "{ useEffect",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "Circle": [
+      {
+        "name": "Circle",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Achievements": [
+      {
+        "name": "Achievements",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\dsa\\Achievements.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Lock": [
+      {
+        "name": "Lock",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "NotFound": [
+      {
+        "name": "NotFound",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\not-found.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Home": [
+      {
+        "name": "Home",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ContactSidebar": [
+      {
+        "name": "ContactSidebar",
+        "module": "@/components/contact-sidebar",
+        "isDefault": true
+      },
+      {
+        "name": "ContactSidebar",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\contact-sidebar.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "CommandPalette": [
+      {
+        "name": "CommandPalette",
+        "module": "@/components/command-palette",
+        "isDefault": true
+      },
+      {
+        "name": "CommandPalette",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\command-palette.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "useRouter": [
+      {
+        "name": "useRouter",
+        "module": "next/navigation",
+        "isDefault": false
+      }
+    ],
+    "type ProjectData": [
+      {
+        "name": "type ProjectData",
+        "module": "@/data/projects",
+        "isDefault": false
+      }
+    ],
+    "manifest": [
+      {
+        "name": "manifest",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\manifest.ts",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "RootLayout": [
+      {
+        "name": "RootLayout",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\layout.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "Navbar": [
+      {
+        "name": "Navbar",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\navbar.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "Navbar",
+        "module": "@/components/navbar",
+        "isDefault": true
+      }
+    ],
+    "ThemeProvider": [
+      {
+        "name": "ThemeProvider",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\theme-provider.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "ThemeProvider",
+        "module": "@/components/theme-provider",
+        "isDefault": false
+      }
+    ],
+    "TooltipProvider": [
+      {
+        "name": "TooltipProvider",
+        "module": "@/components/ui/tooltip",
+        "isDefault": false
+      }
+    ],
+    "Geist": [
+      {
+        "name": "Geist",
+        "module": "next/font/google",
+        "isDefault": false
+      }
+    ],
+    "Geist_Mono": [
+      {
+        "name": "Geist_Mono",
+        "module": "next/font/google",
+        "isDefault": false
+      }
+    ],
+    "FlickeringGrid": [
+      {
+        "name": "FlickeringGrid",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\magicui\\flickering-grid.tsx",
+        "type": "const",
+        "isDefault": false
+      },
+      {
+        "name": "FlickeringGrid",
+        "module": "@/components/magicui/flickering-grid",
+        "isDefault": false
+      }
+    ],
+    "Cover": [
+      {
+        "name": "Cover",
+        "module": "@/components/Cover",
+        "isDefault": true
+      }
+    ],
+    "MyJourney": [
+      {
+        "name": "MyJourney",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\my-journey.tsx",
+        "type": "function",
+        "isDefault": true
+      },
+      {
+        "name": "MyJourney",
+        "module": "@/components/my-journey",
+        "isDefault": true
+      }
+    ],
+    "ChartWrapper": [
+      {
+        "name": "ChartWrapper",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\charts\\ChartWrapper.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "FolderTag": [
+      {
+        "name": "FolderTag",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "FolderLink": [
+      {
+        "name": "FolderLink",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "FolderProject": [
+      {
+        "name": "FolderProject",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "AnimatedFolder": [
+      {
+        "name": "AnimatedFolder",
+        "module": "@/components/3d-folder",
+        "isDefault": false
+      },
+      {
+        "name": "AnimatedFolder",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "ProjectThumbnail": [
+      {
+        "name": "ProjectThumbnail",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ProjectLightbox": [
+      {
+        "name": "ProjectLightbox",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\3d-folder.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "type React": [
+      {
+        "name": "type React",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "createPortal": [
+      {
+        "name": "createPortal",
+        "module": "react-dom",
+        "isDefault": false
+      }
+    ],
+    "Feature": [
+      {
+        "name": "Feature",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\21stdotdev\\project-carausal.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "memo": [
+      {
+        "name": "memo",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "CoverWrapper": [
+      {
+        "name": "CoverWrapper",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\CoverWrapper.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "usePathname": [
+      {
+        "name": "usePathname",
+        "module": "next/navigation",
+        "isDefault": false
+      }
+    ],
+    "Day": [
+      {
+        "name": "Day",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\transform.ts",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "transformCalendar": [
+      {
+        "name": "transformCalendar",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\transform.ts",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "notFound": [
+      {
+        "name": "notFound",
+        "module": "next/navigation",
+        "isDefault": false
+      }
+    ],
+    "MDXContent": [
+      {
+        "name": "MDXContent",
+        "module": "@content-collections/mdx/react",
+        "isDefault": false
+      }
+    ],
+    "LeetCodeRadial": [
+      {
+        "name": "LeetCodeRadial",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\LeetCodeRadial.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "useSpring": [
+      {
+        "name": "useSpring",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "useTransform": [
+      {
+        "name": "useTransform",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "LeetCodeGraph": [
+      {
+        "name": "LeetCodeGraph",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\LeetCodeGraph.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "LeetCode": [
+      {
+        "name": "LeetCode",
+        "module": "@/components/ui/svgs/leetcode",
+        "isDefault": false
+      }
+    ],
+    "LeetCodeCardUI": [
+      {
+        "name": "LeetCodeCardUI",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\LeetCodeCardUI.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "LeetCodeCard": [
+      {
+        "name": "LeetCodeCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\LeetCodeCard.tsx",
+        "isDefault": true
+      }
+    ],
+    "getLeetCodeStats": [
+      {
+        "name": "getLeetCodeStats",
+        "module": "@/lib/leetcode",
+        "isDefault": false
+      }
+    ],
+    "DSASheetsCard": [
+      {
+        "name": "DSASheetsCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\components\\leetcode\\DSASheetsCard.tsx",
+        "type": "function",
+        "isDefault": true
+      }
+    ],
+    "dynamic": [
+      {
+        "name": "dynamic",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\app\\api\\github-commits\\route.ts",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "NextRequest": [
+      {
+        "name": "NextRequest",
+        "module": "next/server",
+        "isDefault": false
+      }
+    ],
+    "NextResponse": [
+      {
+        "name": "NextResponse",
+        "module": "next/server",
+        "isDefault": false
+      }
+    ],
+    "SoftProfileCard": [
+      {
+        "name": "SoftProfileCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\gptCard\\brandCard.tsx",
+        "isDefault": true
+      }
+    ],
+    "Post": [
+      {
+        "name": "Post",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.content-collections\\generated\\index.d.ts",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "declare": [
+      {
+        "name": "declare",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\.content-collections\\generated\\index.d.ts",
+        "isDefault": false
+      }
+    ],
+    "GetTypeByName": [
+      {
+        "name": "GetTypeByName",
+        "module": "@content-collections/core",
+        "isDefault": false
+      }
+    ],
+    "Avatar": [
+      {
+        "name": "Avatar",
+        "module": "@/components/ui/avatar",
+        "isDefault": false
+      }
+    ],
+    "AvatarFallback": [
+      {
+        "name": "AvatarFallback",
+        "module": "@/components/ui/avatar",
+        "isDefault": false
+      }
+    ],
+    "AvatarImage": [
+      {
+        "name": "AvatarImage",
+        "module": "@/components/ui/avatar",
+        "isDefault": false
+      }
+    ],
+    "NextjsIconDark": [
+      {
+        "name": "NextjsIconDark",
+        "module": "@/components/ui/svgs/nextjsIconDark",
+        "isDefault": false
+      }
+    ],
+    "TimelineItemProps": [
+      {
+        "name": "TimelineItemProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "TimelineProps": [
+      {
+        "name": "TimelineProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "TimelineConnectItemProps": [
+      {
+        "name": "TimelineConnectItemProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "TimelineConnectItem": [
+      {
+        "name": "TimelineConnectItem",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "TimelineItem": [
+      {
+        "name": "TimelineItem",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "Timeline": [
+      {
+        "name": "Timeline",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\timeline.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "ReactNode": [
+      {
+        "name": "ReactNode",
+        "module": "react",
+        "isDefault": false
+      }
+    ],
+    "ThemeProvider as NextThemesProvider": [
+      {
+        "name": "ThemeProvider as NextThemesProvider",
+        "module": "next-themes",
+        "isDefault": false
+      }
+    ],
+    "type { ThemeProviderProps": [
+      {
+        "name": "type { ThemeProviderProps",
+        "module": "next-themes",
+        "isDefault": true
+      }
+    ],
+    "type ComponentProps": [
+      {
+        "name": "type ComponentProps",
+        "module": "react",
+        "isDefault": false
+      }
+    ],
+    "codeToHtml": [
+      {
+        "name": "codeToHtml",
+        "module": "shiki/bundle/web",
+        "isDefault": false
+      }
+    ],
+    "BadgeProps": [
+      {
+        "name": "BadgeProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\badge.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "cva": [
+      {
+        "name": "cva",
+        "module": "class-variance-authority",
+        "isDefault": false
+      }
+    ],
+    "type VariantProps": [
+      {
+        "name": "type VariantProps",
+        "module": "class-variance-authority",
+        "isDefault": false
+      }
+    ],
+    "ArrowLeft": [
+      {
+        "name": "ArrowLeft",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ArrowRight": [
+      {
+        "name": "ArrowRight",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ButtonProps": [
+      {
+        "name": "ButtonProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\button.tsx",
+        "type": "interface",
+        "isDefault": false
+      }
+    ],
+    "Slot": [
+      {
+        "name": "Slot",
+        "module": "@radix-ui/react-slot",
+        "isDefault": false
+      }
+    ],
+    "AvatarPrimitive": [
+      {
+        "name": "AvatarPrimitive",
+        "module": "@radix-ui/react-avatar",
+        "isDefault": true,
+        "asDefinition": "* as AvatarPrimitive"
+      }
+    ],
+    "TransitionVariant": [
+      {
+        "name": "TransitionVariant",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\animated-theme-toggler.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "AnimatedThemeToggler": [
+      {
+        "name": "AnimatedThemeToggler",
+        "module": "@/components/ui/animated-theme-toggler",
+        "isDefault": false
+      },
+      {
+        "name": "AnimatedThemeToggler",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\animated-theme-toggler.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "Moon": [
+      {
+        "name": "Moon",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Sun": [
+      {
+        "name": "Sun",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "flushSync": [
+      {
+        "name": "flushSync",
+        "module": "react-dom",
+        "isDefault": false
+      }
+    ],
+    "AccordionPrimitive": [
+      {
+        "name": "AccordionPrimitive",
+        "module": "@radix-ui/react-accordion",
+        "isDefault": true,
+        "asDefinition": "* as AccordionPrimitive"
+      }
+    ],
+    "type ComponentPropsWithoutRef": [
+      {
+        "name": "type ComponentPropsWithoutRef",
+        "module": "react",
+        "isDefault": false
+      }
+    ],
+    "BookOpen": [
+      {
+        "name": "BookOpen",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Users": [
+      {
+        "name": "Users",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "ProjectPerformanceChart": [
+      {
+        "name": "ProjectPerformanceChart",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\project-performance-chart.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "TooltipPrimitive": [
+      {
+        "name": "TooltipPrimitive",
+        "module": "@radix-ui/react-tooltip",
+        "isDefault": true,
+        "asDefinition": "* as TooltipPrimitive"
+      }
+    ],
+    "EC2": [
+      {
+        "name": "EC2",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\aws-ec2.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "AWS": [
+      {
+        "name": "AWS",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\aws.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "GRPC": [
+      {
+        "name": "GRPC",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\grpc.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "GCP": [
+      {
+        "name": "GCP",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\gcp.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "type { SVGProps": [
+      {
+        "name": "type { SVGProps",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "type { FolderProject": [
+      {
+        "name": "type { FolderProject",
+        "module": "@/components/3d-folder",
+        "isDefault": true
+      }
+    ],
+    "SeparatorPrimitive": [
+      {
+        "name": "SeparatorPrimitive",
+        "module": "@radix-ui/react-separator",
+        "isDefault": true,
+        "asDefinition": "* as SeparatorPrimitive"
+      }
+    ],
+    "ProjectFolderCard": [
+      {
+        "name": "ProjectFolderCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\project-folder-card.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "ProjectCard": [
+      {
+        "name": "ProjectCard",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\project-card.tsx",
+        "type": "function",
+        "isDefault": false
+      }
+    ],
+    "Wasm": [
+      {
+        "name": "Wasm",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\webassembly.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "SpringBoot": [
+      {
+        "name": "SpringBoot",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\ui\\svgs\\spring.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "Dock": [
+      {
+        "name": "Dock",
+        "module": "@/components/magicui/dock",
+        "isDefault": false
+      }
+    ],
+    "DockIcon": [
+      {
+        "name": "DockIcon",
+        "module": "@/components/magicui/dock",
+        "isDefault": false
+      }
+    ],
+    "ModeToggle": [
+      {
+        "name": "ModeToggle",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\mode-toggle.tsx",
+        "type": "function",
+        "isDefault": false
+      },
+      {
+        "name": "ModeToggle",
+        "module": "@/components/mode-toggle",
+        "isDefault": false
+      }
+    ],
+    "Command": [
+      {
+        "name": "Command",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "Terminal": [
+      {
+        "name": "Terminal",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "IconProps": [
+      {
+        "name": "IconProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\icons.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "GlobeIcon": [
+      {
+        "name": "GlobeIcon",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "MailIcon": [
+      {
+        "name": "MailIcon",
+        "module": "lucide-react",
+        "isDefault": false
+      }
+    ],
+    "useInView": [
+      {
+        "name": "useInView",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "Variants": [
+      {
+        "name": "Variants",
+        "module": "motion/react",
+        "isDefault": false
+      }
+    ],
+    "type { ComponentType": [
+      {
+        "name": "type { ComponentType",
+        "module": "react",
+        "isDefault": true
+      }
+    ],
+    "Labels": [
+      {
+        "name": "Labels",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphProps": [
+      {
+        "name": "ContributionGraphProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraph": [
+      {
+        "name": "ContributionGraph",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphBlockProps": [
+      {
+        "name": "ContributionGraphBlockProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphBlock": [
+      {
+        "name": "ContributionGraphBlock",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphCalendarProps": [
+      {
+        "name": "ContributionGraphCalendarProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphCalendar": [
+      {
+        "name": "ContributionGraphCalendar",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphFooterProps": [
+      {
+        "name": "ContributionGraphFooterProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphFooter": [
+      {
+        "name": "ContributionGraphFooter",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphTotalCountProps": [
+      {
+        "name": "ContributionGraphTotalCountProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphTotalCount": [
+      {
+        "name": "ContributionGraphTotalCount",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphLegendProps": [
+      {
+        "name": "ContributionGraphLegendProps",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "type",
+        "isDefault": false
+      }
+    ],
+    "ContributionGraphLegend": [
+      {
+        "name": "ContributionGraphLegend",
+        "path": "d:\\Rajarshi Chakraborty ( Arghya )\\Projects\\Rajarshi's Portfolio\\src\\components\\kibo-ui\\contribution-graph\\index.tsx",
+        "type": "const",
+        "isDefault": false
+      }
+    ],
+    "type { Day as WeekDay": [
+      {
+        "name": "type { Day as WeekDay",
+        "module": "date-fns",
+        "isDefault": true
+      }
+    ]
+  }
+}
