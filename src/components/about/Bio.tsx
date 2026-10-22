@@ -33,7 +33,7 @@ export function Bio() {
         </Reveal>
 
         <Reveal delay={0.1} className="space-y-6">
-          <div className="prose prose-neutral max-w-none leading-relaxed dark:prose-invert prose-p:text-muted-foreground prose-strong:text-foreground">
+          <div className="prose prose-neutral max-w-none leading-relaxed dark:prose-invert prose-p:text-muted-foreground prose-strong:text-foreground prose-a:font-semibold prose-a:text-foreground prose-a:decoration-pink-500/50 prose-a:underline-offset-4 hover:prose-a:decoration-pink-500">
             <ReactMarkdown>{DATA.summary}</ReactMarkdown>
           </div>
 

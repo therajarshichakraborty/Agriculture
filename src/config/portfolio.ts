@@ -8,18 +8,18 @@ export const portfolio = {
   // ----------------------------------------------------------
   name: "Rajarshi Chakraborty",
   initials: "RC",
-  role: "Full-Stack TypeScript Developer & AI Engineer",
+  role: "Full-Stack & AI Engineer",
   location: "Kolkata, West Bengal, India",
   bio: "Software Engineer at Brand Voy and Computer Science undergrad at Techno Main Salt Lake (Class of 2027). Focused on designing and developing scalable, production-grade applications with clean architecture, high performance, and strong System Design principles, with deep enthusiasm for Gen & Agentic AI.",
   shortBio:
-    "Full-Stack TypeScript Developer & AI Engineer with a strong focus on building scalable, production-grade applications.",
+    "Full-Stack & AI Engineer with a strong focus on building scalable, production-grade applications.",
   avatar: "https://github.com/therajarshichakraborty.png", // Direct link to GitHub avatar, with fallback in UI
   available: true, // "Available for work" badge
 
   // ----------------------------------------------------------
   // Contact & Social
   // ----------------------------------------------------------
-  email: "rajarshichakraborty20000@gmail.com",
+  email: "rajarshichakraborty2005@gmail.com",
   github: "https://github.com/therajarshichakraborty",
   githubHandle: "@therajarshichakraborty",
   linkedin: "https://www.linkedin.com/in/rajarshi-c-06a3402b7/",

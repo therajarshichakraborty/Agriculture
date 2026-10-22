@@ -12,13 +12,18 @@ export async function DSA() {
   const history: {
     rating: number;
     ranking: number;
-    contest: { startTime: number };
+    contest: { title: string; startTime: number };
   }[] = await getContestData(LEETCODE_USER);
   const contests = history.map((item, i) => ({
     date: new Date(item.contest.startTime * 1000).toLocaleDateString("en-GB", {
       month: "short",
       year: "2-digit"
     }),
+    fullDate: new Date(item.contest.startTime * 1000).toLocaleDateString(
+      "en-US",
+      { month: "short", day: "numeric", year: "numeric" }
+    ),
+    title: item.contest.title,
     rating: Math.round(item.rating),
     ranking: item.ranking,
     contestAttend: i + 1

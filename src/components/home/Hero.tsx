@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowUpRight, Download, Eye } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download, Eye } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
@@ -12,8 +12,7 @@ import { portfolio } from "@/src/config/portfolio";
 const roles = [
   "Full-Stack Engineer",
   "AI Engineer",
-  "TypeScript Developer",
-  "System Designer"
+  "System Architect"
 ];
 
 const fadeUp = (delay: number) => ({
@@ -35,13 +34,10 @@ export function Hero() {
             {...fadeUp(0.1)}
             className="font-display text-[1.75rem] font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
-            I build as a{" "}
-            <span className="block">
-              <FlipWords
-                words={roles}
-                gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
-              />
-            </span>
+            <FlipWords
+              words={roles}
+              gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
+            />
           </motion.h1>
 
           <motion.p
@@ -53,12 +49,23 @@ export function Hero() {
 
           <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
             <Button
-              className="gap-2 group font-semibold"
+              className="group relative gap-2 overflow-hidden font-semibold transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/25 active:scale-[0.98]"
               nativeButton={false}
               render={<Link href="/projects" />}
             >
-              <Eye className="size-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-              <span>View my work</span>
+              {/* Periodic light sweep across the button */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 left-0 w-1/3 animate-[btn-shine_3.6s_ease-in-out_infinite] bg-linear-to-r from-transparent via-white/45 to-transparent dark:via-black/20 motion-reduce:hidden"
+              />
+              {/* Brand gradient underline that grows in on hover */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-3 bottom-0 h-0.5 origin-left scale-x-0 rounded-full bg-linear-to-r from-red-500 via-pink-500 to-violet-500 transition-transform duration-500 ease-out group-hover:scale-x-100"
+              />
+              <Eye className="relative size-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+              <span className="relative">View my work</span>
+              <ArrowRight className="relative -ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button
               variant="outline"

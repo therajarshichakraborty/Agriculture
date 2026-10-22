@@ -650,13 +650,23 @@ export default function GithubContributionBadge({
   const chartInView = useInView(chartWrapRef, { once: true, margin: "-80px" });
 
   useEffect(() => {
+    // Keep the line hidden until its draw starts, so it never flashes in full.
+    if (chartWrapRef.current) chartWrapRef.current.dataset.drawn = "false";
     if (!chartInView || !chartMounted || loading || chartData.length === 0) return;
-    const frame = requestAnimationFrame(() => {
+    let frame = 0;
+    let tries = 0;
+    // On a reload the section is in view before ResponsiveContainer has
+    // measured and rendered the SVG, so wait for the path to exist.
+    const start = () => {
       const wrap = chartWrapRef.current;
       const path = wrap?.querySelector<SVGPathElement>(".recharts-area-curve");
-      if (!wrap || !path) return;
-      const length = path.getTotalLength();
+      const length = path?.getTotalLength() ?? 0;
+      if (!wrap || !path || length === 0) {
+        if (tries++ < 120) frame = requestAnimationFrame(start);
+        return;
+      }
       path.style.strokeDasharray = `${length}`;
+      wrap.dataset.drawn = "true";
       const draw = path.animate(
         [{ strokeDashoffset: length }, { strokeDashoffset: 0 }],
         { duration: 1800, easing: "cubic-bezier(0.65, 0, 0.35, 1)", fill: "forwards" }
@@ -673,7 +683,8 @@ export default function GithubContributionBadge({
           fill: "backwards"
         });
       });
-    });
+    };
+    frame = requestAnimationFrame(start);
     return () => cancelAnimationFrame(frame);
   }, [chartInView, chartMounted, loading, chartData]);
 
@@ -930,7 +941,11 @@ export default function GithubContributionBadge({
             Rajarshi Chakraborty's Contribution Graph
           </div>
 
-          <div ref={chartWrapRef} className="w-full h-[180px]">
+          <div
+            ref={chartWrapRef}
+            data-drawn="false"
+            className="w-full h-[180px] [&[data-drawn=false]_.recharts-area-curve]:opacity-0 [&[data-drawn=false]_.recharts-area-dot]:opacity-0"
+          >
             {!chartMounted || loading ? (
               <div className="w-full h-full flex items-center justify-center animate-pulse">
                 <div className="flex flex-col items-center gap-3">

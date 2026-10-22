@@ -1,6 +1,12 @@
 import ReactMarkdown from "react-markdown";
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon, Code } from "lucide-react";
+import {
+  HomeIcon,
+  NotebookIcon,
+  Code,
+  UserIcon,
+  MessageSquareText
+} from "lucide-react";
 import {
   NextjsIconDark,
   Typescript,
@@ -89,12 +95,14 @@ export const DATA = {
   url: "https://rajarshis-portfolio.vercel.app",
   location: "Kolkata, West Bengal, India",
   locationLink: "https://www.google.com/maps/place/Kolkata,+West+Bengal",
-  description: `Full-Stack TypeScript Developer & AI Engineer with a strong focus on building scalable, production-grade applications.`,
-  summary: `**Hello :)** I’m **Rajarshi Chakraborty**, a Software Engineer at Brand Voy and a **Computer Science** undergrad at Techno Main Salt Lake ( Class of 2027 ), passionate about building scalable **software and intelligent systems**.
+  description: `Full-Stack & AI Engineer with a strong focus on building scalable, production-grade applications.`,
+  summary: `I’m **Rajarshi Chakraborty**, a **Software Engineer at Brand Voy** and a Computer Science undergrad at Techno Main Salt Lake (Class of 2027). I design and ship **production-grade software**: fast, reliable and built to scale from day one.
 
-I’m a **Full-Stack TypeScript Developer** & **AI Engineer** focused on designing and developing production-grade applications with clean **architecture**, **high performance**, **scalability**, and strong **System Design** principles.
+I work across the entire stack, from polished interfaces in **React** and **Next.js** to resilient backends in **Node.js**, **Go** and **Python**, running on **PostgreSQL**, **Redis**, **Docker** and **AWS**. I think in systems first: clear boundaries, measurable performance and architecture that still makes sense a year from now.
 
-Beyond traditional engineering, I’m deeply interested in **Gen** & **Agentic AI**. I enjoy building AI-powered systems that combine **intelligent automation** with **real-world data** to **solve complex problems** and **create meaningful impact**. I’m driven by continuous learning, engineering excellence, and turning challenging ideas into reliable, practical products.`,
+Right now I’m going deep on **Generative and Agentic AI**, building LLM-powered products, retrieval pipelines and autonomous agents that do real work on real data. Away from the editor I sharpen my fundamentals on LeetCode, with **700+ problems solved**, and write about what I learn along the way.
+
+Building something ambitious? [Let’s talk](/contact)`,
 
   avatarUrl: "RajarshiImage.jpg",
   skills: [
@@ -174,15 +182,13 @@ Beyond traditional engineering, I’m deeply interested in **Gen** & **Agentic A
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    {
-      href: "https://hashnode.com/@Rajarshi2005",
-      icon: NotebookIcon,
-      label: "Blog"
-    },
-    { href: "/projects", icon: Code, label: "Projects" }
+    { href: "/about", icon: UserIcon, label: "About" },
+    { href: "/projects", icon: Code, label: "Projects" },
+    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/contact", icon: MessageSquareText, label: "Contact" }
   ],
   contact: {
-    email: "rajarshichakraborty20000@gmail.com",
+    email: "rajarshichakraborty2005@gmail.com",
     tel: "+91 8001950250",
     social: {
       GitHub: {
@@ -351,7 +357,7 @@ I thrive on continuous learning, innovation, and practical application to solve 
       href: "https://www.ticollege.ac.in/",
       degree: "B.Tech in Computer Science and Engineering",
       logoUrl: "/tmsl2.png",
-      start: " June 2023",
+      start: "June 2023",
       end: "Present",
       description: `GPA - 8.136/10 (Academic Progress till Semester 6th)
 
