@@ -1,23 +1,15 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { cn } from "@/src/lib/utils";
 
-type Meteor = { left: string; delay: string; duration: string };
-
-/** Falling meteor streaks. Positions are generated after mount to avoid hydration drift. */
+/**
+ * Falling meteor streaks. Positions use a deterministic spread so server and
+ * client markup match without a post-mount effect.
+ */
 export function Meteors({ number = 18, className }: { number?: number; className?: string }) {
-  const [meteors, setMeteors] = useState<Meteor[]>([]);
-
-  useEffect(() => {
-    setMeteors(
-      Array.from({ length: number }, () => ({
-        left: `${Math.floor(Math.random() * 120 - 10)}%`,
-        delay: `${(Math.random() * 6).toFixed(2)}s`,
-        duration: `${Math.floor(Math.random() * 6 + 4)}s`
-      }))
-    );
-  }, [number]);
+  const meteors = Array.from({ length: number }, (_, i) => ({
+    left: `${((i * 37) % 120) - 10}%`,
+    delay: `${((i * 0.73) % 6).toFixed(2)}s`,
+    duration: `${(4 + ((i * 1.7) % 6)).toFixed(0)}s`
+  }));
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
