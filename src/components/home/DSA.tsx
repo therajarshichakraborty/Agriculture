@@ -30,7 +30,7 @@ export async function DSA() {
       id="dsa"
       eyebrow="Problem Solving"
       title="My DSA journey, in numbers."
-      description="Consistent practice on LeetCode — live stats, contest rating and the sheets I train with."
+      description="Consistent practice on LeetCode: live stats, contest rating and the sheets I train with."
       className={HOME_WIDTH}
     >
       <div className="grid gap-4 lg:grid-cols-5">

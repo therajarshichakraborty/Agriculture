@@ -208,28 +208,28 @@ function StatsBar({
     {
       icon: <Award className="size-4 text-amber-500 fill-amber-500" />,
       label: "Badges",
-      value: badgesCount > 0 ? badgesCount.toString() : "—",
+      value: badgesCount > 0 ? badgesCount.toString() : "-",
       sub: "",
       accent: "via-amber-500"
     },
     {
       icon: <TrendingUp className="size-4 text-orange-400 fill-orange-400" />,
       label: "Top",
-      value: pct !== null ? `${pct}%` : "—",
+      value: pct !== null ? `${pct}%` : "-",
       sub: "",
       accent: "via-orange-400"
     },
     {
       icon: <Trophy className="size-4 text-violet-500 fill-violet-500" />,
       label: "Contest Rating",
-      value: rating !== null ? Math.round(rating).toLocaleString() : "—",
+      value: rating !== null ? Math.round(rating).toLocaleString() : "-",
       sub: "",
       accent: "via-violet-500"
     },
     {
       icon: <Users className="size-4 text-blue-400 fill-blue-400" />,
       label: "Global Rank",
-      value: globalRanking !== null ? globalRanking.toLocaleString() : "—",
+      value: globalRanking !== null ? globalRanking.toLocaleString() : "-",
       sub: "",
       accent: "via-blue-400"
     },
@@ -238,7 +238,7 @@ function StatsBar({
         <Zap className="size-5 text-amber-400 dark:text-zinc-200 fill-amber-400 dark:fill-zinc-200" />
       ),
       label: "Attended",
-      value: contestAttend !== null ? contestAttend.toString() : "—",
+      value: contestAttend !== null ? contestAttend.toString() : "-",
       sub: "",
       accent: "via-amber-400 dark:via-zinc-300"
     }
@@ -656,7 +656,7 @@ export default function LeetCodeGraph() {
         {/* ── Contribution Graph ── */}
         <div className="w-full overflow-x-auto custom-scrollbar pb-2">
           <TooltipProvider>
-            {/* Graph header row — mirrors LeetCode's layout */}
+            {/* Graph header row: mirrors LeetCode's layout */}
             <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mb-3">
               {/* Left: submission count + active days + streak */}
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
@@ -704,7 +704,7 @@ export default function LeetCodeGraph() {
               />
             </div>
 
-            {/* Heatmap — fades when switching year */}
+            {/* Heatmap: fades when switching year */}
             <div
               style={{
                 opacity: graphVisible ? 1 : 0,
@@ -735,7 +735,7 @@ export default function LeetCodeGraph() {
                   <div className="text-xs text-muted-foreground flex items-center gap-1.5">
                     Total:
                     <Badge variant="outline">
-                      {loading || graphLoading ? "—" : total.toLocaleString()}{" "}
+                      {loading || graphLoading ? "-" : total.toLocaleString()}{" "}
                       Submissions
                     </Badge>
                   </div>

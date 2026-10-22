@@ -1058,7 +1058,7 @@ If you have a link: If you have the GitHub repository public, place it right nex
     tagline: "Lightweight Tailwind-Inspired CSS Utility Engine",
     description: `A lightweight, runtime CSS utility engine inspired by Tailwind CSS, leveraging vanilla JavaScript and DOM manipulation to deliver dynamic utility class generation, real-time styling, and a fast, build-free development workflow.`,
     longDescription:
-      "Mini-TailwindCSS is a runtime CSS utility engine that parses custom utility class names and dynamically injects styles into the browser — no build step, no preprocessor, no external framework required. Built with vanilla JavaScript and a modular utility parsing architecture, it supports responsive classes, extensible class mapping, and rapid UI prototyping. The engine is published as an NPM package and ships with a React integration layer.",
+      "Mini-TailwindCSS is a runtime CSS utility engine that parses custom utility class names and dynamically injects styles into the browser. No build step, no preprocessor, no external framework required. Built with vanilla JavaScript and a modular utility parsing architecture, it supports responsive classes, extensible class mapping, and rapid UI prototyping. The engine is published as an NPM package and ships with a React integration layer.",
     category: "Frontend",
     duration: "Feb 2026 – Feb 2026",
     image: "/background/mini-tailwind-2.png",

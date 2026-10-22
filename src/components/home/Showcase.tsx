@@ -71,7 +71,7 @@ export function GithubActivity() {
       id="github"
       eyebrow="Open Source"
       title="My latest commits."
-      description="Shipping in public — contribution graph and the most recent pushes, live from GitHub."
+      description="Shipping in public: contribution graph and the most recent pushes, live from GitHub."
       className={HOME_WIDTH}
     >
       <div className="flex flex-col gap-6">

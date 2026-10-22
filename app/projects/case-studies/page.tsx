@@ -510,7 +510,7 @@ export default function ProjectsPage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-4">
                               <span className="text-white text-xs font-mono font-medium">
-                                {project.title} — Production Banner
+                                {project.title} | Production Banner
                               </span>
                             </div>
                           </div>

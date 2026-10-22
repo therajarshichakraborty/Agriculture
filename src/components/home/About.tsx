@@ -11,7 +11,7 @@ export function About() {
     <Section
       id="about"
       eyebrow="About"
-      title="Engineering software that scales — and systems that think."
+      title="Engineering software that scales, and systems that think."
       description="A product-minded engineer who cares about clean architecture, performance and shipping things people actually use."
       className={HOME_WIDTH}
     >

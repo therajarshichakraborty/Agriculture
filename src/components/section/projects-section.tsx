@@ -221,7 +221,7 @@ export default function ProjectsSection() {
             </h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
               I&apos;ve worked on a variety of projects, from simple websites to
-              complex web applications. Hover the folder to explore — click any
+              complex web applications. Hover the folder to explore, click any
               card to view full details.
             </p>
           </div>

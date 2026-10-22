@@ -12,7 +12,7 @@ import { portfolio } from "@/src/config/portfolio";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const title = `${portfolio.name} — ${portfolio.role}`;
+const title = `${portfolio.name} | ${portfolio.role}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(portfolio.website),

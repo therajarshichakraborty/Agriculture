@@ -73,7 +73,7 @@ export default async function BlogPage({
       <PageHeader
         eyebrow={`${allArticles.length + localPosts.length} articles`}
         title="Notes on building software."
-        description="Writing on AI engineering, Node.js internals, Git and system design — published across my Hashnode blogs."
+        description="Writing on AI engineering, Node.js internals, Git and system design, published across my Hashnode blogs."
       >
         <a
           href={portfolio.blog}
@@ -185,14 +185,14 @@ export default async function BlogPage({
           </div>
         ) : (
           <div className="rounded-2xl border border-border px-4 py-16 text-center text-muted-foreground">
-            Articles are loading from Hashnode —{" "}
+            Articles are loading from Hashnode.{" "}
             <a
               href={portfolio.blog}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-foreground underline underline-offset-4"
             >
-              read them there
+              Read them there
             </a>{" "}
             in the meantime.
           </div>

@@ -648,7 +648,7 @@ export default function GithubContributionBadge({
     {
       icon: <GitPullRequest className="size-4 text-violet-500" />,
       label: "Total PRs",
-      value: prCount !== null ? prCount.toLocaleString() : "—",
+      value: prCount !== null ? prCount.toLocaleString() : "-",
       sub: "pull requests",
       accent: "via-violet-500/40",
       isLoading: statsLoading
@@ -672,7 +672,7 @@ export default function GithubContributionBadge({
     {
       icon: <GitBranch className="size-4 text-rose-500" />,
       label: "Total Issues",
-      value: issuesCount !== null ? issuesCount.toLocaleString() : "—",
+      value: issuesCount !== null ? issuesCount.toLocaleString() : "-",
       sub: "issues raised",
       accent: "via-rose-500/40",
       isLoading: statsLoading
@@ -1078,10 +1078,10 @@ export default function GithubContributionBadge({
               <div className="min-w-0 flex-1">
                 <div className="text-base sm:text-2xl font-bold tracking-tight text-foreground truncate">
                   {statsLoading
-                    ? "—"
+                    ? "-"
                     : starsCount !== null
                       ? starsCount.toLocaleString()
-                      : "—"}
+                      : "-"}
                 </div>
 
                 <p className="text-[11px] sm:text-sm font-medium text-muted-foreground truncate">
@@ -1103,10 +1103,10 @@ export default function GithubContributionBadge({
               <div className="min-w-0 flex-1">
                 <div className="text-base sm:text-2xl font-bold tracking-tight text-foreground truncate">
                   {statsLoading
-                    ? "—"
+                    ? "-"
                     : reposCount !== null
                       ? reposCount.toLocaleString()
-                      : "—"}
+                      : "-"}
                 </div>
 
                 <p className="text-[11px] sm:text-sm font-medium text-muted-foreground truncate">
