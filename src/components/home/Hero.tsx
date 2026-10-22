@@ -24,7 +24,7 @@ const fadeUp = (delay: number) => ({
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-16 md:pt-28 md:pb-20">
+    <section className="relative pt-20 pb-8 md:pt-28 md:pb-10">
       <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-14 px-6 md:px-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="flex min-w-0 flex-col gap-7">
           <motion.div {...fadeUp(0)}>

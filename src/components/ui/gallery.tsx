@@ -20,35 +20,27 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="mx-auto w-full max-w-xl bg-transparent">
+    <section className="w-full bg-transparent py-2 sm:py-5">
       <div className="w-full mx-auto">
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-2.5">
+        <div className="columns-3 gap-2 sm:gap-4 md:gap-6 [column-fill:_balance]">
           {images.map((src, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 12, scale: 0.98 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-40px" }}
-              whileHover={{ y: -4 }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 24,
-                delay: (i % 3) * 0.05
-              }}
-              className="group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer border border-border/50 hover:border-cyan-500/40 dark:hover:border-cyan-400/40 shadow-xs hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-blue-500/15 transition-colors duration-500"
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 22 }}
+              className="group relative break-inside-avoid mb-2 sm:mb-4 md:mb-6 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer border border-border/50 hover:border-cyan-500/40 dark:hover:border-cyan-400/40 shadow-xs hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-blue-500/15 transition-colors duration-500"
             >
               {/* Image with smooth zoom and subtle contrast enhancement */}
-              <div className="absolute inset-0 overflow-hidden rounded-xl sm:rounded-2xl">
+              <div className="overflow-hidden rounded-xl sm:rounded-2xl">
                 <Image
                   src={src}
                   alt={`Portfolio showcase ${i + 1}`}
-                  fill
-                  sizes="(min-width: 640px) 190px, 50vw"
+                  width={500}
+                  height={500}
                   className="
-                    object-cover rounded-xl sm:rounded-2xl
+                    w-full h-auto object-cover rounded-xl sm:rounded-2xl
                     transition-all duration-700 ease-out
-                    group-hover:scale-105 group-hover:contrast-[1.03]
+                    group-hover:scale-110 group-hover:contrast-[1.03]
                   "
                 />
               </div>

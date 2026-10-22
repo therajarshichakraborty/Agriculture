@@ -2,8 +2,8 @@ import { MarqueeDemo } from "@/src/components/magicui/marquee-demo";
 
 export function TechStack() {
   return (
-    <section aria-label="Tech stack" className="mx-auto w-full max-w-5xl px-6 py-10 md:px-10">
-      <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+    <section aria-label="Tech stack" className="mx-auto w-full max-w-5xl px-6 py-6 md:px-10">
+      <p className="mb-5 text-center text-sm font-medium text-muted-foreground">
         Tools I ship production software with
       </p>
       <div className="relative">

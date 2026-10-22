@@ -32,7 +32,7 @@ export function Section({
       {(eyebrow || title || description) && (
         <Reveal
           className={cn(
-            "mb-12 flex flex-col gap-4 md:mb-16",
+            "mb-8 flex flex-col gap-4 md:mb-10",
             align === "center" ? "items-center text-center" : "items-start"
           )}
         >
