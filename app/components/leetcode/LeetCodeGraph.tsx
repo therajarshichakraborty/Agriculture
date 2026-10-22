@@ -246,14 +246,11 @@ function StatsBar({
 
   return (
     <div className="grid grid-cols-5 gap-1 sm:gap-3 mb-4">
-      {stats.map(({ icon, label, value, sub, accent }) => (
+      {stats.map(({ icon, label, value, sub }) => (
         <div
           key={label}
           className="relative rounded-xl bg-transparent px-0.5 sm:px-1.5 py-2 sm:py-3.5 flex flex-col items-center gap-0.5 sm:gap-1 overflow-hidden hover:shadow-md transition-all duration-300"
         >
-          <div
-            className={`absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent ${accent} to-transparent`}
-          />
           <div className="flex items-center gap-1 sm:gap-1.5">
             <span className="[&>svg]:size-3 sm:[&>svg]:size-4">{icon}</span>
             <span className="text-[8px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-tight sm:tracking-wider text-center truncate">

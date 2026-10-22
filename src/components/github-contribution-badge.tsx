@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef, useMemo } from "react";
+import { useInView } from "motion/react";
 import { Icons } from "@/components/icons";
 import {
   ExternalLink,
@@ -644,6 +645,38 @@ export default function GithubContributionBadge({
     }));
   }, [last31DaysContributions]);
 
+  // Draw the activity line once when the chart scrolls into view.
+  const chartWrapRef = useRef<HTMLDivElement>(null);
+  const chartInView = useInView(chartWrapRef, { once: true, margin: "-80px" });
+
+  useEffect(() => {
+    if (!chartInView || !chartMounted || loading || chartData.length === 0) return;
+    const frame = requestAnimationFrame(() => {
+      const wrap = chartWrapRef.current;
+      const path = wrap?.querySelector<SVGPathElement>(".recharts-area-curve");
+      if (!wrap || !path) return;
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = `${length}`;
+      const draw = path.animate(
+        [{ strokeDashoffset: length }, { strokeDashoffset: 0 }],
+        { duration: 1800, easing: "cubic-bezier(0.65, 0, 0.35, 1)", fill: "forwards" }
+      );
+      draw.onfinish = () => {
+        path.style.strokeDasharray = "";
+        draw.cancel();
+      };
+      wrap.querySelectorAll<SVGElement>(".recharts-area-dot").forEach((dot, i) => {
+        dot.animate([{ opacity: 0, transform: "scale(0.4)" }, { opacity: 1, transform: "scale(1)" }], {
+          duration: 300,
+          delay: 200 + i * 45,
+          easing: "ease-out",
+          fill: "backwards"
+        });
+      });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [chartInView, chartMounted, loading, chartData]);
+
   const summaryStats = [
     {
       icon: <GitPullRequest className="size-4 text-violet-500" />,
@@ -682,14 +715,11 @@ export default function GithubContributionBadge({
   return (
     <div className="w-full mt-6 flex flex-col gap-5">
       <div className="grid grid-cols-4 gap-1 sm:gap-3">
-        {summaryStats.map(({ icon, label, value, sub, accent, isLoading }) => (
+        {summaryStats.map(({ icon, label, value, sub, isLoading }) => (
           <div
             key={label}
             className="relative rounded-xl bg-transparent px-1 sm:px-4 py-2 sm:py-3.5 flex flex-col items-center text-center gap-0.5 sm:gap-1 overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
           >
-            <div
-              className={`absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent ${accent} to-transparent`}
-            />
             <div className="flex items-center justify-center gap-1 sm:gap-1.5">
               <span className="[&>svg]:size-3 sm:[&>svg]:size-4">{icon}</span>
               <span className="text-[8px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-tight sm:tracking-wider truncate">
@@ -713,7 +743,6 @@ export default function GithubContributionBadge({
       </div>
 
       <div className="relative w-full overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-emerald-500/50 to-transparent" />
         <div className="px-5 pt-5 pb-4">
           {/* Contribution Calendar section */}
           <div className="flex items-center justify-between mb-4">
@@ -863,7 +892,6 @@ export default function GithubContributionBadge({
       </div>
 
       <div className="relative w-full overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-pink-500/40 to-transparent" />
 
         <div className="flex items-center justify-between px-5 pt-4 pb-2">
           <div className="flex items-center gap-2">
@@ -902,7 +930,7 @@ export default function GithubContributionBadge({
             Rajarshi Chakraborty's Contribution Graph
           </div>
 
-          <div className="w-full h-[180px]">
+          <div ref={chartWrapRef} className="w-full h-[180px]">
             {!chartMounted || loading ? (
               <div className="w-full h-full flex items-center justify-center animate-pulse">
                 <div className="flex flex-col items-center gap-3">
@@ -927,11 +955,6 @@ export default function GithubContributionBadge({
                       <stop offset="0%" stopColor="#ef4444" />
                       <stop offset="50%" stopColor="#ec4899" />
                       <stop offset="100%" stopColor="#8b5cf6" />
-                    </linearGradient>
-                    <linearGradient id="contribGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#ec4899" stopOpacity={0.28} />
-                      <stop offset="60%" stopColor="#8b5cf6" stopOpacity={0.08} />
-                      <stop offset="100%" stopColor="#8b5cf6" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid
@@ -1009,8 +1032,7 @@ export default function GithubContributionBadge({
                       stroke: "white",
                       strokeWidth: 2
                     }}
-                    fillOpacity={1}
-                    fill="url(#contribGradient)"
+                    fill="none"
                   />
                 </AreaChart>
               </ResponsiveContainer>
@@ -1024,7 +1046,6 @@ export default function GithubContributionBadge({
         </div>
       </div>
       <div className="relative w-full overflow-hidden justify-center items-center flex">
-        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-orange-500/40 to-transparent" />
 
         <div className="w-full px-1 sm:px-6 py-4 sm:py-5">
           <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full">
