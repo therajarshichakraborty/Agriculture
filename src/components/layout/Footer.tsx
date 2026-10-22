@@ -16,7 +16,7 @@ const navLinks = [
 
 const resourceLinks = [
   { href: "/resume.pdf", label: "Résumé" },
-  { href: "/pdfs/research-paper.pdf", label: "IEEE Paper" },
+  { href: "/pdfs/research-paper.pdf", label: "Research" },
   { href: portfolio.blog, label: "Hashnode" },
   { href: "/#dsa", label: "DSA Journey" }
 ];

@@ -1,7 +1,7 @@
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { DATA } from "@/data/resume";
 import { Button } from "@/components/ui/button";
-import ContactDialog from "@/components/section/contact-form";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function HireMeSection() {
@@ -40,13 +40,16 @@ export default function HireMeSection() {
           I’m just one message away - feel free to reach out on social media or
           email me directly, and I&apos;ll respond as soon as I can.
         </p>
-        <ContactDialog className="group inline-flex cursor-pointer items-center gap-1 rounded-sm font-medium text-blue-600 decoration-blue-600/40 underline-offset-4 transition-colors hover:text-blue-700  hover:underline hover:decoration-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 dark:text-blue-400 dark:hover:text-blue-300">
+        <Link
+          href="/contact"
+          className="group inline-flex cursor-pointer items-center gap-1 rounded-sm font-medium text-blue-600 decoration-blue-600/40 underline-offset-4 transition-colors hover:text-blue-700  hover:underline hover:decoration-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 dark:text-blue-400 dark:hover:text-blue-300"
+        >
           Contact me
           <ArrowUpRight
             aria-hidden="true"
             className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           />
-        </ContactDialog>
+        </Link>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
           <Button

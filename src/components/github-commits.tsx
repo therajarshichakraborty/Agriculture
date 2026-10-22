@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { GitCommit, ExternalLink } from "lucide-react";
+import { BrandGradientDefs } from "@/src/components/ui/brand-gradient";
 import { Marquee } from "@/components/ui/marquee";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
@@ -162,39 +163,43 @@ export default function GithubCommits({ username }: { username: string }) {
             No commits found.
           </div>
         ) : (
-          <Marquee
-            vertical
-            pauseOnHover
-            className="[--duration:30s] [--gap:0.75rem] h-[220px] w-full"
-            repeat={6}
-          >
-            {commits.map((commit) => (
-              <a
-                key={commit.sha}
-                href={commit.commitUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 py-1.5 transition-all duration-300 ease-out cursor-pointer w-full min-w-0 justify-start hover:bg-neutral-100/60 dark:hover:bg-neutral-800/30 rounded-lg px-2.5"
-              >
-                <GitCommit className="size-4 text-muted-foreground group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300 ease-out shrink-0" />
-                <div className="flex items-center justify-between min-w-0 flex-1 gap-4">
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 ease-out truncate group-hover:text-black dark:group-hover:text-white">
-                      {commit.message}
-                    </span>
-                    <span className="text-[10px] font-bold bg-neutral-50 dark:bg-neutral-900/60 px-1.5 py-0.5 rounded border border-neutral-200/60 dark:border-neutral-800/80 shrink-0 transition-all duration-300 ease-out group-hover:bg-white dark:group-hover:bg-neutral-900 group-hover:border-neutral-300 dark:group-hover:border-neutral-700">
-                      <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+          <>
+            <BrandGradientDefs id="commit-gradient" />
+            <Marquee
+              vertical
+              pauseOnHover
+              className="[--duration:30s] [--gap:0.75rem] h-[220px] w-full"
+              repeat={6}
+            >
+              {commits.map((commit) => (
+                <a
+                  key={commit.sha}
+                  href={commit.commitUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 py-1.5 transition-all duration-300 ease-out cursor-pointer w-full min-w-0 justify-start hover:bg-neutral-100/60 dark:hover:bg-neutral-800/30 rounded-lg px-2.5"
+                >
+                  <GitCommit
+                    color="url(#commit-gradient)"
+                    className="size-4 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110"
+                  />
+                  <div className="flex items-center justify-between min-w-0 flex-1 gap-4">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 ease-out truncate group-hover:text-black dark:group-hover:text-white">
+                        {commit.message}
+                      </span>
+                      <span className="shrink-0 bg-linear-to-r from-red-500 via-pink-500 to-violet-500 bg-clip-text text-[11px] font-bold text-transparent">
                         {commit.repoName}
                       </span>
+                    </div>
+                    <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 ease-out shrink-0 hidden sm:inline">
+                      {formatRelativeTime(commit.date)}
                     </span>
                   </div>
-                  <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 ease-out shrink-0 hidden sm:inline">
-                    {formatRelativeTime(commit.date)}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </Marquee>
+                </a>
+              ))}
+            </Marquee>
+          </>
         )}
       </div>
     </div>

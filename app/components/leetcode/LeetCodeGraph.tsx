@@ -15,6 +15,7 @@ import {
   TooltipTrigger
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
+import { BrandGradientDefs } from "@/src/components/ui/brand-gradient";
 import { LeetCode } from "@/components/ui/svgs/leetcode";
 import { Marquee } from "@/components/ui/marquee";
 import {
@@ -350,44 +351,50 @@ function RecentSubmissionsCard({
             No recent submissions found.
           </div>
         ) : (
-          <Marquee
-            vertical
-            pauseOnHover
-            className="[--duration:10s] [--gap:0.75rem] h-[220px] w-full"
-            repeat={6}
-          >
-            {displaySubmissions.map((sub, idx) => {
-              const submissionUrl = sub.id
-                ? `https://leetcode.com/submissions/detail/${sub.id}/`
-                : sub.titleSlug
-                  ? `https://leetcode.com/problems/${sub.titleSlug}/`
-                  : "https://leetcode.com/u/rajarshi_2005/";
+          <>
+            <BrandGradientDefs id="leetcode-gradient" />
+            <Marquee
+              vertical
+              pauseOnHover
+              className="[--duration:10s] [--gap:0.75rem] h-[220px] w-full"
+              repeat={6}
+            >
+              {displaySubmissions.map((sub, idx) => {
+                const submissionUrl = sub.id
+                  ? `https://leetcode.com/submissions/detail/${sub.id}/`
+                  : sub.titleSlug
+                    ? `https://leetcode.com/problems/${sub.titleSlug}/`
+                    : "https://leetcode.com/u/rajarshi_2005/";
 
-              return (
-                <a
-                  key={`${sub.id || sub.title}-${sub.timestamp}-${idx}`}
-                  href={submissionUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 py-1.5 transition-all duration-300 ease-out cursor-pointer w-full min-w-0 justify-start hover:bg-neutral-100/60 dark:hover:bg-neutral-800/30 rounded-lg px-2.5"
-                >
-                  <Code2 className="size-4 text-muted-foreground group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors duration-300 ease-out shrink-0" />
-                  <div className="flex items-center justify-between min-w-0 flex-1 gap-4">
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 ease-out truncate group-hover:text-black dark:group-hover:text-white">
-                        {sub.title}
-                      </span>
+                return (
+                  <a
+                    key={`${sub.id || sub.title}-${sub.timestamp}-${idx}`}
+                    href={submissionUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 py-1.5 transition-all duration-300 ease-out cursor-pointer w-full min-w-0 justify-start hover:bg-neutral-100/60 dark:hover:bg-neutral-800/30 rounded-lg px-2.5"
+                  >
+                    <Code2
+                      color="url(#leetcode-gradient)"
+                      className="size-4 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110"
+                    />
+                    <div className="flex items-center justify-between min-w-0 flex-1 gap-4">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 ease-out truncate group-hover:text-black dark:group-hover:text-white">
+                          {sub.title}
+                        </span>
+                      </div>
+                      {sub.timestamp && (
+                        <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 ease-out shrink-0 hidden sm:inline">
+                          {formatRelativeTime(sub.timestamp)}
+                        </span>
+                      )}
                     </div>
-                    {sub.timestamp && (
-                      <span className="text-[10px] text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 ease-out shrink-0 hidden sm:inline">
-                        {formatRelativeTime(sub.timestamp)}
-                      </span>
-                    )}
-                  </div>
-                </a>
-              );
-            })}
-          </Marquee>
+                  </a>
+                );
+              })}
+            </Marquee>
+          </>
         )}
       </div>
     </div>
