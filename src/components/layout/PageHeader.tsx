@@ -15,7 +15,7 @@ export function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <header className="relative isolate overflow-hidden pt-36 pb-14 md:pt-44 md:pb-20">
+    <header className="relative isolate overflow-hidden pt-20 pb-14 md:pt-28 md:pb-20">
       <div aria-hidden className="absolute inset-0 -z-10 bg-dot mask-radial-fade opacity-80" />
       <Spotlight className="-top-40 left-0 md:-top-24 md:left-72" fill="var(--brand)" />
       <Reveal className="mx-auto flex max-w-4xl flex-col items-center gap-5 px-6 text-center">

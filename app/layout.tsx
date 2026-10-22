@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/src/components/layout/ThemeProvider";
-import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer } from "@/src/components/layout/Footer";
 import Dock from "@/src/components/navbar";
 import CommandPalette from "@/src/components/command-palette";
@@ -47,10 +46,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fcfcfd" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0f" }
-  ]
+  themeColor: "#fdfdfe",
+  colorScheme: "light"
 };
 
 export default function RootLayout({
@@ -65,13 +62,13 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="light"
+          forcedTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col overflow-x-clip">
-              <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>
