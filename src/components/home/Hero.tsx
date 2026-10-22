@@ -1,145 +1,129 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, MapPin, Download } from "lucide-react";
-import { motion, type Variants } from "framer-motion";
-import { Button } from "@/src/components/ui/button";
-import { Badge } from "@/src/components/ui/badge";
+import { motion } from "motion/react";
+import { ArrowRight, Download, MapPin } from "lucide-react";
+import { Spotlight } from "@/src/components/aceternity/spotlight";
+import { FlipWords } from "@/src/components/aceternity/flip-words";
+import { TextGenerateEffect } from "@/src/components/aceternity/text-generate-effect";
+import { MovingBorderButton } from "@/src/components/aceternity/moving-border";
+import MultilingualGreeting from "@/src/components/multilingual-greeting";
+import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
 import { portfolio } from "@/src/config/portfolio";
 
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const }
-  })
-};
+const roles = [
+  "Full-Stack Engineer",
+  "AI Engineer",
+  "TypeScript Developer",
+  "System Designer"
+];
+
+const stats = [
+  { value: "Brand Voy", label: "Software Engineer" },
+  { value: "IEEE", label: "Published researcher" },
+  { value: "10+", label: "Production projects" },
+  { value: "8.13", label: "CGPA · CSE" }
+];
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 20, filter: "blur(6px)" },
+  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  transition: { duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] as const }
+});
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-      <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
-        {/* Text content */}
-        <div className="flex flex-col gap-6 text-center md:text-left md:max-w-xl">
-          {/* Available badge */}
+    <section className="relative isolate overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      {/* Backdrop */}
+      <div aria-hidden className="absolute inset-0 -z-10 bg-grid mask-radial-fade opacity-70" />
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-0 -z-10 h-130 w-225 -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--brand)_22%,transparent),transparent)] blur-2xl"
+      />
+      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="var(--brand-2)" />
+
+      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex flex-col gap-7">
           {portfolio.available && (
-            <motion.div
-              custom={0}
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              className="flex justify-center md:justify-start"
-            >
-              <Badge variant="secondary" className="gap-1.5 py-1 px-3 text-xs">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            <motion.div {...fadeUp(0)}>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/60 py-1 pr-3 pl-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
+              >
+                <span className="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2 py-0.5 font-medium text-emerald-500">
+                  <span className="relative flex size-1.5">
+                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
+                  </span>
+                  Available
                 </span>
-                Available for work
-              </Badge>
+                Open to internships, freelance & full-time roles
+                <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </motion.div>
           )}
 
-          {/* Name */}
+          <motion.div {...fadeUp(0.1)}>
+            <MultilingualGreeting />
+          </motion.div>
+
           <motion.h1
-            custom={1}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            {...fadeUp(0.2)}
+            className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl"
           >
-            Hi, I&apos;m{" "}
-            <span className="text-foreground">{portfolio.name}</span>
+            I build as a{" "}
+            <FlipWords words={roles} className="text-gradient-brand" />
           </motion.h1>
 
-          {/* Role */}
-          <motion.p
-            custom={2}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-xl font-medium text-muted-foreground"
-          >
-            {portfolio.role}
-          </motion.p>
+          <TextGenerateEffect
+            words={portfolio.shortBio}
+            highlight={["Full-Stack", "TypeScript", "AI", "Engineer", "scalable,", "production-grade"]}
+            className="max-w-xl text-base text-muted-foreground md:text-lg"
+          />
 
-          {/* Bio */}
-          <motion.p
-            custom={3}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-base text-muted-foreground leading-relaxed"
-          >
-            {portfolio.bio}
-          </motion.p>
-
-          {/* Location */}
-          <motion.div
-            custom={4}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="flex items-center justify-center gap-1.5 text-sm text-muted-foreground md:justify-start"
-          >
-            <MapPin className="h-4 w-4" />
-            {portfolio.location}
+          <motion.div {...fadeUp(0.4)} className="flex flex-wrap items-center gap-3">
+            <MovingBorderButton as={Link} href="/projects" containerClassName="h-11">
+              View my work
+              <ArrowRight className="size-4" />
+            </MovingBorderButton>
+            <a
+              href="/resume.pdf"
+              download="rajarshi-chakraborty-resume.pdf"
+              className="inline-flex h-11 items-center gap-2 rounded-[0.875rem] bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+            >
+              <Download className="size-4" />
+              Download résumé
+            </a>
+            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <MapPin className="size-4" />
+              {portfolio.location}
+            </span>
           </motion.div>
 
-          {/* CTAs */}
-          <motion.div
-            custom={5}
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="flex flex-col gap-3 sm:flex-row justify-center md:justify-start"
+          <motion.dl
+            {...fadeUp(0.5)}
+            className="mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4"
           >
-            <Button asChild size="lg">
-              <Link href="/projects">
-                View my work
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/contact">
-                <Download className="h-4 w-4" />
-                Download CV
-              </Link>
-            </Button>
-          </motion.div>
+            {stats.map((s) => (
+              <div key={s.label} className="bg-background/80 px-4 py-3 backdrop-blur">
+                <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                  {s.label}
+                </dt>
+                <dd className="mt-0.5 font-display text-lg font-semibold text-foreground">
+                  {s.value}
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
         </div>
 
-        {/* Avatar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="relative"
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="flex justify-center"
         >
-          <div className="relative h-56 w-56 sm:h-64 sm:w-64 md:h-80 md:w-80">
-            {/* Decorative ring */}
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-border animate-spin [animation-duration:20s]" />
-            {/* Avatar image */}
-            <div className="absolute inset-4 overflow-hidden rounded-full bg-secondary">
-              <Image
-                src={portfolio.avatar}
-                alt={portfolio.name}
-                fill
-                className="object-cover"
-                priority
-                onError={(e) => {
-                  // Fallback to initials if image fails
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
-              {/* Initials fallback */}
-              <div className="flex h-full w-full items-center justify-center text-4xl font-bold text-muted-foreground">
-                {portfolio.initials}
-              </div>
-            </div>
-          </div>
+          <HeroAvatarOrbit />
         </motion.div>
       </div>
     </section>
