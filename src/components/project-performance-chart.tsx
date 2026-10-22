@@ -152,8 +152,8 @@ export function ProjectPerformanceChart({ projectId }: { projectId: string }) {
     ? "rgba(255, 255, 255, 0.08)"
     : "rgba(0, 0, 0, 0.05)";
   const labelColor = isDark
-    ? "hsl(var(--muted-foreground))"
-    : "hsl(var(--muted-foreground))";
+    ? "var(--muted-foreground)"
+    : "var(--muted-foreground)";
 
   const renderChart = () => {
     switch (chartInfo.chartType) {
@@ -185,7 +185,7 @@ export function ProjectPerformanceChart({ projectId }: { projectId: string }) {
             <Tooltip
               contentStyle={{
                 backgroundColor: isDark ? "#090b11" : "#fefefe",
-                border: "1px solid hsl(var(--border))",
+                border: "1px solid var(--border)",
                 borderRadius: "12px",
                 fontSize: "12px"
               }}
@@ -221,7 +221,7 @@ export function ProjectPerformanceChart({ projectId }: { projectId: string }) {
             <Tooltip
               contentStyle={{
                 backgroundColor: isDark ? "#090b11" : "#fefefe",
-                border: "1px solid hsl(var(--border))",
+                border: "1px solid var(--border)",
                 borderRadius: "12px",
                 fontSize: "12px"
               }}
@@ -265,7 +265,7 @@ export function ProjectPerformanceChart({ projectId }: { projectId: string }) {
             <Tooltip
               contentStyle={{
                 backgroundColor: isDark ? "#090b11" : "#fefefe",
-                border: "1px solid hsl(var(--border))",
+                border: "1px solid var(--border)",
                 borderRadius: "12px",
                 fontSize: "12px"
               }}
