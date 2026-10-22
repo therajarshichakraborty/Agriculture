@@ -8,8 +8,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TechStack />
       <About />
+      <TechStack />
       <GithubActivity />
       <Research />
       <DSA />
