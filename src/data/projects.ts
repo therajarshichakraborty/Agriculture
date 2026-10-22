@@ -343,7 +343,7 @@ Talk-To-Your-GitHub bridges GitHub repository metadata with generative AI to del
     id: "Edith AI",
     title: "Edith AI",
     tagline: "Modern Open-Source Backend-as-a-Service Platform",
-    description: `Edith AI is a modern, open-source Backend-as-a-Service platform built for developers who want to move fast without sacrificing flexibility or control. Designed with a scalable monorepo architecture, OpenStack combines a powerful NestJS backend with a high-performance Next.js dashboard to deliver an exceptional developer experience across authentication, databases, realtime APIs, storage, serverless functions, and AI integrations.`,
+    description: `Edith AI is a modern, open-source Backend-as-a-Service platform built for developers who want to move fast without sacrificing flexibility or control. Designed with a scalable monorepo architecture, it combines a powerful NestJS backend with a high-performance Next.js dashboard to deliver an exceptional developer experience across authentication, databases, realtime APIs, storage, serverless functions, and AI integrations.`,
     longDescription: `Technologies: Next.js, React, TypeScript, Tailwind, shadcn/ui, NestJS, PostgreSQL, Redis, Docker, Turborepo, pnpm, Prisma, RabbitMQ, Socket.io.
 Edith AI combines a powerful NestJS backend with a high-performance Next.js dashboard to deliver an exceptional developer experience.
 
@@ -708,7 +708,7 @@ Focused on scalability, maintainability, and developer experience through modula
     //@ts-ignore
     category: "AI Productivity Platform",
 
-    duration: "June 2026 – July 2026",
+    duration: "June 2026 - July 2026",
 
     image: "/background/exeosai.png",
 
@@ -810,7 +810,7 @@ Focused on scalability, maintainability, and developer experience through modula
   {
     id: "zenith-cli",
     title: "ZenithCLI",
-    tagline: "Next-Gen AI Developer Workspace & CL",
+    tagline: "Next-Gen AI Developer Workspace & CLI",
     description: `Zenith CLI is a modern, AI-powered developer workspace that lives entirely inside your terminal.
 Powered by Google Gemini, Zenith combines conversational AI, intelligent tool execution, and autonomous project generation into a single CLI experience. Whether you're asking questions, searching the web, executing code, or scaffolding an entire application, Zenith keeps your workflow fast, interactive, and terminal-first.`,
     longDescription: `Technologies: Bun, TypeScript, Next.js, Express, PostgreSQL, Prisma, Better Auth, Vercel AI SDK, Gemini API, Tailwind, esbuild.
@@ -819,11 +819,9 @@ Implemented secure CLI-to-Web authentication by standardizing on the OAuth 2.0 D
 Built an autonomous agentic workspace generator utilizing the Vercel AI SDK and Gemini API to dynamically scaffold file-system structures, configure boilerplate (e.g., package.json), and generate production-ready code blocks.
 Integrated smart Function Calling (Tool Calling) pipelines, enabling the AI to execute sandboxed Python math engines, fetch live URLs for context injection (RAG), and invoke Google Search tools dynamically.
 Optimized CLI performance and startup latency by bundling TS modules into a single flat ESM target using tsup/esbuild and utilizing lazy-loaded class services.
-💡 Resume Tips for this section:
-Bold key terms: Notice how terms like OAuth 2.0 Device Authorization Flow (RFC 8628), Vercel AI SDK, and tsup/esbuild are bolded or highlighted. ATS scanners look for these exact terms, and it helps recruiters scan the page quickly.
-If you have a link: If you have the GitHub repository public, place it right next to the title:`,
+`,
     category: "Developer Tooling",
-    duration: "May 2026 – Present",
+    duration: "May 2026 - Present",
     image: "/background/zenith-cli-2.png",
     technologies: [
       { name: skills[0].name },
@@ -887,7 +885,7 @@ If you have a link: If you have the GitHub repository public, place it right nex
     longDescription:
       "Synapse UI offers a curated collection of reusable React components with both copy-paste support and seamless CLI installation via the Shadcn CLI. Every component is built with accessibility, scalability, and elegance in mind. The documentation site is powered by FumaDocs with MDX support, enabling rich interactive examples. Components integrate naturally with TailwindCSS and shadcn/ui, making them composable and easy to theme.",
     category: "UI Library",
-    duration: "Jan 2026 – May 2026",
+    duration: "Jan 2026 - May 2026",
     image: "/background/synapseui-2.png",
     technologies: [
       { name: "Next.js" },
@@ -943,7 +941,7 @@ If you have a link: If you have the GitHub repository public, place it right nex
     longDescription:
       "SocketPoll enables ultra-low latency live polls, votes, and audience interactions at scale. Built with a modern full-stack architecture using React, Vite, Express, Socket.io, PostgreSQL, and Drizzle, it delivers real-time state synchronization across thousands of concurrent participants. The platform features live result streaming, session management, presenter controls, and responsive UI built with shadcn/ui and Tailwind.",
     category: "Real-Time",
-    duration: "Mar 2026 – Mar 2026",
+    duration: "Mar 2026",
     image: "/background/socketpoll-2.png",
     technologies: [
       { name: "React" },
@@ -1006,7 +1004,7 @@ If you have a link: If you have the GitHub repository public, place it right nex
     longDescription:
       "LinkedUp leverages LangChain's prompt pipeline architecture with Groq's ultra-fast LLM inference to generate high-quality, context-aware LinkedIn posts in seconds. Users can input their topic, tone, and target audience, and the system produces polished, engagement-optimized content. The Pydantic data models ensure structured output, while Streamlit provides an interactive, zero-friction frontend.",
     category: "AI / Python",
-    duration: "April 2023 – September 2023",
+    duration: "Apr 2023 - Sep 2023",
     image: "/background/linkedup-2.png",
     technologies: [
       { name: "Python" },
@@ -1060,7 +1058,7 @@ If you have a link: If you have the GitHub repository public, place it right nex
     longDescription:
       "Mini-TailwindCSS is a runtime CSS utility engine that parses custom utility class names and dynamically injects styles into the browser. No build step, no preprocessor, no external framework required. Built with vanilla JavaScript and a modular utility parsing architecture, it supports responsive classes, extensible class mapping, and rapid UI prototyping. The engine is published as an NPM package and ships with a React integration layer.",
     category: "Frontend",
-    duration: "Feb 2026 – Feb 2026",
+    duration: "Feb 2026",
     image: "/background/mini-tailwind-2.png",
     technologies: [
       { name: "JavaScript" },
