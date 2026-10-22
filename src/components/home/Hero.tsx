@@ -43,7 +43,7 @@ export function Hero() {
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="var(--brand-2)" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.15fr_0.85fr]">
-        <div className="flex flex-col gap-7">
+        <div className="flex min-w-0 flex-col gap-7">
           {portfolio.available && (
             <motion.div {...fadeUp(0)}>
               <Link
@@ -57,7 +57,10 @@ export function Hero() {
                   </span>
                   Available
                 </span>
-                Open to internships, freelance & full-time roles
+                <span className="hidden sm:inline">
+                  Open to internships, freelance & full-time roles
+                </span>
+                <span className="sm:hidden">Open to new roles</span>
                 <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </motion.div>
@@ -72,7 +75,9 @@ export function Hero() {
             className="font-display text-3xl font-semibold tracking-normal text-foreground sm:text-4xl md:text-5xl"
           >
             I build as a{" "}
-            <FlipWords words={roles} className="text-gradient-brand" />
+            <span className="block sm:inline">
+              <FlipWords words={roles} className="text-gradient-brand" />
+            </span>
           </motion.h1>
 
           <TextGenerateEffect
