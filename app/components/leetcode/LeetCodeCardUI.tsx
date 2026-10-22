@@ -41,12 +41,12 @@ function Stat({ color, gradientClass, label, value, max, delay }: StatProps) {
       initial={{ opacity: 0, x: -8 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, delay }}
-      className="group flex flex-col gap-1 cursor-pointer"
+      className="flex flex-col gap-1"
     >
-      <div className="flex items-center justify-between text-xs transition-transform duration-200 ease-out group-hover:translate-x-1">
+      <div className="flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
           <span
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:shadow-[0_0_8px_rgba(168,85,247,0.6)] ${color}`}
+            className={`w-2.5 h-2.5 rounded-full ${color}`}
           />
           <span className="text-zinc-600 dark:text-zinc-300 font-medium">
             {label}
@@ -80,7 +80,6 @@ export default function LeetCodeCardUI({ data }: { data: LeetCodeStats }) {
       <motion.div
         initial={{ opacity: 0, y: 15, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        whileHover={{ y: -4 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="
           relative
@@ -88,9 +87,6 @@ export default function LeetCodeCardUI({ data }: { data: LeetCodeStats }) {
           p-4 sm:p-5 rounded-2xl
           bg-transparent
           backdrop-blur-xl
-          transition-all duration-300
-          hover:border-violet-500/30 dark:hover:border-violet-500/30
-          hover:shadow-2xl hover:shadow-violet-500/15
           overflow-hidden
         "
       >

@@ -29,7 +29,7 @@ const SHEETS = [
     href: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2",
     description:
       "Striver's step-by-step A to Z DSA course on takeUforward, taking you from the basics to advanced patterns.",
-    tags: ["BEGINNER TO ADVANCED", "VIDEO SOLUTIONS"]
+    tags: ["BEGINNER TO ADVANCED"]
   }
 ];
 

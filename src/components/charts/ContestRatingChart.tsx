@@ -3,7 +3,6 @@
 import {
   Line,
   LineChart,
-  Tooltip,
   XAxis,
   YAxis,
   ResponsiveContainer,
@@ -11,8 +10,6 @@ import {
   CartesianGrid
 } from "recharts";
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 type ContestDataItem = {
   date: string;
@@ -26,18 +23,13 @@ type ContestChartData = {
 };
 
 export default function ContestRatingChart({ data }: ContestChartData) {
-  const { resolvedTheme } = useTheme(); // ✅ FIXED (inside component)
 
-  // ✅ Prevent hydration mismatch (important in Next.js)
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
 
   if (!data || data.length === 0) {
     return <div className="text-xs text-muted-foreground">No contest data</div>;
   }
 
-  const strokeColor =
-    mounted && resolvedTheme === "dark" ? "#e2463d" : "#d85413";
+  const strokeColor = "#ef4444";
 
   // const xTicks = [0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600];
   const yTicks = [1200, 1300, 1400, 1500];
@@ -56,9 +48,10 @@ export default function ContestRatingChart({ data }: ContestChartData) {
         Contest Rating Progress
       </h2>
 
-      <div className="w-full h-[220px] mx-auto">
+      <div className="w-full h-[220px] mx-auto pointer-events-none select-none [&_*]:outline-none">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
+            accessibilityLayer={false}
             data={data}
             height={600}
             margin={{ left: 0, right: 15, top: 10, bottom: 10 }}
@@ -80,27 +73,6 @@ export default function ContestRatingChart({ data }: ContestChartData) {
               interval={0}
             />
 
-            <Tooltip
-              formatter={(value, name) => [
-                value,
-                name === "rating" ? "Rating" : "Ranking"
-              ]}
-              contentStyle={{
-                backgroundColor: "var(--popover)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-                boxShadow: "0 10px 30px -10px rgba(0,0,0,0.3)"
-              }}
-              labelStyle={{
-                color: "var(--foreground)",
-                fontWeight: 600
-              }}
-              itemStyle={{
-                color: strokeColor,
-                fontWeight: 600
-              }}
-            />
-
             <Legend wrapperStyle={{ fontSize: "10px" }} />
 
             {/* Rating Line */}
@@ -109,7 +81,8 @@ export default function ContestRatingChart({ data }: ContestChartData) {
               dataKey="rating"
               stroke={strokeColor}
               strokeWidth={2}
-              dot={true}
+              dot={{ r: 3, fill: "#fff", stroke: strokeColor, strokeWidth: 1.5 }}
+              activeDot={false}
               name="Rating"
               className="dark:text-white"
             />
