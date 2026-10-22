@@ -57,7 +57,7 @@ export function Footer() {
   const socials = Object.values(DATA.contact.social);
 
   return (
-    <footer className="relative mt-24 overflow-hidden">
+    <footer className="relative mt-10 overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -149,7 +149,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: "0%" }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.06, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="inline-block bg-linear-to-b from-foreground/15 to-foreground/[0.03] bg-clip-text text-[clamp(4.5rem,17vw,15rem)] font-bold leading-[0.85] tracking-tighter text-transparent transition-all duration-500 hover:-translate-y-2 hover:from-red-500 hover:via-pink-500 hover:to-violet-500"
+            className="-mx-[0.085em] inline-block bg-linear-to-b from-foreground/15 to-foreground/[0.03] bg-clip-text px-[0.06em] py-[0.04em] text-[clamp(4rem,15vw,13.5rem)] font-bold leading-none text-transparent transition-all duration-500 hover:-translate-y-2 hover:from-red-500 hover:via-pink-500 hover:to-violet-500"
           >
             {letter}
           </motion.span>
