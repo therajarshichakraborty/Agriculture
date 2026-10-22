@@ -26,7 +26,6 @@ const columns = [
 ];
 
 export function Footer() {
-  const year = new Date().getFullYear();
   const socials = Object.values(DATA.contact.social);
 
   return (
@@ -35,7 +34,7 @@ export function Footer() {
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand/60 to-transparent"
       />
-      <div className="mx-auto max-w-6xl px-6 pt-16 pb-28">
+      <div className="mx-auto max-w-6xl px-6 pt-16 pb-[calc(14vw+5rem)]">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div className="space-y-5">
             <Link href="/" className="inline-flex items-center gap-2.5">
@@ -92,19 +91,6 @@ export function Footer() {
               </ul>
             </div>
           ))}
-        </div>
-
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>
-            © {year} {portfolio.name}. All rights reserved.
-          </p>
-          <p className="flex items-center gap-2">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
-            </span>
-            {portfolio.location}
-          </p>
         </div>
       </div>
 
