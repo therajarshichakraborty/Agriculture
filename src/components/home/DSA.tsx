@@ -1,5 +1,4 @@
 import { Section, Reveal } from "@/src/components/aceternity/section";
-import { GlowCard } from "@/src/components/aceternity/glow-card";
 import LeetCodeCard from "@/app/components/leetcode/LeetCodeCard";
 import LeetCodeGraph from "@/app/components/leetcode/LeetCodeGraph";
 import DSASheetsCard from "@/app/components/leetcode/DSASheetsCard";
@@ -35,23 +34,10 @@ export async function DSA() {
     >
       <div className="grid gap-4 lg:grid-cols-5">
         <Reveal className="lg:col-span-2">
-          <GlowCard bordered={false} className="h-full">
-            <div className="p-2">
-              <LeetCodeCard />
-            </div>
-          </GlowCard>
+          <LeetCodeCard />
         </Reveal>
         <Reveal delay={0.1} className="lg:col-span-3">
-          <GlowCard bordered={false} className="h-full">
-            <div className="flex h-full flex-col p-5">
-              <p className="mb-4 text-sm font-semibold tracking-tight">
-                Contest rating
-              </p>
-              <div className="flex-1">
-                <ContestRatingChart data={contests} />
-              </div>
-            </div>
-          </GlowCard>
+          <ContestRatingChart data={contests} />
         </Reveal>
         <Reveal delay={0.15} className="lg:col-span-5">
           <LeetCodeGraph />
