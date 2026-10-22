@@ -10,7 +10,7 @@ export default function HireMeSection() {
       <div className="absolute -top-4 z-10 rounded-full border border-border bg-card/70 px-3.5 py-1 shadow-sm backdrop-blur left-1/2 -translate-x-1/2">
         <span className="text-xs font-medium tracking-wide text-muted-foreground">Hire Me</span>
       </div>
-      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
+      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden opacity-40">
         <FlickeringGrid
           className="h-full w-full"
           squareSize={10}
@@ -24,8 +24,7 @@ export default function HireMeSection() {
 
       <div className="relative flex flex-col items-center gap-5 text-center">
         <h2
-          className="
-  text-3xl font-bold tracking-tighter sm:text-5xl"
+          className="text-gradient font-display text-4xl font-semibold tracking-tight sm:text-6xl"
         >
           Let’s Build Something Impactful
         </h2>
