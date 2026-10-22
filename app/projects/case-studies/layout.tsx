@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { DATA } from "@/data/resume";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Case Studies",
   description:
     "Explore full-stack, AI, and backend projects engineered by Rajarshi Chakraborty, including OpenStack, ApexZero, ZenithCLI, and Synapse UI.",
   openGraph: {
     title: `Projects | ${DATA.name}`,
     description:
       "Explore full-stack, AI, and backend projects engineered by Rajarshi Chakraborty.",
-    url: `${DATA.url}/projects`,
+    url: `${DATA.url}/projects/case-studies`,
     siteName: `${DATA.name} Portfolio`,
     type: "website"
   },
