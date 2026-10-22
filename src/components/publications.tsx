@@ -17,8 +17,8 @@ export function Publications() {
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center w-full">
           <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-          <div className="border bg-primary z-10 rounded-xl px-4 py-1">
-            <span className="text-white dark:text-black text-sm font-medium ">
+          <div className="z-10 rounded-full border border-border bg-card/70 px-3.5 py-1 shadow-sm backdrop-blur">
+            <span className="text-xs font-medium tracking-wide text-muted-foreground">
               Publications
             </span>
           </div>
@@ -26,7 +26,7 @@ export function Publications() {
         </div>
         <br />
         <div className="flex flex-col gap-y-3 items-center justify-center">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl inline-block text-center">
+          <h2 className="text-gradient font-display text-3xl font-semibold tracking-normal sm:text-4xl md:text-5xl inline-block text-center">
             Checkout My Latest Publications
           </h2>
           <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">

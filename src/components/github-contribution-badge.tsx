@@ -957,7 +957,7 @@ export default function GithubContributionBadge({
                     }
                     tickLine={true}
                     axisLine={true}
-                    tick={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }}
+                    tick={{ fontSize: 9, fill: "var(--muted-foreground)" }}
                     stroke={
                       isDark
                         ? "rgba(148, 163, 184, 0.25)"
@@ -967,7 +967,7 @@ export default function GithubContributionBadge({
                   <YAxis
                     tickLine={true}
                     axisLine={true}
-                    tick={{ fontSize: 9, fill: "hsl(var(--muted-foreground))" }}
+                    tick={{ fontSize: 9, fill: "var(--muted-foreground)" }}
                     width={25}
                     allowDecimals={false}
                     ticks={[0, 5, 10, 15, 20, 25]}
