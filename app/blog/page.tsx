@@ -8,16 +8,38 @@ import { paginate, normalizePage } from "@/src/lib/pagination";
 import { portfolio } from "@/src/config/portfolio";
 import { cn } from "@/src/lib/utils";
 import { Underline } from "@/src/components/ui/underline";
+import { JsonLd } from "@/src/components/seo/JsonLd";
+import {
+  PERSON_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  breadcrumbs,
+  graph,
+  pageMetadata
+} from "@/src/lib/seo";
 
 const description =
-  "Articles on AI engineering, Node.js, Git and system design by Rajarshi Chakraborty.";
+  "Rajarshi Chakraborty's blog: hands-on articles on JavaScript, Node.js, Express, networking, Git, LLMs and AI engineering.";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description,
-  openGraph: { title: "Blog", description },
-  twitter: { card: "summary_large_image", title: "Blog", description }
-};
+// Each results page is its own canonical URL; publication filters are
+// alternate views of the same posts, so they stay out of the index.
+export async function generateMetadata({
+  searchParams
+}: {
+  searchParams: Promise<{ page?: string; pub?: string }>;
+}): Promise<Metadata> {
+  const { page, pub } = await searchParams;
+  const pageNumber = Math.max(1, parseInt(page ?? "1", 10) || 1);
+  return {
+    ...pageMetadata({
+      title: pageNumber > 1 ? `Blog, page ${pageNumber}` : "Blog",
+      description,
+      path: pageNumber > 1 ? `/blog?page=${pageNumber}` : "/blog",
+      ogImage: false
+    }),
+    ...(pub && { robots: { index: false, follow: true } })
+  };
+}
 
 export const revalidate = 3600;
 
@@ -79,8 +101,34 @@ export default async function BlogPage({
     }
   ];
 
+  const blogSchema = {
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    url: `${SITE_URL}/blog`,
+    name: "Rajarshi Chakraborty's Blog",
+    description,
+    inLanguage: "en",
+    isPartOf: { "@id": WEBSITE_ID },
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": PERSON_ID },
+    blogPost: allArticles.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      url: post.url,
+      mainEntityOfPage: post.url,
+      datePublished: new Date(post.publishedAt).toISOString(),
+      ...(post.cover && { image: post.cover }),
+      author: { "@id": PERSON_ID },
+      publisher: { "@type": "Organization", name: post.publication }
+    }))
+  };
+
   return (
     <>
+      <JsonLd
+        data={graph(blogSchema, breadcrumbs([{ name: "Blog", path: "/blog" }]))}
+      />
       <PageHeader
         plain
         title={

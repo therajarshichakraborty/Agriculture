@@ -26,7 +26,7 @@ export function Hero() {
             <MultilingualGreeting />
           </motion.div>
 
-          <motion.h1
+          <motion.h2
             {...fadeUp(0.1)}
             className="font-display text-[1.75rem] font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
@@ -35,7 +35,7 @@ export function Hero() {
               words={roles}
               gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
             />
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             {...fadeUp(0.2)}
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="flex justify-center"
+          className="hidden justify-center md:flex"
         >
           <div className="-mt-2 lg:-mt-10">
             <HeroAvatarOrbit />

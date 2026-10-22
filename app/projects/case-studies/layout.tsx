@@ -1,25 +1,11 @@
-import type { Metadata } from "next";
-import { DATA } from "@/data/resume";
+import { pageMetadata } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Case Studies",
   description:
-    "Explore full-stack, AI, and backend projects engineered by Rajarshi Chakraborty, including OpenStack, ApexZero, ZenithCLI, and Synapse UI.",
-  openGraph: {
-    title: `Projects | ${DATA.name}`,
-    description:
-      "Explore full-stack, AI, and backend projects engineered by Rajarshi Chakraborty.",
-    url: `${DATA.url}/projects/case-studies`,
-    siteName: `${DATA.name} Portfolio`,
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `Projects | ${DATA.name}`,
-    description:
-      "Explore full-stack, AI, and backend projects engineered by Rajarshi Chakraborty."
-  }
-};
+    "Engineering case studies by Rajarshi Chakraborty: architecture, trade-offs and lessons from full-stack, AI and developer-tooling projects.",
+  path: "/projects/case-studies"
+});
 
 export default function ProjectsLayout({
   children

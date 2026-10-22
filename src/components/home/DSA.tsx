@@ -42,17 +42,17 @@ export async function DSA() {
       description="Consistent practice on LeetCode: live stats, contest rating and the sheets I train with."
       className={HOME_WIDTH}
     >
-      <div className="grid gap-4 lg:grid-cols-5">
-        <Reveal className="lg:col-span-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">
+        <Reveal className="min-w-0 lg:col-span-2">
           <LeetCodeCard />
         </Reveal>
-        <Reveal delay={0.1} className="lg:col-span-3">
+        <Reveal delay={0.1} className="min-w-0 lg:col-span-3">
           <ContestRatingChart data={contests} />
         </Reveal>
-        <Reveal delay={0.15} className="lg:col-span-5">
+        <Reveal delay={0.15} className="min-w-0 lg:col-span-5">
           <LeetCodeGraph />
         </Reveal>
-        <Reveal delay={0.2} className="lg:col-span-5">
+        <Reveal delay={0.2} className="min-w-0 lg:col-span-5">
           <DSASheetsCard />
         </Reveal>
       </div>

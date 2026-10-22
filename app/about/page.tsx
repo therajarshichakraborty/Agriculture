@@ -1,20 +1,28 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/src/components/layout/PageHeader";
 import { Bio } from "@/src/components/about/Bio";
 import { Experience } from "@/src/components/about/Experience";
 import { Education } from "@/src/components/about/Education";
 import { Research } from "@/src/components/home/Showcase";
-import { portfolio } from "@/src/config/portfolio";
 import { Underline } from "@/src/components/ui/underline";
+import { JsonLd } from "@/src/components/seo/JsonLd";
+import { breadcrumbs, graph, pageMetadata, profilePage } from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "About",
-  description: `Learn more about ${portfolio.name}, ${portfolio.role} based in ${portfolio.location}.`
-};
+  description:
+    "About Rajarshi Chakraborty: Software Engineer at Brand Voy, UnderGrad Researcher at Techno Main Salt Lake and community lead at Samarth TMSL and Geekonix, Kolkata.",
+  path: "/about"
+});
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={graph(
+          profilePage("/about"),
+          breadcrumbs([{ name: "About", path: "/about" }])
+        )}
+      />
       <PageHeader
         plain
         title={

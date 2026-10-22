@@ -47,7 +47,7 @@ export default function HeroAvatarOrbit() {
   ];
 
   return (
-    <div className="relative flex items-center justify-center w-[140px] h-[160px] sm:w-[190px] sm:h-[190px] md:w-[340px] md:h-[340px] lg:w-[370px] lg:h-[370px] overflow-visible group/orbit-container">
+    <div className="relative flex items-center justify-center size-[272px] min-[380px]:size-[308px] sm:size-[352px] md:size-[396px] lg:size-[370px] overflow-visible group/orbit-container">
       {/* Inline styles for starry float, revolve & twinkle animations */}
       <style
         dangerouslySetInnerHTML={{
@@ -90,7 +90,7 @@ export default function HeroAvatarOrbit() {
       />
 
       {/* Actual Orbit Widget (Scaled to fit parent boundaries) */}
-      <div className="absolute flex items-center justify-center select-none w-[440px] h-[440px] scale-[0.48] sm:scale-[0.64] md:scale-[0.8] lg:scale-[0.86] transition-all duration-500 origin-center">
+      <div className="absolute flex items-center justify-center select-none w-[440px] h-[440px] scale-[0.62] min-[380px]:scale-[0.7] sm:scale-[0.8] md:scale-[0.9] lg:scale-[0.86] transition-all duration-500 origin-center">
         {/* Ambient Pulsing Glow Background */}
         <div className="absolute w-[260px] h-[260px] rounded-full bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-pink-500/10 dark:from-blue-500/15 dark:via-indigo-500/15 dark:to-pink-500/15 blur-2xl animate-pulse -z-10" />
 

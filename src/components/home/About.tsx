@@ -21,7 +21,7 @@ export function About() {
         </>
       }
       description="A product-minded engineer who cares about clean architecture, performance and shipping things people actually use."
-      className={`${HOME_WIDTH} pt-28 md:pt-44`}
+      className={`${HOME_WIDTH} pt-16 md:pt-44`}
     >
       <div className="flex flex-col gap-10">
         <div className="mx-auto flex max-w-3xl flex-col gap-5 text-left">

@@ -7,42 +7,77 @@ import Dock from "@/src/components/navbar";
 import CommandPalette from "@/src/components/command-palette";
 import { TooltipProvider } from "@/src/components/ui/tooltip";
 import { portfolio } from "@/src/config/portfolio";
+import { JsonLd } from "@/src/components/seo/JsonLd";
+import {
+  KEYWORDS,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_URL,
+  graph,
+  person,
+  website
+} from "@/src/lib/seo";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-
-const title = `${portfolio.name} | ${portfolio.role}`;
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(portfolio.website),
-  title: { default: title, template: `%s | ${portfolio.name}` },
-  description: portfolio.bio,
-  keywords: [
-    "Rajarshi Chakraborty",
-    "Full-Stack Developer",
-    "AI Engineer",
-    "TypeScript",
-    "Next.js",
-    "Software Engineer Kolkata",
-    "Portfolio"
-  ],
-  authors: [{ name: portfolio.name, url: portfolio.website }],
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s | ${portfolio.name}` },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: KEYWORDS,
+  authors: [{ name: portfolio.name, url: SITE_URL }],
   creator: portfolio.name,
+  publisher: portfolio.name,
+  category: "technology",
+  alternates: { canonical: "/" },
   openGraph: {
-    title,
-    description: portfolio.shortBio,
-    url: portfolio.website,
-    siteName: `${portfolio.name} Portfolio`,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+    siteName: SITE_NAME,
     locale: "en_US",
-    type: "website"
+    type: "profile",
+    firstName: "Rajarshi",
+    lastName: "Chakraborty",
+    username: "therajarshichakraborty",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${portfolio.name}, Full-Stack & AI Engineer`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description: portfolio.shortBio,
-    creator: portfolio.twitterHandle
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: portfolio.twitterHandle,
+    site: portfolio.twitterHandle,
+    images: ["/opengraph-image"]
   },
-  robots: { index: true, follow: true }
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  },
+  // Search Console ownership token carried over from the previous portfolio.
+  verification: { google: "4rKUkgp1GvjwtPFpZWzwQwBiyVWY5DF-fuk5YwmEw0o" },
+  formatDetection: { telephone: false, address: false, email: false },
+  appleWebApp: { title: portfolio.name, statusBarStyle: "default" }
 };
 
 export const viewport: Viewport = {
@@ -60,6 +95,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <JsonLd data={graph(website, person)} />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

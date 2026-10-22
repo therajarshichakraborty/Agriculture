@@ -246,7 +246,7 @@ function StatsBar({
   ];
 
   return (
-    <div className="grid grid-cols-5 gap-1 sm:gap-3 mb-4">
+    <div className="grid grid-cols-3 gap-x-1 gap-y-3 sm:grid-cols-5 sm:gap-3 mb-4">
       {stats.map(({ icon, label, value, sub }) => (
         <div
           key={label}
@@ -254,7 +254,7 @@ function StatsBar({
         >
           <div className="flex items-center gap-1 sm:gap-1.5">
             <span className="[&>svg]:size-3 sm:[&>svg]:size-4">{icon}</span>
-            <span className="text-[8px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-tight sm:tracking-wider text-center truncate">
+            <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wide sm:tracking-wider text-center truncate">
               {label}
             </span>
           </div>
@@ -262,7 +262,7 @@ function StatsBar({
             {loading ? (
               <span className="inline-block w-8 sm:w-10 h-5 sm:h-6 bg-muted/40 animate-pulse rounded" />
             ) : (
-              <span className="text-xs sm:text-xl font-bold text-foreground tabular-nums truncate">
+              <span className="text-lg sm:text-xl font-bold text-foreground tabular-nums truncate">
                 {value}
               </span>
             )}

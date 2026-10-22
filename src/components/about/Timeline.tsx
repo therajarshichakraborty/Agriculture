@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Fragment, useRef, type ReactNode } from "react";
-import { motion, useScroll, useSpring } from "motion/react";
+import { motion, useInView, useScroll, useSpring } from "motion/react";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { Reveal } from "@/src/components/aceternity/section";
 
@@ -80,6 +80,9 @@ export function TimelineItem({
     damping: 26,
     mass: 0.3
   });
+  // Watch the whole entry: the 40px logo alone is too small to trigger
+  // reliably on phones, which left it stuck invisible.
+  const entered = useInView(itemRef, { once: true, margin: "-80px" });
 
   return (
     <li ref={itemRef} className="group/item relative pb-14 last:pb-0">
@@ -96,8 +99,7 @@ export function TimelineItem({
       <Reveal delay={index * 0.05} className="relative pl-14 sm:pl-16">
         <motion.span
           initial={{ scale: 0.6, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true, margin: "-80px" }}
+          animate={entered ? { scale: 1, opacity: 1 } : undefined}
           transition={{ type: "spring", stiffness: 320, damping: 18 }}
           className="absolute top-0 left-0 flex size-10 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-border transition-shadow duration-300 group-hover/item:shadow-md group-hover/item:ring-foreground/30"
         >

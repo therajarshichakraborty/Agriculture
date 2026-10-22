@@ -722,7 +722,7 @@ export default function GithubContributionBadge({
 
   return (
     <div className="w-full mt-6 flex flex-col gap-5">
-      <div className="grid grid-cols-4 gap-1 sm:gap-3">
+      <div className="grid grid-cols-2 gap-x-2 gap-y-3 sm:grid-cols-4 sm:gap-3">
         {summaryStats.map(({ icon, label, value, sub, isLoading }) => (
           <div
             key={label}
@@ -730,7 +730,7 @@ export default function GithubContributionBadge({
           >
             <div className="flex items-center justify-center gap-1 sm:gap-1.5">
               <span className="[&>svg]:size-3 sm:[&>svg]:size-4">{icon}</span>
-              <span className="text-[8px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-tight sm:tracking-wider truncate">
+              <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-wide sm:tracking-wider truncate">
                 {label}
               </span>
             </div>
@@ -738,11 +738,11 @@ export default function GithubContributionBadge({
               {isLoading ? (
                 <span className="inline-block w-8 sm:w-10 h-5 sm:h-6 bg-muted/40 animate-pulse rounded" />
               ) : (
-                <span className="text-sm sm:text-2xl font-bold text-foreground tabular-nums truncate">
+                <span className="text-xl sm:text-2xl font-bold text-foreground tabular-nums truncate">
                   {value}
                 </span>
               )}
-              <span className="text-[8px] sm:text-[10px] text-muted-foreground truncate">
+              <span className="text-[10px] text-muted-foreground truncate">
                 {sub}
               </span>
             </div>
@@ -753,8 +753,8 @@ export default function GithubContributionBadge({
       <div className="relative w-full overflow-hidden">
         <div className="px-5 pt-5 pb-4">
           {/* Contribution Calendar section */}
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
+          <div className="mb-4 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-2">
               <Icons.github className="size-4 text-foreground/70" />
               <span className="text-sm font-semibold text-foreground tracking-tight">
                 Contribution Calendar
@@ -769,7 +769,7 @@ export default function GithubContributionBadge({
                 </span>
               )}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex w-full items-center justify-between gap-2 sm:w-auto sm:justify-start">
               <YearSelector
                 activeYears={activeYears}
                 selected={selectedYear}

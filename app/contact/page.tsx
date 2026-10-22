@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ArrowUpRight, Phone } from "lucide-react";
 import {
   ContactForm,
@@ -13,11 +12,43 @@ import {
   SECONDARY_EMAIL,
   composeUrl
 } from "@/src/lib/contact";
-import { Underline } from "@/src/components/ui/underline";
+import { JsonLd } from "@/src/components/seo/JsonLd";
+import {
+  SITE_URL,
+  WEBSITE_ID,
+  breadcrumbs,
+  graph,
+  pageMetadata,
+  person
+} from "@/src/lib/seo";
 
-export const metadata: Metadata = {
+const description =
+  "Contact Rajarshi Chakraborty, Full-Stack & AI Engineer in Kolkata, about internships, full-time roles, freelance projects or collaborations.";
+
+export const metadata = pageMetadata({
   title: "Contact",
-  description: `Get in touch with ${portfolio.name} for internships, freelance work and collaborations.`
+  description,
+  path: "/contact"
+});
+
+const contactPage = {
+  "@type": "ContactPage",
+  "@id": `${SITE_URL}/contact#page`,
+  url: `${SITE_URL}/contact`,
+  name: "Contact Rajarshi Chakraborty",
+  description,
+  isPartOf: { "@id": WEBSITE_ID },
+  mainEntity: {
+    ...person,
+    telephone: portfolio.phone.replace(/s/g, ""),
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "professional inquiries",
+      email: CONTACT_EMAIL,
+      telephone: portfolio.phone.replace(/s/g, ""),
+      availableLanguage: ["English", "Bengali"]
+    }
+  }
 };
 
 const channels = [
@@ -68,6 +99,12 @@ const channels = [
 export default function ContactPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-6 pt-20 pb-24 md:pt-28">
+      <JsonLd
+        data={graph(
+          contactPage,
+          breadcrumbs([{ name: "Contact", path: "/contact" }])
+        )}
+      />
       <header className="max-w-3xl">
         <Reveal>
           <p className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground">
@@ -80,7 +117,7 @@ export default function ContactPage() {
         </Reveal>
         <Reveal delay={0.05}>
           <h1 className="mt-5 text-4xl leading-[1.05] font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
-            Got an <Underline>idea</Underline>?
+            Got an idea?
             <br />
             <GradientText>Let&apos;s make it real.</GradientText>
           </h1>

@@ -15,7 +15,7 @@ const paragraphs = DATA.story.split(/\n\s*\n/);
 export function Bio() {
   return (
     <section className="mx-auto max-w-6xl px-6 pb-12">
-      <div className="grid items-start gap-12 md:grid-cols-[320px_1fr] md:gap-16">
+      <div className="grid items-start gap-12 md:grid-cols-[240px_1fr] md:gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
         <Reveal>
           <Card3D className="mx-auto w-full max-w-xs">
             <div className="relative aspect-4/5 overflow-hidden rounded-3xl border border-border bg-secondary shadow-2xl">
