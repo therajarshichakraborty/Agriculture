@@ -9,7 +9,8 @@ const nextConfig = {
       { protocol: "https", hostname: "github.com" },
       { protocol: "https", hostname: "avatars.githubusercontent.com" },
       { protocol: "https", hostname: "**.r2.dev" },
-      { protocol: "https", hostname: "s3.amazonaws.com" }
+      { protocol: "https", hostname: "s3.amazonaws.com" },
+      { protocol: "https", hostname: "cdn.hashnode.com" }
     ]
   },
   async headers() {
