@@ -1,3 +1,5 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import { AnimatedFolder } from "@/components/3d-folder";
 import type { FolderProject } from "@/components/3d-folder";
