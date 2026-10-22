@@ -1,36 +1,38 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/src/lib/utils";
-import { portfolio } from "@/src/config/portfolio";
 
 interface FilterBarProps {
+  categories: string[];
   active: string;
   onChange: (category: string) => void;
 }
 
-export function FilterBar({ active, onChange }: FilterBarProps) {
+export function FilterBar({ categories, active, onChange }: FilterBarProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="flex flex-wrap gap-2"
-    >
-      {portfolio.categories.map((category) => (
+    <div className="glass inline-flex max-w-full flex-wrap justify-center gap-1 rounded-2xl border border-border p-1">
+      {categories.map((category) => (
         <button
           key={category}
           onClick={() => onChange(category)}
           className={cn(
-            "rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-150",
+            "relative rounded-xl px-4 py-1.5 text-sm font-medium transition-colors",
             active === category
-              ? "border-foreground bg-foreground text-background"
-              : "border-border bg-background text-muted-foreground hover:border-foreground/50 hover:text-foreground"
+              ? "text-background"
+              : "text-muted-foreground hover:text-foreground"
           )}
         >
-          {category}
+          {active === category && (
+            <motion.span
+              layoutId="filter-pill"
+              className="absolute inset-0 rounded-xl bg-foreground"
+              transition={{ type: "spring", stiffness: 400, damping: 32 }}
+            />
+          )}
+          <span className="relative">{category}</span>
         </button>
       ))}
-    </motion.div>
+    </div>
   );
 }
