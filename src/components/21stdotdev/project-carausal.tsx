@@ -687,7 +687,7 @@ export function ProjectCarousel() {
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-gradient font-display text-3xl font-semibold tracking-normal sm:text-4xl md:text-5xl inline-block text-center">
+            <h2 className="text-gradient font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl inline-block text-center">
               Check out my latest work
             </h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">

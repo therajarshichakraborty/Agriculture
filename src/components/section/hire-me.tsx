@@ -24,7 +24,7 @@ export default function HireMeSection() {
 
       <div className="relative flex flex-col items-center gap-5 text-center">
         <h2
-          className="text-gradient font-display text-4xl font-semibold tracking-normal sm:text-6xl"
+          className="text-gradient font-display text-4xl font-semibold tracking-tight sm:text-6xl"
         >
           Let’s Build Something Impactful
         </h2>

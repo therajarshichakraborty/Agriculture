@@ -38,7 +38,7 @@ export function Section({
         >
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
           {title && (
-            <h2 className="text-gradient max-w-3xl text-balance font-display text-3xl font-semibold tracking-normal sm:text-4xl md:text-5xl">
+            <h2 className="text-gradient max-w-3xl text-balance font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
               {title}
             </h2>
           )}

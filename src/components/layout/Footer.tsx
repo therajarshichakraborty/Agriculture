@@ -110,7 +110,7 @@ export function Footer() {
 
       <p
         aria-hidden
-        className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 select-none whitespace-nowrap bg-linear-to-b from-foreground/10 to-transparent bg-clip-text font-display text-[18vw] font-bold leading-none tracking-normaler text-transparent md:-bottom-10"
+        className="pointer-events-none absolute -bottom-6 left-1/2 -translate-x-1/2 select-none whitespace-nowrap bg-linear-to-b from-foreground/10 to-transparent bg-clip-text font-display text-[18vw] font-bold leading-none tracking-tighter text-transparent md:-bottom-10"
       >
         RAJARSHI
       </p>

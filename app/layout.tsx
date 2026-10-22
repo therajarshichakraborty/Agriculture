@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/src/components/layout/ThemeProvider";
 import { Navbar } from "@/src/components/layout/Navbar";
@@ -12,11 +11,6 @@ import { portfolio } from "@/src/config/portfolio";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const display = localFont({
-  src: "../public/fonts/ClashDisplay-Semibold.ttf",
-  variable: "--font-display",
-  display: "swap"
-});
 
 const title = `${portfolio.name} — ${portfolio.role}`;
 
@@ -65,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${display.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
