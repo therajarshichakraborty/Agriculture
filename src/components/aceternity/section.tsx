@@ -36,9 +36,9 @@ export function Section({
             align === "center" ? "items-center text-center" : "items-start"
           )}
         >
-          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+          {eyebrow && <SectionLabel centered={align === "center"}>{eyebrow}</SectionLabel>}
           {title && (
-            <h2 className="text-gradient max-w-3xl text-balance font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
+            <h2 className="max-w-3xl text-balance text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl">
               {title}
             </h2>
           )}
@@ -51,6 +51,29 @@ export function Section({
       )}
       {children}
     </section>
+  );
+}
+
+/** Section label from the previous portfolio: dark pill flanked by hairlines. */
+export function SectionLabel({
+  children,
+  centered = true
+}: {
+  children: ReactNode;
+  centered?: boolean;
+}) {
+  const pill = (
+    <div className="z-10 rounded-xl border bg-primary px-4 py-1">
+      <span className="text-sm font-medium text-background">{children}</span>
+    </div>
+  );
+  if (!centered) return pill;
+  return (
+    <div className="flex w-full items-center">
+      <div className="h-px flex-1 bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
+      {pill}
+      <div className="h-px flex-1 bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
+    </div>
   );
 }
 
