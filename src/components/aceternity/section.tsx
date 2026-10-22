@@ -56,8 +56,11 @@ export function Section({
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground backdrop-blur">
-      <span className="size-1.5 rounded-full bg-linear-to-r from-brand to-brand-2" />
+    <span className="inline-flex items-center gap-2 rounded-full bg-card/80 px-3 py-1 shadow-[0_0_0_1px_var(--border)] text-xs font-medium tracking-wide text-muted-foreground backdrop-blur">
+      <span className="relative flex size-1.5">
+        <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-60" />
+        <span className="relative inline-flex size-1.5 rounded-full bg-linear-to-r from-brand to-brand-2" />
+      </span>
       {children}
     </span>
   );
@@ -74,8 +77,8 @@ export function Reveal({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
       className={className}

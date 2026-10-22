@@ -5,6 +5,7 @@ import LeetCodeGraph from "@/app/components/leetcode/LeetCodeGraph";
 import DSASheetsCard from "@/app/components/leetcode/DSASheetsCard";
 import ContestRatingChart from "@/src/components/charts/ContestRatingChart";
 import { getContestData } from "@/src/lib/leetcode/getContestData";
+import { HOME_WIDTH } from "@/src/components/home/About";
 
 const LEETCODE_USER = "rajarshi_2005";
 
@@ -30,17 +31,18 @@ export async function DSA() {
       eyebrow="Problem Solving"
       title="My DSA journey, in numbers."
       description="Consistent practice on LeetCode — live stats, contest rating and the sheets I train with."
+      className={HOME_WIDTH}
     >
       <div className="grid gap-4 lg:grid-cols-5">
         <Reveal className="lg:col-span-2">
-          <GlowCard className="h-full">
+          <GlowCard bordered={false} className="h-full">
             <div className="p-2">
               <LeetCodeCard />
             </div>
           </GlowCard>
         </Reveal>
         <Reveal delay={0.1} className="lg:col-span-3">
-          <GlowCard className="h-full">
+          <GlowCard bordered={false} className="h-full">
             <div className="flex h-full flex-col p-5">
               <p className="mb-4 text-sm font-semibold tracking-tight">
                 Contest rating

@@ -920,7 +920,7 @@ export default function GithubContributionBadge({
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={chartData}
-                  margin={{ left: -10, right: 10, top: 5, bottom: 5 }}
+                  margin={{ left: 8, right: 10, top: 5, bottom: 5 }}
                 >
                   <defs>
                     <linearGradient

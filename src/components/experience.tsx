@@ -586,7 +586,7 @@ const ExperienceItem = ({
               return (
                 <li key={i} className="flex items-start gap-3 group/bullet">
                   {/* Chevron-style bullet */}
-                  <span className="mt-[5px] flex-shrink-0 size-[3px] rotate-45 border-r border-b border-muted-foreground/50 group-hover/bullet:border-foreground/90 group-hover/bullet:scale-125 transition-all duration-200" />
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-linear-to-br from-brand to-brand-2 opacity-70 transition-all duration-200 group-hover/bullet:scale-150 group-hover/bullet:opacity-100" />
                   <p className="text-sm leading-relaxed text-muted-foreground group-hover/bullet:text-foreground/90 transition-colors duration-200">
                     {label && (
                       <span className="font-semibold text-foreground/90">

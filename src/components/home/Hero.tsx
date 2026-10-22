@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, Download, MapPin } from "lucide-react";
-import { Spotlight } from "@/src/components/aceternity/spotlight";
+import { ArrowRight, Download } from "lucide-react";
+import { BackgroundBeamsWithCollision } from "@/src/components/aceternity/background-beams-collision";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
-import { TextGenerateEffect } from "@/src/components/aceternity/text-generate-effect";
-import { MovingBorderButton } from "@/src/components/aceternity/moving-border";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
 import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
 import { portfolio } from "@/src/config/portfolio";
@@ -18,119 +16,70 @@ const roles = [
   "System Designer"
 ];
 
-const stats = [
-  { value: "Brand Voy", label: "Software Engineer" },
-  { value: "IEEE", label: "Published researcher" },
-  { value: "10+", label: "Production projects" },
-  { value: "8.13", label: "CGPA · CSE" }
-];
-
 const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 20, filter: "blur(6px)" },
-  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] as const }
 });
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* Backdrop */}
-      <div aria-hidden className="absolute inset-0 -z-10 bg-grid mask-radial-fade opacity-70" />
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-0 -z-10 h-130 w-225 -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--brand)_22%,transparent),transparent)] blur-2xl"
-      />
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="var(--brand-2)" />
-
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+    <BackgroundBeamsWithCollision className="pt-32 pb-24 md:pt-40 md:pb-32">
+      <section className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-14 px-6 md:px-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="flex min-w-0 flex-col gap-7">
-          {portfolio.available && (
-            <motion.div {...fadeUp(0)}>
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/60 py-1 pr-3 pl-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
-              >
-                <span className="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2 py-0.5 font-medium text-emerald-500">
-                  <span className="relative flex size-1.5">
-                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
-                  </span>
-                  Available
-                </span>
-                <span className="hidden sm:inline">
-                  Open to internships, freelance & full-time roles
-                </span>
-                <span className="sm:hidden">Open to new roles</span>
-                <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </motion.div>
-          )}
-
-          <motion.div {...fadeUp(0.1)}>
+          <motion.div {...fadeUp(0)}>
             <MultilingualGreeting />
           </motion.div>
 
           <motion.h1
-            {...fadeUp(0.2)}
-            className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl"
+            {...fadeUp(0.1)}
+            className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             I build as a{" "}
-            <span className="block sm:inline">
-              <FlipWords words={roles} className="text-gradient-brand" />
+            <span className="block">
+              <FlipWords
+                words={roles}
+                className="text-brand"
+              />
             </span>
           </motion.h1>
 
-          <TextGenerateEffect
-            words={portfolio.shortBio}
-            highlight={["Full-Stack", "TypeScript", "AI", "Engineer", "scalable,", "production-grade"]}
-            className="max-w-xl text-base text-muted-foreground md:text-lg"
-          />
+          <motion.p
+            {...fadeUp(0.2)}
+            className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
+          >
+            {portfolio.shortBio}
+          </motion.p>
 
-          <motion.div {...fadeUp(0.4)} className="flex flex-wrap items-center gap-3">
-            <MovingBorderButton as={Link} href="/projects" containerClassName="h-11">
+          <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/projects"
+              className="group relative inline-flex h-11 items-center gap-2 overflow-hidden rounded-xl bg-foreground px-5 text-sm font-medium text-background shadow-[0_8px_24px_-10px_var(--brand)] transition-transform active:scale-[0.98]"
+            >
+              <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               View my work
-              <ArrowRight className="size-4" />
-            </MovingBorderButton>
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+            </Link>
             <a
               href="/resume.pdf"
               download="rajarshi-chakraborty-resume.pdf"
-              className="inline-flex h-11 items-center gap-2 rounded-[0.875rem] bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+              className="group inline-flex h-11 items-center gap-2 rounded-xl bg-background/70 px-5 text-sm font-medium text-foreground shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] backdrop-blur transition-all hover:-translate-y-0.5 active:scale-[0.98]"
             >
-              <Download className="size-4" />
+              <Download className="size-4 transition-transform group-hover:translate-y-0.5" />
               Download résumé
             </a>
-            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-              <MapPin className="size-4" />
-              {portfolio.location}
-            </span>
           </motion.div>
-
-          <motion.dl
-            {...fadeUp(0.5)}
-            className="mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4"
-          >
-            {stats.map((s) => (
-              <div key={s.label} className="bg-background/80 px-4 py-3 backdrop-blur">
-                <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                  {s.label}
-                </dt>
-                <dd className="mt-0.5 font-display text-lg font-semibold text-foreground">
-                  {s.value}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center"
         >
           <HeroAvatarOrbit />
         </motion.div>
-      </div>
-    </section>
+      </section>
+    </BackgroundBeamsWithCollision>
   );
 }

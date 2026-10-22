@@ -1,4 +1,3 @@
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { DATA } from "@/data/resume";
 import { Button } from "@/components/ui/button";
 import ContactDialog from "@/components/section/contact-form";
@@ -7,19 +6,8 @@ import { ArrowUpRight } from "lucide-react";
 export default function HireMeSection() {
   return (
     <div className="rounded-xl p-4 sm:p-10 relative">
-      <div className="absolute -top-4 z-10 rounded-full border border-border bg-card/70 px-3.5 py-1 shadow-sm backdrop-blur left-1/2 -translate-x-1/2">
+      <div className="absolute -top-6 z-10 rounded-full bg-card/80 px-3.5 py-1 shadow-[0_0_0_1px_var(--border)] backdrop-blur left-1/2 -translate-x-1/2">
         <span className="text-xs font-medium tracking-wide text-muted-foreground">Hire Me</span>
-      </div>
-      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden opacity-40">
-        <FlickeringGrid
-          className="h-full w-full"
-          squareSize={10}
-          gridGap={2}
-          style={{
-            maskImage: "linear-gradient(to bottom, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)"
-          }}
-        />
       </div>
 
       <div className="relative flex flex-col items-center gap-5 text-center">
@@ -39,7 +27,7 @@ export default function HireMeSection() {
           I’m just one message away - feel free to reach out on social media or
           email me directly, and I&apos;ll respond as soon as I can.
         </p>
-        <ContactDialog className="group inline-flex cursor-pointer items-center gap-1 rounded-sm font-medium text-blue-600 decoration-blue-600/40 underline-offset-4 transition-colors hover:text-blue-700  hover:underline hover:decoration-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 dark:text-blue-400 dark:hover:text-blue-300">
+        <ContactDialog className="group inline-flex cursor-pointer items-center gap-1 rounded-sm font-medium text-brand decoration-brand/40 underline-offset-4 transition-colors hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           Contact me
           <ArrowUpRight
             aria-hidden="true"
@@ -59,7 +47,7 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-background text-foreground border-neutral-200 dark:border-neutral-800 transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
           >
             <DATA.contact.social.X.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>X (Twitter)</span>
@@ -75,7 +63,7 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-background text-foreground border-neutral-200 dark:border-neutral-800 transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
           >
             <DATA.contact.social.LinkedIn.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>LinkedIn</span>
@@ -91,7 +79,7 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-background text-foreground border-neutral-200 dark:border-neutral-800 transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
           >
             <DATA.contact.social.email.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>Email</span>

@@ -20,9 +20,9 @@ export function TechStack() {
             {row.map((skill) => (
               <li
                 key={skill.name}
-                className="flex shrink-0 items-center gap-2.5 rounded-xl border border-border bg-card/70 px-4 py-2.5 text-sm font-medium text-foreground/90 backdrop-blur transition-colors hover:border-foreground/20"
+                className="group flex shrink-0 items-center gap-2.5 rounded-xl bg-card px-4 py-2.5 text-sm font-medium text-foreground/90 shadow-[0_0_0_1px_color-mix(in_oklch,var(--foreground)_6%,transparent),0_2px_6px_-2px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:text-foreground"
               >
-                <skill.icon className="size-5 shrink-0" />
+                <skill.icon className="size-5 shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" />
                 {skill.name}
               </li>
             ))}

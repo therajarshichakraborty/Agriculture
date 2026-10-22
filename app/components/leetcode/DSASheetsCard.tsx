@@ -20,13 +20,13 @@ export default function DSASheetsCard() {
         </span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
         {/* Card 1: Grind 169 */}
         <a
           href="https://www.techinterviewhandbook.org/grind75/?weeks=28&hours=6"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col justify-between p-5 rounded-2xl border border-border/40 bg-card/20 hover:bg-muted/20 transition-all duration-300 group cursor-pointer hover:border-border/80 hover:-translate-y-0.5 shadow-2xs"
+          className="flex flex-col justify-between p-5 rounded-2xl bg-card transition-all duration-300 group cursor-pointer hover:-translate-y-1 shadow-[0_0_0_1px_color-mix(in_oklch,var(--foreground)_6%,transparent),0_2px_4px_rgba(0,0,0,0.03),0_12px_32px_-12px_rgba(0,0,0,0.12)] hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--brand)_25%,transparent),0_24px_48px_-16px_color-mix(in_oklch,var(--brand)_30%,transparent)]"
         >
           <div>
             <div className="flex items-center justify-between">
@@ -55,7 +55,7 @@ export default function DSASheetsCard() {
           href="https://dsa.chaicode.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col justify-between p-5 rounded-2xl border border-border/40 bg-card/20 hover:bg-muted/20 transition-all duration-300 group cursor-pointer hover:border-border/80 hover:-translate-y-0.5 shadow-2xs"
+          className="flex flex-col justify-between p-5 rounded-2xl bg-card transition-all duration-300 group cursor-pointer hover:-translate-y-1 shadow-[0_0_0_1px_color-mix(in_oklch,var(--foreground)_6%,transparent),0_2px_4px_rgba(0,0,0,0.03),0_12px_32px_-12px_rgba(0,0,0,0.12)] hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--brand)_25%,transparent),0_24px_48px_-16px_color-mix(in_oklch,var(--brand)_30%,transparent)]"
         >
           <div>
             <div className="flex items-center justify-between">
@@ -84,7 +84,7 @@ export default function DSASheetsCard() {
           href="https://neetcode.io/practice/practice/neetcode250"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col justify-between p-5 rounded-2xl border border-border/40 bg-card/20 hover:bg-muted/20 transition-all duration-300 group cursor-pointer hover:border-border/80 hover:-translate-y-0.5 shadow-2xs"
+          className="flex flex-col justify-between p-5 rounded-2xl bg-card transition-all duration-300 group cursor-pointer hover:-translate-y-1 shadow-[0_0_0_1px_color-mix(in_oklch,var(--foreground)_6%,transparent),0_2px_4px_rgba(0,0,0,0.03),0_12px_32px_-12px_rgba(0,0,0,0.12)] hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--brand)_25%,transparent),0_24px_48px_-16px_color-mix(in_oklch,var(--brand)_30%,transparent)]"
         >
           <div>
             <div className="flex items-center justify-between">
