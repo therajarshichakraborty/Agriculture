@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/src/components/layout/ThemeProvider";
-import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer } from "@/src/components/layout/Footer";
 import Dock from "@/src/components/navbar";
 import CommandPalette from "@/src/components/command-palette";
@@ -12,13 +10,8 @@ import { portfolio } from "@/src/config/portfolio";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const display = localFont({
-  src: "../public/fonts/ClashDisplay-Semibold.ttf",
-  variable: "--font-display",
-  display: "swap"
-});
 
-const title = `${portfolio.name} — ${portfolio.role}`;
+const title = `${portfolio.name} | ${portfolio.role}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(portfolio.website),
@@ -53,10 +46,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fcfcfd" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0b0f" }
-  ]
+  themeColor: "#fdfdfe",
+  colorScheme: "light"
 };
 
 export default function RootLayout({
@@ -65,19 +56,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${display.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="light"
+          forcedTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <TooltipProvider>
             <div className="relative flex min-h-screen flex-col overflow-x-clip">
-              <Navbar />
               <main className="flex-1">{children}</main>
               <Footer />
             </div>

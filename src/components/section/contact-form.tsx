@@ -233,7 +233,10 @@ export default function ContactDialog({
     <Dialog onOpenChange={handleOpenChange}>
       <DialogTrigger className={className}>{children}</DialogTrigger>
 
-      <DialogContent className="max-h-[calc(100dvh-2rem)] w-full max-w-[calc(100%-2rem)] gap-0 overflow-y-auto overscroll-contain rounded-2xl bg-background p-0 shadow-2xl ring-foreground/10 [scrollbar-width:none] sm:max-w-4xl [&::-webkit-scrollbar]:hidden">
+      <DialogContent
+        overlayClassName="bg-black/25 supports-backdrop-filter:backdrop-blur-sm data-open:animate-[contact-backdrop-in_0.4s_ease-out_both] data-closed:animate-[contact-backdrop-out_0.25s_ease-in_both]"
+        className="max-h-[calc(100dvh-2rem)] w-full max-w-[calc(100%-2rem)] origin-center gap-0 overflow-y-auto overscroll-contain rounded-2xl bg-background p-0 shadow-[0_32px_80px_-24px_rgba(0,0,0,0.35)] ring-foreground/10 will-change-[transform,opacity,filter] [scrollbar-width:none] data-open:animate-[contact-in_0.55s_cubic-bezier(0.16,1,0.3,1)_both] data-closed:animate-[contact-out_0.22s_cubic-bezier(0.4,0,1,1)_both] sm:max-w-4xl [&::-webkit-scrollbar]:hidden"
+      >
         <MotionConfig reducedMotion="user">
           <div className="grid lg:grid-cols-[5fr_7fr]">
             {/* Left: intro */}
@@ -269,7 +272,7 @@ export default function ContactDialog({
                   <DialogTitle className="text-3xl leading-[1.1] font-bold tracking-tighter text-foreground sm:text-4xl">
                     Got an idea?
                     <br />
-                    <span className="animate-[gradientShift_6s_ease-in-out_infinite] bg-[linear-gradient(90deg,var(--color-cyan-400),var(--color-blue-500),var(--color-indigo-500),var(--color-sky-300),var(--color-cyan-400))] bg-size-[200%_auto] bg-clip-text text-transparent motion-reduce:animate-none">
+                    <span className="animate-[gradientShift_6s_ease-in-out_infinite] bg-[linear-gradient(90deg,var(--color-red-500),var(--color-pink-500),var(--color-violet-500),var(--color-pink-500),var(--color-red-500))] bg-size-[200%_auto] bg-clip-text text-transparent motion-reduce:animate-none">
                       Let&apos;s talk.
                     </span>
                   </DialogTitle>

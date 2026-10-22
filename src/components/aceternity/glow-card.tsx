@@ -8,10 +8,17 @@ type GlowCardProps = {
   children: ReactNode;
   className?: string;
   radius?: number;
+  /** Borderless variant: soft shadow surface that lifts on hover. */
+  bordered?: boolean;
 };
 
 /** Card whose border and surface light up under the cursor (Aceternity card-spotlight). */
-export function GlowCard({ children, className, radius = 320 }: GlowCardProps) {
+export function GlowCard({
+  children,
+  className,
+  radius = 320,
+  bordered = true
+}: GlowCardProps) {
   const mouseX = useMotionValue(-radius);
   const mouseY = useMotionValue(-radius);
 
@@ -32,7 +39,10 @@ export function GlowCard({ children, className, radius = 320 }: GlowCardProps) {
         mouseY.set(-radius);
       }}
       className={cn(
-        "group/glow relative overflow-hidden rounded-2xl border border-border bg-card p-px transition-colors",
+        "group/glow relative overflow-hidden rounded-2xl bg-card p-px transition-all duration-300",
+        bordered
+          ? "border border-border"
+          : "shadow-[0_0_0_1px_color-mix(in_oklch,var(--foreground)_6%,transparent),0_2px_4px_rgba(0,0,0,0.03),0_12px_32px_-12px_rgba(0,0,0,0.12)] hover:-translate-y-1 hover:shadow-[0_0_0_1px_color-mix(in_oklch,var(--brand)_25%,transparent),0_24px_48px_-16px_color-mix(in_oklch,var(--brand)_30%,transparent)]",
         className
       )}
     >

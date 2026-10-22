@@ -1,5 +1,5 @@
 // ============================================================
-// PORTFOLIO CONFIG — Rajarshi Chakraborty
+// PORTFOLIO CONFIG: Rajarshi Chakraborty
 // ============================================================
 
 export const portfolio = {
@@ -8,18 +8,18 @@ export const portfolio = {
   // ----------------------------------------------------------
   name: "Rajarshi Chakraborty",
   initials: "RC",
-  role: "Full-Stack TypeScript Developer & AI Engineer",
+  role: "Full-Stack & AI Engineer",
   location: "Kolkata, West Bengal, India",
   bio: "Software Engineer at Brand Voy and Computer Science undergrad at Techno Main Salt Lake (Class of 2027). Focused on designing and developing scalable, production-grade applications with clean architecture, high performance, and strong System Design principles, with deep enthusiasm for Gen & Agentic AI.",
   shortBio:
-    "Full-Stack TypeScript Developer & AI Engineer with a strong focus on building scalable, production-grade applications.",
+    "Full-Stack & AI Engineer with a strong focus on building scalable, production-grade applications.",
   avatar: "https://github.com/therajarshichakraborty.png", // Direct link to GitHub avatar, with fallback in UI
   available: true, // "Available for work" badge
 
   // ----------------------------------------------------------
   // Contact & Social
   // ----------------------------------------------------------
-  email: "rajarshichakraborty20000@gmail.com",
+  email: "rajarshichakraborty2005@gmail.com",
   github: "https://github.com/therajarshichakraborty",
   githubHandle: "@therajarshichakraborty",
   linkedin: "https://www.linkedin.com/in/rajarshi-c-06a3402b7/",
@@ -265,7 +265,7 @@ export const portfolio = {
     {
       company: "Brand Voy",
       role: "Software Engineer",
-      period: "Aug 2026 — Present",
+      period: "Aug 2026 - Present",
       location: "London, United Kingdom (Remote)",
       description:
         "Develop and maintain scalable, reliable, and user-focused web applications for live production environments. Work extensively with high-volume sports data, primarily covering cricket and football, to build data-driven sports technology projects serving international clients across English and Vietnamese markets with real-time statistics, matches, fixtures, and localization.",
@@ -282,7 +282,7 @@ export const portfolio = {
     {
       company: "Techno Main Salt Lake",
       role: "Undergrad Engineering Fellow",
-      period: "June 2023 — Present",
+      period: "June 2023 - Present",
       location: "Kolkata, West Bengal, India",
       description:
         "STEM fellow in Computer Science and Engineering actively exploring emerging technologies in Software Development, Artificial Intelligence, and Data Science. Co-authored IEEE-published research on Deep Learning Enabled Fruit Quality Assessment with Hyper-Spectral Feature Fusion (CIACON 2026).",
@@ -304,14 +304,14 @@ export const portfolio = {
     {
       institution: "Techno Main Salt Lake",
       degree: "B.Tech in Computer Science and Engineering",
-      period: "2023 — Present",
+      period: "2023 - Present",
       description:
         "Academic Progress: GPA 8.136 / 10. Comprehensive coursework covering Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Machine Learning, Cryptography & Network Security, and System Design. Published IEEE researcher at CIACON 2026."
     },
     {
       institution: "West Bengal Council of Higher Secondary Education",
-      degree: "Higher Secondary (XII) — Pure Science",
-      period: "2020 — 2023",
+      degree: "Higher Secondary (XII), Pure Science",
+      period: "2020 - 2023",
       description:
         "Grade: A+ (81.2% marks in +2 examination). Captain of the School Cricket Team, leading the team in inter-school tournaments. Rigorous foundation in Mathematics, Physics, Chemistry, and Biology combined with leadership and strategic discipline."
     }

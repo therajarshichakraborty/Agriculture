@@ -5,8 +5,8 @@ import { DATA } from "@/data/resume";
 export default function ContactSection() {
   return (
     <div className="border rounded-xl p-10 relative">
-      <div className="absolute -top-4 z-10 rounded-full border border-border bg-card/70 px-3.5 py-1 shadow-sm backdrop-blur left-1/2 -translate-x-1/2">
-        <span className="text-xs font-medium tracking-wide text-muted-foreground">Contact</span>
+      <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
+        <span className="text-background text-sm font-medium">Contact</span>
       </div>
       <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
         <FlickeringGrid

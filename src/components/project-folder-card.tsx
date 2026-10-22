@@ -235,7 +235,7 @@ export function ProjectFolderCard({
     <BlurFade delay={BLUR_FADE_DELAY * 12 + index * 0.06} className="h-full">
       {/*
         The outer wrapper is a subtle glass panel.
-        The AnimatedFolder sits on top with its own `bg-card` look — we let it
+        The AnimatedFolder sits on top with its own `bg-card` look; we let it
         keep that so it doesn't fight our backdrop-blur layer. The description
         panel below is clearly separated by a top border.
       */}

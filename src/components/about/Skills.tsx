@@ -42,7 +42,7 @@ export function Skills() {
       id="skills"
       eyebrow="Toolbox"
       title="A stack chosen for production."
-      description="The languages, frameworks and platforms I reach for — grouped by where they live in a system."
+      description="The languages, frameworks and platforms I reach for, grouped by where they live in a system."
     >
       <div className="grid gap-4 md:grid-cols-6">
         {groups.map((group, i) => (

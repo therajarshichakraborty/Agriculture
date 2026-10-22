@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       <PageHeader
         eyebrow={`${PROJECTS.length} projects`}
         title="Things I've designed, built and shipped."
-        description="AI platforms, developer tools, real-time systems and UI libraries — engineered end-to-end."
+        description="AI platforms, developer tools, real-time systems and UI libraries, engineered end-to-end."
       >
         <Link
           href="/projects/case-studies"

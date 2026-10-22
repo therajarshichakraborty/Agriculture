@@ -3,19 +3,17 @@
 import {
   Line,
   LineChart,
-  Tooltip,
   XAxis,
   YAxis,
   ResponsiveContainer,
   Legend,
-  CartesianGrid
+  Tooltip
 } from "recharts";
-
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 type ContestDataItem = {
   date: string;
+  fullDate: string;
+  title: string;
   rating: number;
   ranking: number;
   contestAttend: number;
@@ -25,30 +23,14 @@ type ContestChartData = {
   data: ContestDataItem[];
 };
 
+const strokeColor = "#ef4444";
+
 export default function ContestRatingChart({ data }: ContestChartData) {
-  const { resolvedTheme } = useTheme(); // ✅ FIXED (inside component)
-
-  // ✅ Prevent hydration mismatch (important in Next.js)
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
   if (!data || data.length === 0) {
     return <div className="text-xs text-muted-foreground">No contest data</div>;
   }
 
-  const strokeColor =
-    mounted && resolvedTheme === "dark" ? "#e2463d" : "#d85413";
-
-  // const xTicks = [0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600];
   const yTicks = [1200, 1300, 1400, 1500];
-
-  const dataX = [
-    { x: 0, y: 12 },
-    { x: 117, y: 45 },
-    { x: 234, y: 23 },
-    { x: 351, y: 78 },
-    { x: 468, y: 156 }
-  ];
 
   return (
     <div className="w-full rounded-xl p-0 sm:p-4 bg-transparent border-none">
@@ -56,20 +38,14 @@ export default function ContestRatingChart({ data }: ContestChartData) {
         Contest Rating Progress
       </h2>
 
-      <div className="w-full h-[220px] mx-auto">
+      <div className="w-full h-[220px] mx-auto select-none [&_*]:outline-none">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
+            accessibilityLayer={false}
             data={data}
-            height={600}
             margin={{ left: 0, right: 15, top: 10, bottom: 10 }}
           >
-            {/* <CartesianGrid strokeDasharray="2 2"/> */}
-            <XAxis
-              dataKey="date"
-              tick={{ fontSize: 10 }}
-              tickLine={false}
-              //ticks={xTicks}
-            />
+            <XAxis dataKey="date" tick={{ fontSize: 10 }} tickLine={false} />
 
             <YAxis
               tick={{ fontSize: 10 }}
@@ -80,49 +56,78 @@ export default function ContestRatingChart({ data }: ContestChartData) {
               interval={0}
             />
 
+            <Legend wrapperStyle={{ fontSize: "10px" }} />
+
             <Tooltip
-              formatter={(value, name) => [
-                value,
-                name === "rating" ? "Rating" : "Ranking"
-              ]}
-              contentStyle={{
-                backgroundColor: "var(--popover)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-                boxShadow: "0 10px 30px -10px rgba(0,0,0,0.3)"
+              cursor={{
+                stroke: strokeColor,
+                strokeOpacity: 0.35,
+                strokeDasharray: "3 3"
               }}
-              labelStyle={{
-                color: "var(--foreground)",
-                fontWeight: 600
-              }}
-              itemStyle={{
-                color: strokeColor,
-                fontWeight: 600
+              wrapperStyle={{ outline: "none", zIndex: 20 }}
+              content={({ active, payload }) => {
+                if (!active || !payload || payload.length === 0) return null;
+                const point = payload[0].payload as ContestDataItem;
+                const prev = data[point.contestAttend - 2];
+                const delta = prev ? point.rating - prev.rating : null;
+
+                return (
+                  <div className="min-w-44 rounded-lg border border-border bg-popover/90 px-3 py-2 text-[10px] text-popover-foreground shadow-md backdrop-blur-md">
+                    <p className="mb-0.5 font-semibold text-muted-foreground">
+                      {point.fullDate}
+                    </p>
+                    <p className="mb-1.5 text-xs font-semibold text-foreground">
+                      {point.title}
+                    </p>
+                    <div className="flex items-baseline justify-between gap-4">
+                      <span className="text-muted-foreground">Rating</span>
+                      <span className="text-xs font-bold tabular-nums text-foreground">
+                        {point.rating.toLocaleString()}
+                        {delta !== null && (
+                          <span
+                            className={
+                              delta >= 0
+                                ? "ml-1 text-emerald-600 dark:text-emerald-400"
+                                : "ml-1 text-red-500"
+                            }
+                          >
+                            {delta >= 0 ? `+${delta}` : delta}
+                          </span>
+                        )}
+                      </span>
+                    </div>
+                    <div className="flex items-baseline justify-between gap-4">
+                      <span className="text-muted-foreground">Rank</span>
+                      <span className="font-semibold tabular-nums text-foreground">
+                        {point.ranking.toLocaleString()}
+                      </span>
+                    </div>
+                    <div className="flex items-baseline justify-between gap-4">
+                      <span className="text-muted-foreground">Contest</span>
+                      <span className="font-semibold tabular-nums text-foreground">
+                        #{point.contestAttend}
+                      </span>
+                    </div>
+                  </div>
+                );
               }}
             />
 
-            <Legend wrapperStyle={{ fontSize: "10px" }} />
-
-            {/* Rating Line */}
             <Line
               type="monotone"
               dataKey="rating"
               stroke={strokeColor}
               strokeWidth={2}
-              dot={true}
+              dot={{ r: 3, fill: "#fff", stroke: strokeColor, strokeWidth: 1.5 }}
+              activeDot={{
+                r: 5,
+                fill: strokeColor,
+                stroke: "#fff",
+                strokeWidth: 2
+              }}
               name="Rating"
               className="dark:text-white"
             />
-
-            {/* Ranking Line */}
-            {/* <Line
-              type="monotone"
-              dataKey="ranking"
-              stroke="#000000"
-              strokeWidth={2}
-              dot={true}
-              name="Ranking"
-            /> */}
           </LineChart>
         </ResponsiveContainer>
       </div>

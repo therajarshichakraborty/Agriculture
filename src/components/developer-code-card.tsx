@@ -24,7 +24,7 @@ export default function DeveloperCodeCard() {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="w-[130%] -ml-[15%] rounded-2xl bg-transparent text-foreground hover:translate-x-1 transition-all duration-300 overflow-hidden select-none relative group mt-4 shadow-none"
+      className="w-full rounded-2xl bg-transparent text-foreground hover:translate-x-1 transition-all duration-300 overflow-hidden select-none relative group mt-4 shadow-none"
     >
       <div className="p-3.5 font-mono text-[11px] leading-relaxed text-left bg-transparent">
         <div className="flex items-start hover:bg-muted/40 rounded px-1 -mx-1 transition-colors">

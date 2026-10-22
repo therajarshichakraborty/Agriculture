@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, Download, MapPin } from "lucide-react";
-import { Spotlight } from "@/src/components/aceternity/spotlight";
+import { ArrowRight, ArrowUpRight, Download, Eye } from "lucide-react";
+import { Button } from "@/src/components/ui/button";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
-import { TextGenerateEffect } from "@/src/components/aceternity/text-generate-effect";
-import { MovingBorderButton } from "@/src/components/aceternity/moving-border";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
 import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
 import { portfolio } from "@/src/config/portfolio";
@@ -14,121 +12,83 @@ import { portfolio } from "@/src/config/portfolio";
 const roles = [
   "Full-Stack Engineer",
   "AI Engineer",
-  "TypeScript Developer",
-  "System Designer"
-];
-
-const stats = [
-  { value: "Brand Voy", label: "Software Engineer" },
-  { value: "IEEE", label: "Published researcher" },
-  { value: "10+", label: "Production projects" },
-  { value: "8.13", label: "CGPA · CSE" }
+  "System Architect"
 ];
 
 const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 20, filter: "blur(6px)" },
-  animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, delay, ease: [0.21, 0.47, 0.32, 0.98] as const }
 });
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* Backdrop */}
-      <div aria-hidden className="absolute inset-0 -z-10 bg-grid mask-radial-fade opacity-70" />
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-0 -z-10 h-130 w-225 -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--brand)_22%,transparent),transparent)] blur-2xl"
-      />
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="var(--brand-2)" />
-
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[1.15fr_0.85fr]">
+    <section className="relative pt-20 pb-8 md:pt-28 md:pb-10">
+      <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-14 px-6 md:px-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="flex min-w-0 flex-col gap-7">
-          {portfolio.available && (
-            <motion.div {...fadeUp(0)}>
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/60 py-1 pr-3 pl-1 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-foreground"
-              >
-                <span className="flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2 py-0.5 font-medium text-emerald-500">
-                  <span className="relative flex size-1.5">
-                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex size-1.5 rounded-full bg-emerald-500" />
-                  </span>
-                  Available
-                </span>
-                <span className="hidden sm:inline">
-                  Open to internships, freelance & full-time roles
-                </span>
-                <span className="sm:hidden">Open to new roles</span>
-                <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </motion.div>
-          )}
-
-          <motion.div {...fadeUp(0.1)}>
+          <motion.div {...fadeUp(0)}>
             <MultilingualGreeting />
           </motion.div>
 
           <motion.h1
-            {...fadeUp(0.2)}
-            className="font-display text-3xl font-semibold tracking-normal text-foreground sm:text-4xl md:text-5xl"
+            {...fadeUp(0.1)}
+            className="font-display text-[1.75rem] font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
-            I build as a{" "}
-            <span className="block sm:inline">
-              <FlipWords words={roles} className="text-gradient-brand" />
-            </span>
+            <FlipWords
+              words={roles}
+              gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
+            />
           </motion.h1>
 
-          <TextGenerateEffect
-            words={portfolio.shortBio}
-            highlight={["Full-Stack", "TypeScript", "AI", "Engineer", "scalable,", "production-grade"]}
-            className="max-w-xl text-base text-muted-foreground md:text-lg"
-          />
-
-          <motion.div {...fadeUp(0.4)} className="flex flex-wrap items-center gap-3">
-            <MovingBorderButton as={Link} href="/projects" containerClassName="h-11">
-              View my work
-              <ArrowRight className="size-4" />
-            </MovingBorderButton>
-            <a
-              href="/resume.pdf"
-              download="rajarshi-chakraborty-resume.pdf"
-              className="inline-flex h-11 items-center gap-2 rounded-[0.875rem] bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
-            >
-              <Download className="size-4" />
-              Download résumé
-            </a>
-            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-              <MapPin className="size-4" />
-              {portfolio.location}
-            </span>
-          </motion.div>
-
-          <motion.dl
-            {...fadeUp(0.5)}
-            className="mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-4"
+          <motion.p
+            {...fadeUp(0.2)}
+            className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            {stats.map((s) => (
-              <div key={s.label} className="bg-background/80 px-4 py-3 backdrop-blur">
-                <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                  {s.label}
-                </dt>
-                <dd className="mt-0.5 font-display text-lg font-semibold text-foreground">
-                  {s.value}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
+            {portfolio.shortBio}
+          </motion.p>
+
+          <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
+            <Button
+              className="group relative gap-2 overflow-hidden font-semibold transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/25 active:scale-[0.98]"
+              nativeButton={false}
+              render={<Link href="/projects" />}
+            >
+              {/* Periodic light sweep across the button */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-y-0 left-0 w-1/3 animate-[btn-shine_3.6s_ease-in-out_infinite] bg-linear-to-r from-transparent via-white/45 to-transparent dark:via-black/20 motion-reduce:hidden"
+              />
+              {/* Brand gradient underline that grows in on hover */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-3 bottom-0 h-0.5 origin-left scale-x-0 rounded-full bg-linear-to-r from-red-500 via-pink-500 to-violet-500 transition-transform duration-500 ease-out group-hover:scale-x-100"
+              />
+              <Eye className="relative size-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+              <span className="relative">View my work</span>
+              <ArrowRight className="relative -ml-1 size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+            <Button
+              variant="outline"
+              className="gap-2 group font-semibold bg-background text-foreground border border-input transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+              nativeButton={false}
+              render={<a href="/resume.pdf" download="rajarshi-chakraborty-resume.pdf" />}
+            >
+              <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+              <span>Download résumé</span>
+              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Button>
+          </motion.div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <HeroAvatarOrbit />
+          <div className="-mt-2 lg:-mt-10">
+            <HeroAvatarOrbit />
+          </div>
         </motion.div>
       </div>
     </section>

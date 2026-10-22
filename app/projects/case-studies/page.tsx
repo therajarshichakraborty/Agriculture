@@ -296,7 +296,7 @@ export default function ProjectsPage() {
   }, [searchQuery]);
 
   return (
-    <section id="projects-page" className="w-full pt-32 pb-16 md:pt-40 relative">
+    <section id="projects-page" className="w-full pt-20 pb-16 md:pt-28 relative">
       <div className="flex flex-col gap-y-10 max-w-5xl mx-auto px-4">
         {/* ── 1. Hero Header ── */}
         <div className="flex flex-col gap-y-3 items-center text-center">
@@ -510,7 +510,7 @@ export default function ProjectsPage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end p-4">
                               <span className="text-white text-xs font-mono font-medium">
-                                {project.title} — Production Banner
+                                {project.title} | Production Banner
                               </span>
                             </div>
                           </div>

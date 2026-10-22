@@ -22,7 +22,7 @@ export function LampContainer({
   return (
     <div
       className={cn(
-        "relative isolate flex min-h-[34rem] w-full flex-col items-center justify-center overflow-hidden rounded-3xl border border-border bg-background",
+        "relative isolate flex min-h-[34rem] w-full flex-col items-center justify-center overflow-hidden rounded-3xl bg-background",
         className
       )}
     >
