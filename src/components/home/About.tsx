@@ -17,7 +17,7 @@ export function About() {
     >
       <div className="flex flex-col gap-10">
         <Reveal>
-          <div className="prose prose-neutral mx-auto max-w-3xl text-center text-[15px] leading-relaxed dark:prose-invert md:text-base prose-strong:text-foreground prose-p:text-muted-foreground">
+          <div className="prose prose-neutral mx-auto max-w-3xl text-left text-[15px] leading-relaxed dark:prose-invert md:text-base prose-p:my-4 prose-strong:text-foreground prose-p:text-muted-foreground">
             <ReactMarkdown>{DATA.summary}</ReactMarkdown>
           </div>
         </Reveal>

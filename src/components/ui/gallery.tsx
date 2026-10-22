@@ -22,7 +22,7 @@ export default function Gallery() {
   return (
     <section className="w-full bg-transparent">
       <div className="w-full mx-auto">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-4">
           {images.map((src, i) => (
             <motion.div
               key={i}
@@ -36,7 +36,7 @@ export default function Gallery() {
                   src={src}
                   alt={`Portfolio showcase ${i + 1}`}
                   fill
-                  sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
+                  sizes="(min-width: 640px) 33vw, 50vw"
                   className="
                     object-cover rounded-xl sm:rounded-2xl
                     transition-all duration-700 ease-out

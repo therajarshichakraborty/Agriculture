@@ -40,7 +40,7 @@ export function Hero() {
             <span className="block">
               <FlipWords
                 words={roles}
-                gradient="linear-gradient(90deg, var(--color-cyan-400), var(--color-blue-500), var(--color-indigo-500))"
+                gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
               />
             </span>
           </motion.h1>
@@ -80,7 +80,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <HeroAvatarOrbit />
+          <div className="-mt-2 lg:-mt-10">
+            <HeroAvatarOrbit />
+          </div>
         </motion.div>
       </section>
     </BackgroundBeamsWithCollision>

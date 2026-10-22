@@ -38,7 +38,7 @@ export function BackgroundBeamsWithCollision({
     <div
       ref={containerRef}
       className={cn(
-        "relative flex w-full flex-col overflow-hidden bg-linear-to-b from-background to-secondary/60",
+        "relative flex w-full flex-col overflow-hidden bg-background",
         className
       )}
     >
@@ -54,7 +54,7 @@ export function BackgroundBeamsWithCollision({
       <div
         ref={floorRef}
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-px w-full bg-linear-to-r from-transparent via-border to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px w-full"
       />
     </div>
   );

@@ -29,16 +29,12 @@ export function Footer() {
   const socials = Object.values(DATA.contact.social);
 
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-border">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand/60 to-transparent"
-      />
+    <footer className="relative mt-24 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-[calc(14vw+5rem)]">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div className="space-y-5">
-            <Link href="/" className="inline-flex items-center gap-2.5">
-              <span className="flex size-9 items-center justify-center rounded-lg bg-foreground text-sm font-bold text-background">
+            <Link href="/" className="group inline-flex items-center gap-2.5">
+              <span className="flex size-9 items-center justify-center rounded-lg bg-foreground text-sm font-bold text-background transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110">
                 {portfolio.initials}
               </span>
               <span className="font-semibold tracking-tight">
@@ -56,9 +52,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="flex size-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:-translate-y-0.5 hover:text-foreground"
+                  className="group flex size-9 items-center justify-center rounded-lg bg-secondary/70 text-muted-foreground transition-all duration-300 hover:-translate-y-1 hover:bg-foreground hover:text-background hover:shadow-[0_10px_20px_-10px_var(--brand)] active:scale-95"
                 >
-                  <social.icon className="size-4" />
+                  <social.icon className="size-4 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6" />
                 </a>
               ))}
             </div>
@@ -78,11 +74,14 @@ export function Footer() {
                         href={link.href}
                         target={external ? "_blank" : undefined}
                         rel={external ? "noopener noreferrer" : undefined}
-                        className="group inline-flex items-center gap-1 text-sm text-foreground/80 transition-colors hover:text-foreground"
+                        className="group relative inline-flex items-center gap-1 text-sm text-foreground/80 transition-all duration-300 hover:translate-x-1 hover:text-foreground"
                       >
-                        {link.label}
+                        <span className="relative">
+                          {link.label}
+                          <span className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-linear-to-r from-brand to-brand-2 transition-transform duration-300 group-hover:scale-x-100" />
+                        </span>
                         {external && (
-                          <ArrowUpRight className="size-3 opacity-0 transition-opacity group-hover:opacity-100" />
+                          <ArrowUpRight className="size-3 -translate-x-1 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
                         )}
                       </Link>
                     </li>
