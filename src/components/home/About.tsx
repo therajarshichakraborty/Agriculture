@@ -3,6 +3,7 @@ import { Section, Reveal } from "@/src/components/aceternity/section";
 import { GlowCard } from "@/src/components/aceternity/glow-card";
 import ContactSidebar from "@/src/components/contact-sidebar";
 import DeveloperCodeCard from "@/src/components/developer-code-card";
+import MyJourney from "@/src/components/my-journey";
 import Gallery from "@/src/components/ui/gallery";
 import { DATA } from "@/src/data/resume";
 
@@ -31,7 +32,15 @@ export function About() {
           </GlowCard>
         </Reveal>
 
-        <Reveal delay={0.15} className="md:col-span-3">
+        <Reveal delay={0.1}>
+          <GlowCard className="h-full">
+            <div className="p-5">
+              <MyJourney />
+            </div>
+          </GlowCard>
+        </Reveal>
+
+        <Reveal delay={0.15} className="md:col-span-2">
           <DeveloperCodeCard />
         </Reveal>
 
