@@ -20,25 +20,25 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="w-full bg-transparent py-2 sm:py-5">
+    <section className="w-full bg-transparent">
       <div className="w-full mx-auto">
-        <div className="columns-3 gap-2 sm:gap-3 md:columns-4 lg:columns-6 [column-fill:balance]">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 md:gap-4">
           {images.map((src, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="group relative break-inside-avoid mb-2 sm:mb-3 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer border border-border/50 hover:border-cyan-500/40 dark:hover:border-cyan-400/40 shadow-xs hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-blue-500/15 transition-colors duration-500"
+              className="group relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer border border-border/50 hover:border-cyan-500/40 dark:hover:border-cyan-400/40 shadow-xs hover:shadow-2xl hover:shadow-cyan-500/10 dark:hover:shadow-blue-500/15 transition-colors duration-500"
             >
               {/* Image with smooth zoom and subtle contrast enhancement */}
-              <div className="overflow-hidden rounded-xl sm:rounded-2xl">
+              <div className="absolute inset-0 overflow-hidden rounded-xl sm:rounded-2xl">
                 <Image
                   src={src}
                   alt={`Portfolio showcase ${i + 1}`}
-                  width={500}
-                  height={500}
+                  fill
+                  sizes="(min-width: 768px) 25vw, (min-width: 640px) 33vw, 50vw"
                   className="
-                    w-full h-auto object-cover rounded-xl sm:rounded-2xl
+                    object-cover rounded-xl sm:rounded-2xl
                     transition-all duration-700 ease-out
                     group-hover:scale-110 group-hover:contrast-[1.03]
                   "

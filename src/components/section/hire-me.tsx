@@ -5,25 +5,24 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function HireMeSection() {
   return (
-    <div className="rounded-xl p-4 sm:p-10 relative">
-      <div className="absolute -top-6 z-10 rounded-full bg-card/80 px-3.5 py-1 shadow-[0_0_0_1px_var(--border)] backdrop-blur left-1/2 -translate-x-1/2">
-        <span className="text-xs font-medium tracking-wide text-muted-foreground">Hire Me</span>
-      </div>
-
+    <div className="relative">
       <div className="relative flex flex-col items-center gap-5 text-center">
+        <span className="rounded-full bg-card/80 px-3.5 py-1 text-xs font-medium tracking-wide text-muted-foreground shadow-[0_0_0_1px_var(--border)] backdrop-blur">
+          Hire Me
+        </span>
         <h2
-          className="text-gradient font-display text-4xl font-semibold tracking-tight sm:text-6xl"
+          className="text-gradient max-w-3xl text-balance font-display text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
         >
           Let’s Build Something Impactful
         </h2>
 
-        <p className="mx-auto max-w-lg text-muted-foreground text-balance">
+        <p className="mx-auto max-w-xl text-balance leading-relaxed text-muted-foreground">
           I’m open to internships, freelance work, and collaboration
           opportunities. If you’re looking for someone who can turn ideas into
           real, scalable products.
         </p>
 
-        <p className="mx-auto max-w-lg text-muted-foreground">
+        <p className="mx-auto -mt-2 max-w-xl text-balance leading-relaxed text-muted-foreground">
           I’m just one message away - feel free to reach out on social media or
           email me directly, and I&apos;ll respond as soon as I can.
         </p>
@@ -47,7 +46,7 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold bg-background text-foreground border border-input transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
           >
             <DATA.contact.social.X.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>X (Twitter)</span>
@@ -63,13 +62,12 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold bg-background text-foreground border border-input transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
           >
             <DATA.contact.social.LinkedIn.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>LinkedIn</span>
           </Button>
           <Button
-            variant="outline"
             size="default"
             nativeButton={false}
             render={
@@ -79,7 +77,7 @@ export default function HireMeSection() {
                 rel="noopener noreferrer"
               />
             }
-            className="gap-2 group font-semibold bg-card text-foreground border-transparent shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+            className="gap-2 group font-semibold"
           >
             <DATA.contact.social.email.icon className="size-4 transition-transform duration-300 group-hover:scale-110" />
             <span>Email</span>

@@ -765,7 +765,7 @@ const Experience = () => {
     <section id="experience" className="relative py-1">
       <div className="max-w-screen-md mx-auto">
         {/* Section heading */}
-        <div className="flex flex-col gap-y-4 items-center justify-center mb-12">
+        <div className="flex flex-col gap-y-4 items-center justify-center mb-8">
           <div className="flex items-center w-full">
             <div className="flex-1 h-px bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
             <div className="z-10 rounded-full border border-border bg-card/70 px-3.5 py-1 shadow-sm backdrop-blur">
@@ -776,9 +776,6 @@ const Experience = () => {
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-gradient font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl inline-block text-center">
-              Professional Journey
-            </h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
               My background spans{" "}
               <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent font-medium">
