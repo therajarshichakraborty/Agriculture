@@ -7,13 +7,18 @@ import {
   TimelineItem
 } from "@/src/components/about/Timeline";
 import { portfolio } from "@/src/config/portfolio";
+import { Underline } from "@/src/components/ui/underline";
 
 export function Education() {
   return (
     <Section
       id="education"
       eyebrow="Education"
-      title="Academic foundations."
+      title={
+        <>
+          Academic <Underline>foundations</Underline>.
+        </>
+      }
       description="The fundamentals behind the work, from core sciences to computer science and research."
       align="left"
       className="max-w-4xl"

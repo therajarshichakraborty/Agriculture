@@ -5,6 +5,7 @@ import DSASheetsCard from "@/app/components/leetcode/DSASheetsCard";
 import ContestRatingChart from "@/src/components/charts/ContestRatingChart";
 import { getContestData } from "@/src/lib/leetcode/getContestData";
 import { HOME_WIDTH } from "@/src/components/home/About";
+import { Underline } from "@/src/components/ui/underline";
 
 const LEETCODE_USER = "rajarshi_2005";
 
@@ -33,7 +34,11 @@ export async function DSA() {
     <Section
       id="dsa"
       eyebrow="Problem Solving"
-      title="My DSA journey, in numbers."
+      title={
+        <>
+          My DSA journey, in <Underline>numbers</Underline>.
+        </>
+      }
       description="Consistent practice on LeetCode: live stats, contest rating and the sheets I train with."
       className={HOME_WIDTH}
     >

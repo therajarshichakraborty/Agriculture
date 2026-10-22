@@ -652,37 +652,34 @@ export default function GithubContributionBadge({
   useEffect(() => {
     // Keep the line hidden until its draw starts, so it never flashes in full.
     if (chartWrapRef.current) chartWrapRef.current.dataset.drawn = "false";
-    if (!chartInView || !chartMounted || loading || chartData.length === 0) return;
+    if (!chartInView || !chartMounted || loading || chartData.length === 0)
+      return;
     let frame = 0;
     let tries = 0;
     // On a reload the section is in view before ResponsiveContainer has
     // measured and rendered the SVG, so wait for the path to exist.
     const start = () => {
       const wrap = chartWrapRef.current;
-      const path = wrap?.querySelector<SVGPathElement>(".recharts-area-curve");
-      const length = path?.getTotalLength() ?? 0;
-      if (!wrap || !path || length === 0) {
+      const layer = wrap?.querySelector<SVGGElement>(".recharts-area");
+      const path = layer?.querySelector<SVGPathElement>(".recharts-area-curve");
+      if (!wrap || !layer || !path || path.getTotalLength() === 0) {
         if (tries++ < 120) frame = requestAnimationFrame(start);
         return;
       }
-      path.style.strokeDasharray = `${length}`;
       wrap.dataset.drawn = "true";
-      const draw = path.animate(
-        [{ strokeDashoffset: length }, { strokeDashoffset: 0 }],
-        { duration: 1800, easing: "cubic-bezier(0.65, 0, 0.35, 1)", fill: "forwards" }
-      );
-      draw.onfinish = () => {
-        path.style.strokeDasharray = "";
-        draw.cancel();
-      };
-      wrap.querySelectorAll<SVGElement>(".recharts-area-dot").forEach((dot, i) => {
-        dot.animate([{ opacity: 0, transform: "scale(0.4)" }, { opacity: 1, transform: "scale(1)" }], {
-          duration: 300,
-          delay: 200 + i * 45,
-          easing: "ease-out",
+      // Wipe the line and its dots in together from left to right, so the
+      // dots always land exactly as the line reaches them.
+      layer.animate(
+        [
+          { clipPath: "inset(-10px 100% -10px -10px)" },
+          { clipPath: "inset(-10px -10px -10px -10px)" }
+        ],
+        {
+          duration: 1600,
+          easing: "cubic-bezier(0.65, 0, 0.35, 1)",
           fill: "backwards"
-        });
-      });
+        }
+      );
     };
     frame = requestAnimationFrame(start);
     return () => cancelAnimationFrame(frame);
@@ -903,7 +900,6 @@ export default function GithubContributionBadge({
       </div>
 
       <div className="relative w-full overflow-hidden">
-
         <div className="flex items-center justify-between px-5 pt-4 pb-2">
           <div className="flex items-center gap-2">
             <Activity className="size-4 text-pink-500" />
@@ -937,14 +933,10 @@ export default function GithubContributionBadge({
             Contributions
           </div>
 
-          <div className="text-xs font-semibold text-foreground text-center mb-3 select-none">
-            Rajarshi Chakraborty's Contribution Graph
-          </div>
-
           <div
             ref={chartWrapRef}
             data-drawn="false"
-            className="w-full h-[180px] [&[data-drawn=false]_.recharts-area-curve]:opacity-0 [&[data-drawn=false]_.recharts-area-dot]:opacity-0"
+            className="w-full h-[180px] [&[data-drawn=false]_.recharts-area]:opacity-0"
           >
             {!chartMounted || loading ? (
               <div className="w-full h-full flex items-center justify-center animate-pulse">
@@ -966,7 +958,13 @@ export default function GithubContributionBadge({
                   margin={{ left: 8, right: 10, top: 5, bottom: 5 }}
                 >
                   <defs>
-                    <linearGradient id="contribStroke" x1="0" y1="0" x2="1" y2="0">
+                    <linearGradient
+                      id="contribStroke"
+                      x1="0"
+                      y1="0"
+                      x2="1"
+                      y2="0"
+                    >
                       <stop offset="0%" stopColor="#ef4444" />
                       <stop offset="50%" stopColor="#ec4899" />
                       <stop offset="100%" stopColor="#8b5cf6" />
@@ -1001,7 +999,10 @@ export default function GithubContributionBadge({
                     width={25}
                     allowDecimals={false}
                     tickCount={6}
-                    domain={[0, (max: number) => Math.max(5, Math.ceil(max / 5) * 5)]}
+                    domain={[
+                      0,
+                      (max: number) => Math.max(5, Math.ceil(max / 5) * 5)
+                    ]}
                     stroke={
                       isDark
                         ? "rgba(148, 163, 184, 0.25)"
@@ -1061,7 +1062,6 @@ export default function GithubContributionBadge({
         </div>
       </div>
       <div className="relative w-full overflow-hidden justify-center items-center flex">
-
         <div className="w-full px-1 sm:px-6 py-4 sm:py-5">
           <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full">
             {/* Total Contributions */}

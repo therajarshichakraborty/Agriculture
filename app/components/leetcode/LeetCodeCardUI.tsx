@@ -86,7 +86,6 @@ export default function LeetCodeCardUI({ data }: { data: LeetCodeStats }) {
           w-full max-w-[320px] sm:max-w-[290px]
           p-4 sm:p-5 rounded-2xl
           bg-transparent
-          backdrop-blur-xl
           overflow-hidden
         "
       >

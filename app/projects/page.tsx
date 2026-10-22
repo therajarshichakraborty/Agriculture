@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/src/components/layout/PageHeader";
 import { ProjectExplorer } from "@/src/components/projects/ProjectExplorer";
 import { portfolio } from "@/src/config/portfolio";
+import { Underline } from "@/src/components/ui/underline";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -13,7 +14,11 @@ export default function ProjectsPage() {
     <>
       <PageHeader
         plain
-        title="Things I've designed, built and shipped."
+        title={
+          <>
+            Things I&apos;ve designed, built and <Underline>shipped</Underline>.
+          </>
+        }
         description="AI platforms, developer tools, real-time systems and UI libraries, engineered end to end."
       />
       <ProjectExplorer />

@@ -10,6 +10,7 @@ import {
 import { StackChip, type StackIcon } from "@/src/components/ui/stack-chip";
 import { portfolio } from "@/src/config/portfolio";
 import { DATA } from "@/src/data/resume";
+import { Underline } from "@/src/components/ui/underline";
 
 // Brand logos come from the shared skills list; non-code skills render as text only.
 const stackIcons = new Map<string, { icon: StackIcon; className?: string }>([
@@ -22,7 +23,11 @@ export function Experience() {
     <Section
       id="experience"
       eyebrow="Experience"
-      title="Where I've been building."
+      title={
+        <>
+          Where I&apos;ve been <Underline>building</Underline>.
+        </>
+      }
       description="Shipping production software, running research and leading the campus communities that taught me how teams actually work."
       align="left"
       className="max-w-4xl"

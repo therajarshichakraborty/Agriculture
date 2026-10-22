@@ -3,6 +3,7 @@ import { Section, Reveal } from "@/src/components/aceternity/section";
 import { markdownComponents } from "@/src/components/about/markdown";
 import Gallery from "@/src/components/ui/gallery";
 import { DATA } from "@/src/data/resume";
+import { Underline } from "@/src/components/ui/underline";
 
 /** Narrower, padded container with tighter vertical rhythm for every home section. */
 export const HOME_WIDTH = "max-w-5xl md:px-10 py-8 md:py-10";
@@ -13,7 +14,12 @@ export function About() {
   return (
     <Section
       id="about"
-      title="Engineering software that scales, and systems that think."
+      title={
+        <>
+          Engineering software that <Underline>scales</Underline>, and systems
+          that <Underline delay={0.5}>think</Underline>.
+        </>
+      }
       description="A product-minded engineer who cares about clean architecture, performance and shipping things people actually use."
       className={`${HOME_WIDTH} pt-28 md:pt-44`}
     >

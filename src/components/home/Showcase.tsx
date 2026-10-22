@@ -5,6 +5,7 @@ import GithubCommits from "@/src/components/github-commits";
 import HireMeSection from "@/src/components/section/hire-me";
 import { HOME_WIDTH } from "@/src/components/home/About";
 import { cn } from "@/src/lib/utils";
+import { Underline } from "@/src/components/ui/underline";
 
 const GITHUB_USER = "therajarshichakraborty";
 
@@ -13,7 +14,11 @@ export function GithubActivity() {
     <Section
       id="github"
       eyebrow="Open Source"
-      title="My latest commits."
+      title={
+        <>
+          My latest <Underline>commits</Underline>.
+        </>
+      }
       description="Shipping in public: the most recent pushes and contribution graph, live from GitHub."
       className={HOME_WIDTH}
     >
@@ -31,7 +36,10 @@ export function GithubActivity() {
 
 export function Research() {
   return (
-    <section id="publications" className={cn("mx-auto w-full px-6", HOME_WIDTH)}>
+    <section
+      id="publications"
+      className={cn("mx-auto w-full px-6", HOME_WIDTH)}
+    >
       <Reveal>
         <Publications />
       </Reveal>

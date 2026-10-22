@@ -5,6 +5,7 @@ import { Experience } from "@/src/components/about/Experience";
 import { Education } from "@/src/components/about/Education";
 import { Research } from "@/src/components/home/Showcase";
 import { portfolio } from "@/src/config/portfolio";
+import { Underline } from "@/src/components/ui/underline";
 
 export const metadata: Metadata = {
   title: "About",
@@ -16,7 +17,11 @@ export default function AboutPage() {
     <>
       <PageHeader
         plain
-        title="The person behind the commits."
+        title={
+          <>
+            The person behind the <Underline>commits</Underline>.
+          </>
+        }
         description="Where I've worked, what I've studied and the communities that shaped how I build."
       />
       <Bio />

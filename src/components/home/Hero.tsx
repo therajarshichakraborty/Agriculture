@@ -7,7 +7,7 @@ import { Button } from "@/src/components/ui/button";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
 import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
-import { portfolio } from "@/src/config/portfolio";
+import { Underline } from "@/src/components/ui/underline";
 
 const roles = ["Full-Stack Engineer", "AI Engineer", "System Architect"];
 
@@ -41,7 +41,10 @@ export function Hero() {
             {...fadeUp(0.2)}
             className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg"
           >
-            {portfolio.shortBio}
+            {/* Same words as portfolio.shortBio, with the two roles underlined */}
+            <Underline delay={0.9}>Full-Stack</Underline> &amp;{" "}
+            <Underline delay={1.1}>AI Engineer</Underline> with a strong focus
+            on building scalable, production-grade applications.
           </motion.p>
 
           <motion.div

@@ -7,6 +7,7 @@ import { getHashnodePosts, HASHNODE_PUBLICATIONS } from "@/src/lib/hashnode";
 import { paginate, normalizePage } from "@/src/lib/pagination";
 import { portfolio } from "@/src/config/portfolio";
 import { cn } from "@/src/lib/utils";
+import { Underline } from "@/src/components/ui/underline";
 
 const description =
   "Articles on AI engineering, Node.js, Git and system design by Rajarshi Chakraborty.";
@@ -82,7 +83,11 @@ export default async function BlogPage({
     <>
       <PageHeader
         plain
-        title="Things I learned the hard way."
+        title={
+          <>
+            Things I learned <Underline>the hard way</Underline>.
+          </>
+        }
         description={`${allArticles.length} posts on JavaScript, Node.js, networking, Git and AI, written the way I wish someone had explained them to me.`}
       />
 

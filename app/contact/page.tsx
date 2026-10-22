@@ -13,6 +13,7 @@ import {
   SECONDARY_EMAIL,
   composeUrl
 } from "@/src/lib/contact";
+import { Underline } from "@/src/components/ui/underline";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -79,7 +80,7 @@ export default function ContactPage() {
         </Reveal>
         <Reveal delay={0.05}>
           <h1 className="mt-5 text-4xl leading-[1.05] font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl">
-            Got an idea?
+            Got an <Underline>idea</Underline>?
             <br />
             <GradientText>Let&apos;s make it real.</GradientText>
           </h1>
