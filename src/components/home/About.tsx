@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { Section, Reveal } from "@/src/components/aceternity/section";
 import Gallery from "@/src/components/ui/gallery";
 import { DATA } from "@/src/data/resume";
-import { cn } from "@/src/lib/utils";
 
 /** Narrower, padded container with tighter vertical rhythm for every home section. */
 export const HOME_WIDTH = "max-w-5xl md:px-10 py-8 md:py-10";
@@ -41,32 +40,22 @@ export function About() {
   return (
     <Section
       id="about"
-      eyebrow="About"
       title="Engineering software that scales, and systems that think."
       description="A product-minded engineer who cares about clean architecture, performance and shipping things people actually use."
-      className={HOME_WIDTH}
+      className={`${HOME_WIDTH} pt-28 md:pt-44`}
     >
       <div className="flex flex-col gap-10">
         <div className="mx-auto flex max-w-3xl flex-col gap-5 text-left">
-          {paragraphs.map((text, i) => {
-            const isLead = i === 0;
-            const isCta = i === paragraphs.length - 1;
-            return (
-              <Reveal
-                key={i}
-                delay={i * 0.06}
-                className={cn(
-                  "text-pretty",
-                  isLead
-                    ? "text-lg leading-relaxed tracking-tight text-foreground md:text-xl md:leading-relaxed"
-                    : "text-[15px] leading-[1.8] text-muted-foreground md:text-base md:leading-[1.8]",
-                  isCta && "mt-1 border-t border-border/70 pt-6 font-medium text-foreground"
-                )}
-              >
-                <ReactMarkdown components={markdown}>{text}</ReactMarkdown>
-              </Reveal>
-            );
-          })}
+          {/* One type style for every paragraph, matching the section description. */}
+          {paragraphs.map((text, i) => (
+            <Reveal
+              key={i}
+              delay={i * 0.06}
+              className="text-pretty text-base leading-[1.8] text-muted-foreground md:text-lg md:leading-[1.8]"
+            >
+              <ReactMarkdown components={markdown}>{text}</ReactMarkdown>
+            </Reveal>
+          ))}
         </div>
 
         <Reveal delay={0.1} className="mx-auto w-full max-w-2xl">
