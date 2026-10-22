@@ -63,7 +63,7 @@ export default function MultilingualGreeting() {
   return (
     <div className="flex flex-col gap-0 w-full">
       {/* LINE 1: Greeting + Waving Emoji + Comma */}
-      <div className="relative w-full h-8 sm:h-[40px] md:h-[46px] lg:h-[50px]">
+      <div className="relative w-full h-10 sm:h-12 md:h-14 lg:h-16">
         <AnimatePresence mode="popLayout">
           <motion.div
             key={`hello-line-${currentIndex}`}
@@ -71,7 +71,7 @@ export default function MultilingualGreeting() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -8, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="absolute left-0 top-[-4px] sm:top-[-6px] md:top-[-8px] lg:top-[-10px] flex items-center gap-x-1.5 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-normal select-none whitespace-nowrap"
+            className="absolute left-0 top-[-4px] sm:top-[-6px] md:top-[-8px] lg:top-[-10px] flex items-center gap-x-1.5 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-normal select-none whitespace-nowrap"
           >
             <span
               className="inline-block bg-linear-to-r from-red-500 via-rose-500 to-violet-500 bg-clip-text text-transparent font-extrabold pr-2 sm:pr-3"
@@ -102,13 +102,13 @@ export default function MultilingualGreeting() {
       </div>
 
       {/* LINE 2: "My name is" */}
-      <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-none select-none text-foreground py-0 mt-1 sm:mt-2 md:mt-2.5">
+      <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-none select-none text-foreground py-0 mt-1 sm:mt-2 md:mt-2.5">
         My name is
       </div>
 
       {/* LINE 3: Name */}
       <div className="mt-1 sm:mt-2 md:mt-2.5 py-0">
-        <div className="relative w-full h-7 sm:h-[32px] md:h-[36px] lg:h-[40px]">
+        <div className="relative w-full h-9 sm:h-10 md:h-12 lg:h-14">
           <AnimatePresence mode="popLayout">
             <motion.h1
               key={`name-${currentIndex}`}
@@ -117,7 +117,7 @@ export default function MultilingualGreeting() {
               exit={{ y: -8, opacity: 0 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               aria-label="Rajarshi Chakraborty"
-              className="absolute left-0 top-[-4px] sm:top-[-6px] md:top-[-8px] lg:top-[-10px] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[1.7rem] font-bold tracking-tight bg-linear-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent leading-normal whitespace-nowrap pr-2 sm:pr-4"
+              className="absolute left-0 top-[-4px] sm:top-[-6px] md:top-[-8px] lg:top-[-10px] text-xl sm:text-2xl md:text-3xl lg:text-[2.1rem] font-bold tracking-tight bg-linear-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent leading-normal whitespace-nowrap pr-2 sm:pr-4"
             >
               {current.name}
             </motion.h1>

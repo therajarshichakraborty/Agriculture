@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowUpRight, Download, Eye } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
-import { BackgroundBeamsWithCollision } from "@/src/components/aceternity/background-beams-collision";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
 import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
@@ -25,8 +24,8 @@ const fadeUp = (delay: number) => ({
 
 export function Hero() {
   return (
-    <BackgroundBeamsWithCollision className="pt-32 pb-24 md:pt-40 md:pb-32">
-      <section className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-14 px-6 md:px-10 lg:grid-cols-[1.2fr_0.8fr]">
+    <section className="relative pt-20 pb-16 md:pt-28 md:pb-20">
+      <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-14 px-6 md:px-10 lg:grid-cols-[1.2fr_0.8fr]">
         <div className="flex min-w-0 flex-col gap-7">
           <motion.div {...fadeUp(0)}>
             <MultilingualGreeting />
@@ -34,7 +33,7 @@ export function Hero() {
 
           <motion.h1
             {...fadeUp(0.1)}
-            className="font-display text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+            className="font-display text-[1.75rem] font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
             I build as a{" "}
             <span className="block">
@@ -84,7 +83,7 @@ export function Hero() {
             <HeroAvatarOrbit />
           </div>
         </motion.div>
-      </section>
-    </BackgroundBeamsWithCollision>
+      </div>
+    </section>
   );
 }
