@@ -1,10 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { allPosts } from "content-collections";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/src/components/layout/PageHeader";
-import { GlowCard } from "@/src/components/aceternity/glow-card";
 import { Reveal } from "@/src/components/aceternity/section";
 import { getHashnodePosts, HASHNODE_PUBLICATIONS } from "@/src/lib/hashnode";
 import { paginate, normalizePage } from "@/src/lib/pagination";
@@ -23,7 +20,7 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 8;
 
 const formatDate = (date: string) =>
   new Date(date).toLocaleDateString("en-US", {
@@ -31,6 +28,8 @@ const formatDate = (date: string) =>
     day: "numeric",
     year: "numeric"
   });
+
+const pad = (n: number) => String(n).padStart(2, "0");
 
 export default async function BlogPage({
   searchParams
@@ -49,11 +48,7 @@ export default async function BlogPage({
     page: normalizePage(pageParam, totalPages),
     pageSize: PAGE_SIZE
   });
-
-  const localPosts = [...allPosts].sort(
-    (a, b) =>
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  );
+  const offset = (pagination.page - 1) * PAGE_SIZE;
 
   const hrefFor = (params: { page?: number; pub?: string }) => {
     const query = new URLSearchParams();
@@ -68,123 +63,108 @@ export default async function BlogPage({
     ...HASHNODE_PUBLICATIONS.map((p) => ({ label: p.name, value: p.name }))
   ];
 
+  const controls = [
+    {
+      label: "Previous",
+      icon: ArrowLeft,
+      enabled: pagination.hasPreviousPage,
+      page: pagination.page - 1
+    },
+    {
+      label: "Next",
+      icon: ArrowRight,
+      enabled: pagination.hasNextPage,
+      page: pagination.page + 1
+    }
+  ];
+
   return (
     <>
       <PageHeader
-        eyebrow={`${allArticles.length + localPosts.length} articles`}
-        title="Notes on building software."
-        description="Writing on AI engineering, Node.js internals, Git and system design, published across my Hashnode blogs."
-      >
-        <a
-          href={portfolio.blog}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-10 items-center gap-2 rounded-xl border border-border bg-card px-4 text-sm font-medium transition-colors hover:border-foreground/20"
-        >
-          Follow on Hashnode <ArrowUpRight className="size-4" />
-        </a>
-      </PageHeader>
+        plain
+        title="Things I learned the hard way."
+        description={`${allArticles.length} posts on JavaScript, Node.js, networking, Git and AI, written the way I wish someone had explained them to me.`}
+      />
 
-      <section id="blog" className="mx-auto max-w-6xl px-6 pb-16">
-        {localPosts.length > 0 && (
-          <Reveal className="mb-14">
-            <h2 className="mb-4 text-sm font-medium uppercase tracking-widest text-muted-foreground">
-              On this site
-            </h2>
-            <ul className="divide-y divide-border rounded-2xl border border-border bg-card">
-              {localPosts.map((post) => {
-                const slug = post._meta.path.replace(/\.mdx$/, "");
+      <section id="blog" className="mx-auto max-w-3xl px-6 pb-24">
+        {/* Publication filter: plain text tabs, the active one in black */}
+        <Reveal>
+          <nav
+            aria-label="Filter by publication"
+            className="mb-10 flex items-end gap-4 border-b border-border text-sm"
+          >
+            {/* One row that scrolls sideways on narrow screens */}
+            <div className="flex min-w-0 flex-1 gap-6 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {filters.map((filter) => {
+                const active = pub === filter.value;
                 return (
-                  <li key={slug}>
-                    <Link
-                      href={`/blog/${slug}`}
-                      className="group flex items-center justify-between gap-4 px-5 py-4"
-                    >
-                      <span className="font-medium">{post.title}</span>
-                      <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                        {formatDate(post.publishedAt)}
-                        <ChevronRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                      </span>
-                    </Link>
-                  </li>
+                  <Link
+                    key={filter.label}
+                    href={hrefFor({ pub: filter.value })}
+                    scroll={false}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "border-b-2 pb-3 font-medium transition-colors",
+                      active
+                        ? "border-foreground text-foreground"
+                        : "border-transparent text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {filter.label}
+                  </Link>
                 );
               })}
-            </ul>
-          </Reveal>
-        )}
-
-        <nav
-          aria-label="Filter by publication"
-          className="mb-10 flex justify-center"
-        >
-          <div className="glass inline-flex max-w-full flex-wrap justify-center gap-1 rounded-2xl border border-border p-1">
-            {filters.map((filter) => (
-              <Link
-                key={filter.label}
-                href={hrefFor({ pub: filter.value })}
-                scroll={false}
-                className={cn(
-                  "rounded-xl px-4 py-1.5 text-sm font-medium transition-colors",
-                  pub === filter.value
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {filter.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
+            </div>
+            <span className="shrink-0 pb-3.5 text-xs font-semibold text-muted-foreground tabular-nums">
+              {articles.length} {articles.length === 1 ? "post" : "posts"}
+            </span>
+          </nav>
+        </Reveal>
 
         {items.length > 0 ? (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <ol className="flex flex-col">
             {items.map((post, i) => (
-              <Reveal key={post.url} delay={(i % 3) * 0.05}>
-                <a
-                  href={post.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block h-full"
-                >
-                  <GlowCard className="h-full">
-                    <article className="flex h-full flex-col">
-                      <div className="relative aspect-video overflow-hidden rounded-t-[calc(var(--radius-2xl)-1px)] border-b border-border bg-secondary">
-                        {post.cover && (
-                          <Image
-                            src={post.cover}
-                            alt=""
-                            fill
-                            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                            className="object-cover transition-transform duration-700 group-hover/glow:scale-105"
-                          />
-                        )}
-                        <span className="glass absolute top-3 left-3 rounded-full border border-border px-2.5 py-0.5 text-[11px] font-medium">
-                          {post.publication}
+              <li key={post.url}>
+                <Reveal delay={i * 0.04}>
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex gap-4 py-5 sm:gap-6"
+                  >
+                    <span className="pt-1 font-mono text-sm font-semibold text-muted-foreground tabular-nums transition-colors group-hover:text-foreground">
+                      {pad(offset + i + 1)}.
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="flex items-start gap-2">
+                        <span className="text-lg font-semibold leading-snug tracking-tight text-foreground decoration-foreground/30 underline-offset-4 group-hover:underline sm:text-xl">
+                          {post.title}
                         </span>
-                      </div>
-                      <div className="flex flex-1 flex-col gap-2 p-5">
-                        <time className="text-xs text-muted-foreground">
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          className="mt-1.5 size-4 shrink-0 -translate-x-1 text-foreground opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+                        />
+                      </span>
+                      <span className="mt-2 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                        <time
+                          dateTime={new Date(post.publishedAt).toISOString()}
+                        >
                           {formatDate(post.publishedAt)}
                         </time>
-                        <h3 className="line-clamp-2 font-semibold leading-snug tracking-tight">
-                          {post.title}
-                        </h3>
-                        <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                          {post.description}
-                        </p>
-                        <span className="mt-auto inline-flex items-center gap-1 pt-2 text-sm font-medium">
-                          Read article
-                          <ArrowUpRight className="size-4 transition-transform group-hover/glow:-translate-y-0.5 group-hover/glow:translate-x-0.5" />
-                        </span>
-                      </div>
-                    </article>
-                  </GlowCard>
-                </a>
-              </Reveal>
+                        <span
+                          aria-hidden="true"
+                          className="size-1 rounded-full bg-foreground"
+                        />
+                        <span>{post.publication}</span>
+                      </span>
+                    </span>
+                  </a>
+                </Reveal>
+              </li>
             ))}
-          </div>
+          </ol>
         ) : (
-          <div className="rounded-2xl border border-border px-4 py-16 text-center text-muted-foreground">
+          <p className="py-16 text-center text-muted-foreground">
             Articles are loading from Hashnode.{" "}
             <a
               href={portfolio.blog}
@@ -195,47 +175,68 @@ export default async function BlogPage({
               Read them there
             </a>{" "}
             in the meantime.
-          </div>
+          </p>
         )}
 
         {pagination.totalPages > 1 && (
-          <div className="mt-10 flex items-center justify-between">
+          <div className="mt-10 flex items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              Page {pagination.page} of {pagination.totalPages}
+              Page{" "}
+              <span className="font-semibold text-foreground">
+                {pagination.page}
+              </span>{" "}
+              of {pagination.totalPages}
             </p>
             <div className="flex gap-2">
-              {[
-                {
-                  label: "Previous",
-                  enabled: pagination.hasPreviousPage,
-                  page: pagination.page - 1
-                },
-                {
-                  label: "Next",
-                  enabled: pagination.hasNextPage,
-                  page: pagination.page + 1
-                }
-              ].map((control) =>
-                control.enabled ? (
+              {controls.map((control) => {
+                const Icon = control.icon;
+                const body = (
+                  <>
+                    {control.label === "Previous" && (
+                      <Icon aria-hidden="true" className="size-4" />
+                    )}
+                    {control.label}
+                    {control.label === "Next" && (
+                      <Icon aria-hidden="true" className="size-4" />
+                    )}
+                  </>
+                );
+                return control.enabled ? (
                   <Link
                     key={control.label}
                     href={hrefFor({ pub, page: control.page })}
-                    className="flex h-9 items-center rounded-lg border border-border px-3 text-sm transition-colors hover:bg-accent"
+                    className="inline-flex h-10 items-center gap-1.5 rounded-xl border border-border bg-background px-4 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-foreground/25 hover:shadow-sm active:scale-[0.98]"
                   >
-                    {control.label}
+                    {body}
                   </Link>
                 ) : (
                   <span
                     key={control.label}
-                    className="flex h-9 cursor-not-allowed items-center rounded-lg border border-border px-3 text-sm opacity-50"
+                    aria-disabled="true"
+                    className="inline-flex h-10 items-center gap-1.5 rounded-xl border border-border px-4 text-sm font-medium opacity-40"
                   >
-                    {control.label}
+                    {body}
                   </span>
-                )
-              )}
+                );
+              })}
             </div>
           </div>
         )}
+
+        <Reveal className="mt-14 flex justify-center">
+          <a
+            href={portfolio.blog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex h-10 items-center gap-2 rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-lg hover:shadow-foreground/15"
+          >
+            Follow on Hashnode
+            <ArrowUpRight
+              aria-hidden="true"
+              className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </a>
+        </Reveal>
       </section>
     </>
   );
