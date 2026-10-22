@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/src/components/layout/PageHeader";
 import { Bio } from "@/src/components/about/Bio";
-import { Skills } from "@/src/components/about/Skills";
 import { Experience } from "@/src/components/about/Experience";
 import { Education } from "@/src/components/about/Education";
 import { Research } from "@/src/components/home/Showcase";
@@ -16,12 +15,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About me"
-        title="Engineer. Researcher. Builder."
-        description={portfolio.bio}
+        plain
+        title="The person behind the commits."
+        description="Where I've worked, what I've studied and the communities that shaped how I build."
       />
       <Bio />
-      <Skills />
       <Experience />
       <Education />
       <Research />

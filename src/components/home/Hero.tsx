@@ -9,11 +9,7 @@ import MultilingualGreeting from "@/src/components/multilingual-greeting";
 import HeroAvatarOrbit from "@/src/components/hero-avatar-orbit";
 import { portfolio } from "@/src/config/portfolio";
 
-const roles = [
-  "Full-Stack Engineer",
-  "AI Engineer",
-  "System Architect"
-];
+const roles = ["Full-Stack Engineer", "AI Engineer", "System Architect"];
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 16 },
@@ -34,6 +30,7 @@ export function Hero() {
             {...fadeUp(0.1)}
             className="font-display text-[1.75rem] font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
           >
+            <span className="block text-foreground">Meet your next</span>
             <FlipWords
               words={roles}
               gradient="linear-gradient(90deg, #ef4444, #ec4899, #8b5cf6)"
@@ -47,7 +44,10 @@ export function Hero() {
             {portfolio.shortBio}
           </motion.p>
 
-          <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
+          <motion.div
+            {...fadeUp(0.3)}
+            className="flex flex-wrap items-center gap-3"
+          >
             <Button
               className="group relative gap-2 overflow-hidden font-semibold transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-pink-500/25 active:scale-[0.98]"
               nativeButton={false}
@@ -71,7 +71,12 @@ export function Hero() {
               variant="outline"
               className="gap-2 group font-semibold bg-background text-foreground border border-input transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
               nativeButton={false}
-              render={<a href="/resume.pdf" download="rajarshi-chakraborty-resume.pdf" />}
+              render={
+                <a
+                  href="/resume.pdf"
+                  download="rajarshi-chakraborty-resume.pdf"
+                />
+              }
             >
               <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
               <span>Download résumé</span>

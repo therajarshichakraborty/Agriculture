@@ -1,38 +1,11 @@
-import Link from "next/link";
-import ReactMarkdown, { type Components } from "react-markdown";
-import { ArrowRight } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { Section, Reveal } from "@/src/components/aceternity/section";
+import { markdownComponents } from "@/src/components/about/markdown";
 import Gallery from "@/src/components/ui/gallery";
 import { DATA } from "@/src/data/resume";
 
 /** Narrower, padded container with tighter vertical rhythm for every home section. */
 export const HOME_WIDTH = "max-w-5xl md:px-10 py-8 md:py-10";
-
-// Paragraphs inherit size and colour from their wrapper, so only inline marks need styling.
-const markdown: Components = {
-  strong: ({ children }) => (
-    <strong className="font-semibold text-foreground">{children}</strong>
-  ),
-  // Call-to-action link: brand gradient text, growing underline and a nudging arrow.
-  a: ({ href = "", children }) => (
-    <Link
-      href={href}
-      className="group/cta relative inline-flex items-center gap-1 font-semibold"
-    >
-      <span className="bg-linear-to-r from-red-500 via-pink-500 to-violet-500 bg-clip-text text-transparent">
-        {children}
-      </span>
-      <ArrowRight
-        aria-hidden="true"
-        className="size-4 text-violet-500 transition-transform duration-300 group-hover/cta:translate-x-1"
-      />
-      <span
-        aria-hidden="true"
-        className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-linear-to-r from-red-500 via-pink-500 to-violet-500 transition-transform duration-500 ease-out group-hover/cta:scale-x-100"
-      />
-    </Link>
-  )
-};
 
 const paragraphs = DATA.summary.split(/\n\s*\n/);
 
@@ -53,7 +26,9 @@ export function About() {
               delay={i * 0.06}
               className="text-pretty text-base leading-[1.8] text-muted-foreground md:text-lg md:leading-[1.8]"
             >
-              <ReactMarkdown components={markdown}>{text}</ReactMarkdown>
+              <ReactMarkdown components={markdownComponents}>
+                {text}
+              </ReactMarkdown>
             </Reveal>
           ))}
         </div>

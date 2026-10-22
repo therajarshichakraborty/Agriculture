@@ -8,6 +8,9 @@ import { Card3D } from "@/src/components/aceternity/card-3d";
 import { Reveal } from "@/src/components/aceternity/section";
 import { portfolio } from "@/src/config/portfolio";
 import { DATA } from "@/src/data/resume";
+import { markdownComponents } from "@/src/components/about/markdown";
+
+const paragraphs = DATA.story.split(/\n\s*\n/);
 
 export function Bio() {
   return (
@@ -25,44 +28,61 @@ export function Bio() {
                 priority
               />
               <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/30 to-transparent p-5 text-white">
-                <p className="font-display text-xl font-semibold">{portfolio.name}</p>
+                <p className="font-display text-xl font-semibold">
+                  {portfolio.name}
+                </p>
                 <p className="text-sm text-white/70">{portfolio.role}</p>
               </div>
             </div>
           </Card3D>
         </Reveal>
 
-        <Reveal delay={0.1} className="space-y-6">
-          <div className="prose prose-neutral max-w-none leading-relaxed dark:prose-invert prose-p:text-muted-foreground prose-strong:text-foreground prose-a:font-semibold prose-a:text-foreground prose-a:decoration-pink-500/50 prose-a:underline-offset-4 hover:prose-a:decoration-pink-500">
-            <ReactMarkdown>{DATA.summary}</ReactMarkdown>
+        <div className="space-y-6">
+          <div className="flex flex-col gap-5">
+            {paragraphs.map((text, i) => (
+              <Reveal
+                key={i}
+                delay={0.1 + i * 0.06}
+                className="text-pretty text-base leading-[1.8] text-muted-foreground md:text-lg md:leading-[1.8]"
+              >
+                <ReactMarkdown components={markdownComponents}>
+                  {text}
+                </ReactMarkdown>
+              </Reveal>
+            ))}
           </div>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <MapPin className="size-4" /> {portfolio.location}
-            </span>
-            <a href={`mailto:${portfolio.email}`} className="flex items-center gap-2 hover:text-foreground">
-              <Mail className="size-4" /> {portfolio.email}
-            </a>
-          </div>
+          <Reveal delay={0.1 + paragraphs.length * 0.06} className="space-y-6">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              <span className="flex items-center gap-2">
+                <MapPin className="size-4" /> {portfolio.location}
+              </span>
+              <a
+                href={`mailto:${portfolio.email}`}
+                className="flex items-center gap-2 hover:text-foreground"
+              >
+                <Mail className="size-4" /> {portfolio.email}
+              </a>
+            </div>
 
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="inline-flex h-11 items-center gap-2 rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
-            >
-              Get in touch
-            </Link>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-xl border border-border bg-card px-5 text-sm font-medium transition-colors hover:border-foreground/20"
-            >
-              View résumé <ArrowUpRight className="size-4" />
-            </a>
-          </div>
-        </Reveal>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/contact"
+                className="inline-flex h-11 items-center gap-2 rounded-xl bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+              >
+                Get in touch
+              </Link>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center gap-2 rounded-xl border border-border bg-card px-5 text-sm font-medium transition-colors hover:border-foreground/20"
+              >
+                View résumé <ArrowUpRight className="size-4" />
+              </a>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

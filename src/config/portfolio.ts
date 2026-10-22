@@ -259,61 +259,141 @@ export const portfolio = {
   ],
 
   // ----------------------------------------------------------
-  // Experience
+  // Experience (**text** is emphasized when rendered)
   // ----------------------------------------------------------
   experience: [
     {
       company: "Brand Voy",
+      href: "https://brandvoy.co/",
+      logo: "/brandvoy.png",
       role: "Software Engineer",
       period: "Aug 2026 - Present",
       location: "London, United Kingdom (Remote)",
-      description:
-        "Develop and maintain scalable, reliable, and user-focused web applications for live production environments. Work extensively with high-volume sports data, primarily covering cricket and football, to build data-driven sports technology projects serving international clients across English and Vietnamese markets with real-time statistics, matches, fixtures, and localization.",
-      tech: [
+      summary:
+        "Building live sports products on high-volume cricket and football data for clients across English and Vietnamese markets.",
+      highlights: [
+        "Ship and maintain production web apps that serve **real-time** matches, fixtures, scores and statistics.",
+        "Optimize data handling and app workflows so pages stay fast under **high-volume, live-match** traffic.",
+        "Own features end to end, from requirements and implementation to testing, deployment and production support."
+      ],
+      stack: [
         "TypeScript",
         "Next.js",
-        "Node.js",
-        "Real-Time Data",
-        "High-Volume Data",
-        "REST APIs",
-        "Localization"
+        "React Native",
+        "Expo",
+        "Node",
+        "Express",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "Git"
       ]
     },
     {
       company: "Techno Main Salt Lake",
-      role: "Undergrad Engineering Fellow",
-      period: "June 2023 - Present",
+      href: "https://www.ticollege.ac.in/",
+      logo: "/techno.jpg",
+      role: "UnderGrad Researcher",
+      period: "Jan 2026 - Present",
       location: "Kolkata, West Bengal, India",
-      description:
-        "STEM fellow in Computer Science and Engineering actively exploring emerging technologies in Software Development, Artificial Intelligence, and Data Science. Co-authored IEEE-published research on Deep Learning Enabled Fruit Quality Assessment with Hyper-Spectral Feature Fusion (CIACON 2026).",
-      tech: [
-        "Deep Learning",
+      summary:
+        "Researching deep learning for weather time-series forecasting, from raw data to a deployable pipeline.",
+      highlights: [
+        "Built and benchmarked LSTM, ARIMA and RNN models, improving prediction reliability by **28.75%** over statistical baselines across 3+ years of backtesting.",
+        "Turned research notebooks into a modular Python pipeline, cutting the retrain-to-redeploy cycle from 3+ days to **under 4 hours**.",
+        "Cleaned a **60,000+ row** dataset and tuned 120+ configurations, lifting LSTM validation accuracy by **19.4%** and cutting MAE by **22%**."
+      ],
+      stack: [
         "Python",
-        "Algorithms",
-        "Data Structures",
-        "System Design",
-        "PostgreSQL"
+        "PyTorch",
+        "NumPy",
+        "Pandas",
+        "Scikit Learn",
+        "Node",
+        "Time Series Analysis"
       ]
+    },
+    {
+      company: "Samarth TMSL",
+      logo: "/Samarth.jpg",
+      role: "Co-Head & Content Writer, IGNITE",
+      period: "July 2023 - Present",
+      location: "Kolkata, West Bengal, India",
+      summary:
+        "Co-leading the IGNITE division of Samarth TMSL, running its events and writing the content behind them.",
+      highlights: [
+        "Co-organized **6+ large-scale events**, including the national-level hackathon Educathon and the annual fest Safalya, drawing **500+ participants**.",
+        "Led cross-functional teams of **20+ volunteers** across logistics, design, outreach and operations, delivering every event on schedule.",
+        "Wrote **15+ articles**, workshop decks and guides, helping grow social media engagement by **40%**."
+      ],
+      stack: [
+        "Leadership",
+        "Event Management",
+        "Content Writing",
+        "Public Speaking",
+        "Community Building"
+      ]
+    },
+    {
+      company: "Geekonix",
+      logo: "/geekonix.png",
+      role: "Volunteer & Management Staff",
+      period: "Oct 2023 - Dec 2024",
+      location: "Kolkata, West Bengal, India",
+      summary:
+        "Helped run EDGE, the official technical fest of Techno Main Salt Lake.",
+      highlights: [
+        "Supported **10+ event tracks** across competitive programming, robotics and quizzing over two fest days.",
+        "Coordinated scheduling, venues and resources for **300+ participants a day** with a 30+ member volunteer team.",
+        "Spotted bottlenecks in registration and check-in mid-event and fixed them on the spot, cutting average wait time by **25%**."
+      ],
+      stack: ["Event Operations", "Team Management", "Logistics", "Coordination"]
     }
   ],
 
   // ----------------------------------------------------------
-  // Education
+  // Education (**text** is emphasized when rendered)
   // ----------------------------------------------------------
   education: [
     {
       institution: "Techno Main Salt Lake",
+      href: "https://www.ticollege.ac.in/",
+      logo: "/tmsl2.png",
       degree: "B.Tech in Computer Science and Engineering",
-      period: "2023 - Present",
+      period: "June 2023 - Present",
+      location: "Kolkata, West Bengal, India",
+      facts: ["GPA 8.136 / 10 (through Semester 6)", "Class of 2027"],
       description:
-        "Academic Progress: GPA 8.136 / 10. Comprehensive coursework covering Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Machine Learning, Cryptography & Network Security, and System Design. Published IEEE researcher at CIACON 2026."
+        "Co-authored a **research paper** on deep learning for fruit quality assessment (CIACON 2026) alongside my coursework.",
+      coursework: [
+        "Data Structures & Algorithms",
+        "Design & Analysis of Algorithms",
+        "Operating Systems",
+        "Database Management Systems",
+        "Computer Networks",
+        "Machine Learning",
+        "Cryptography & Network Security",
+        "Software Engineering"
+      ]
     },
     {
       institution: "West Bengal Council of Higher Secondary Education",
-      degree: "Higher Secondary (XII), Pure Science",
-      period: "2020 - 2023",
+      href: "https://wbchse.wb.gov.in/",
+      logo: "/West_Bengal_Council_of_Higher_Secondary_Education_Logo.png",
+      degree: "Higher Secondary (Class XII), Science",
+      period: "April 2020 - Mar 2023",
+      location: "West Bengal, India",
+      facts: ["Grade A+", "81.2% overall"],
       description:
-        "Grade: A+ (81.2% marks in +2 examination). Captain of the School Cricket Team, leading the team in inter-school tournaments. Rigorous foundation in Mathematics, Physics, Chemistry, and Biology combined with leadership and strategic discipline."
+        "Captained the **school cricket team** through inter-school tournaments while studying the core sciences.",
+      coursework: [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Biology",
+        "English",
+        "Bengali"
+      ]
     }
   ],
 

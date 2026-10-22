@@ -98,11 +98,20 @@ export const DATA = {
   description: `Full-Stack & AI Engineer with a strong focus on building scalable, production-grade applications.`,
   summary: `**I like the moment a system breaks and nobody knows why yet.** That’s usually where I do my best work.
 
-Tracing a slow page back to one missing index, or a flaky deploy back to a race condition nobody wrote down, is exactly the kind of puzzle I enjoy. It shaped how I build: understand the whole path end to end, then make it simple enough that the next person never has to dig. Fast matters. Understandable matters more.
+Tracing a **slow page** back to one **missing index**, or a **flaky deploy** back to a **race condition** nobody wrote down, is exactly the kind of puzzle I enjoy. It shaped how I build: understand the whole path end to end, then make it simple enough that the next person never has to dig. Fast matters. Understandable matters more.
 
-Lately that curiosity has pulled me toward AI agents, systems that reason, call tools and fail in brand-new ways. Making them dependable enough to trust with real work is the problem I find most interesting right now.
+Lately that curiosity has pulled me toward **AI agents**, systems that reason, call tools and fail in brand-new ways. Making them dependable enough to trust with real work is the problem I find most interesting right now.
 
 Got something that’s broken in a way nobody can explain? [Let’s talk](/contact)`,
+
+  // Longer, personal story for the About page (kept distinct from the home intro).
+  story: `Back in school I captained the **cricket team**, which turned out to be good training for engineering: read the conditions, back your team and stay calm when the plan falls apart.
+
+Today I’m a Software Engineer at **Brand Voy**, building live sports products on high-volume cricket and football data. When a match is live, the numbers have to be right and they have to be fast, and that standard has stuck with me in everything I build.
+
+I’m also finishing my B.Tech in Computer Science at **Techno Main Salt Lake**, where I research time-series forecasting and co-authored a **research paper** on deep learning. Away from the keyboard, I’ve co-led **IGNITE** at **Samarth TMSL** and helped run **EDGE**, our technical fest, with **Geekonix**. Organizing events for hundreds of people taught me as much about building things as any codebase.
+
+The rest of the time I’m solving problems on **LeetCode** or writing up what I’ve learned on [my blog](/blog)`,
 
   avatarUrl: "RajarshiImage.jpg",
   skills: [

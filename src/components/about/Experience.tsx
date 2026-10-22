@@ -1,63 +1,92 @@
 "use client";
 
-import Image from "next/image";
-import { MapPin } from "lucide-react";
+import { ChartSpline, type LucideIcon } from "lucide-react";
+import { motion } from "motion/react";
+import type { ComponentType, SVGProps } from "react";
 import { Section } from "@/src/components/aceternity/section";
-import { GlowCard } from "@/src/components/aceternity/glow-card";
-import { TracingTimeline } from "@/src/components/aceternity/tracing-timeline";
+import {
+  Highlights,
+  Timeline,
+  TimelineItem
+} from "@/src/components/about/Timeline";
 import { portfolio } from "@/src/config/portfolio";
 import { DATA } from "@/src/data/resume";
+import { cn } from "@/src/lib/utils";
 
-const logoFor = (company: string) =>
-  DATA.work.find((w) => w.company === company)?.logoUrl;
+type Icon = ComponentType<SVGProps<SVGSVGElement>> | LucideIcon;
+
+// Brand logos come from the shared skills list; non-code skills render as text only.
+const stackIcons = new Map<string, { Icon: Icon; className?: string }>([
+  ...DATA.skills.map((s) => [s.name, { Icon: s.icon }] as const),
+  ["Time Series Analysis", { Icon: ChartSpline, className: "text-rose-500" }]
+]);
+
+// Chips pop in one after another, then lift and tilt their icon on hover.
+function StackItem({ name, index }: { name: string; index: number }) {
+  const entry = stackIcons.get(name);
+  return (
+    <motion.li
+      initial={{ opacity: 0, y: 8, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-40px" }}
+      whileHover={{ y: -3 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{
+        type: "spring",
+        stiffness: 380,
+        damping: 22,
+        delay: index * 0.04
+      }}
+      className="group/chip inline-flex items-center gap-1.5 rounded-full bg-muted/60 px-2.5 py-1 text-xs font-medium text-foreground/80 transition-[background-color,color,box-shadow] duration-200 hover:bg-muted hover:text-foreground hover:shadow-sm"
+    >
+      {entry && (
+        <entry.Icon
+          aria-hidden="true"
+          className={cn(
+            "size-3.5 shrink-0 transition-transform duration-300 ease-out group-hover/chip:scale-125 group-hover/chip:-rotate-12",
+            entry.className
+          )}
+        />
+      )}
+      {name === "Node" ? "Node.js" : name}
+    </motion.li>
+  );
+}
 
 export function Experience() {
-  const entries = portfolio.experience.map((job) => {
-    const logo = logoFor(job.company);
-    return {
-      id: job.company,
-      label: job.period,
-      marker: logo ? (
-        <Image src={logo} alt={job.company} width={40} height={40} className="size-full object-cover" />
-      ) : undefined,
-      content: (
-        <GlowCard>
-          <div className="space-y-4 p-6">
-            <div className="flex flex-wrap items-start justify-between gap-2">
-              <div>
-                <h3 className="text-lg font-semibold tracking-tight">{job.role}</h3>
-                <p className="text-sm text-muted-foreground">{job.company}</p>
-              </div>
-              <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                <MapPin className="size-3" />
-                {job.location}
-              </span>
-            </div>
-            <p className="text-sm leading-relaxed text-muted-foreground">{job.description}</p>
-            <ul className="flex flex-wrap gap-1.5">
-              {job.tech.map((t) => (
-                <li
-                  key={t}
-                  className="rounded-md border border-border bg-secondary/60 px-2 py-0.5 text-xs text-secondary-foreground"
-                >
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </GlowCard>
-      )
-    };
-  });
-
   return (
     <Section
       id="experience"
       eyebrow="Experience"
       title="Where I've been building."
+      description="Shipping production software, running research and leading the campus communities that taught me how teams actually work."
       align="left"
+      className="max-w-4xl"
     >
-      <TracingTimeline entries={entries} />
+      <Timeline>
+        {portfolio.experience.map((job, i) => (
+          <TimelineItem
+            key={`${job.company}-${job.role}`}
+            index={i}
+            logo={job.logo}
+            title={job.role}
+            org={job.company}
+            href={"href" in job ? job.href : undefined}
+            location={job.location}
+            period={job.period}
+          >
+            <p className="text-[15px] leading-relaxed text-foreground/85">
+              {job.summary}
+            </p>
+            <Highlights items={job.highlights} />
+            <ul aria-label="Stack" className="flex flex-wrap gap-2 pt-1">
+              {job.stack.map((name, j) => (
+                <StackItem key={name} name={name} index={j} />
+              ))}
+            </ul>
+          </TimelineItem>
+        ))}
+      </Timeline>
     </Section>
   );
 }
