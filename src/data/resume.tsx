@@ -96,13 +96,13 @@ export const DATA = {
   location: "Kolkata, West Bengal, India",
   locationLink: "https://www.google.com/maps/place/Kolkata,+West+Bengal",
   description: `Full-Stack & AI Engineer with a strong focus on building scalable, production-grade applications.`,
-  summary: `I’m **Rajarshi Chakraborty**, a **Software Engineer at Brand Voy** and a Computer Science undergrad at Techno Main Salt Lake (Class of 2027). I design and ship **production-grade software**: fast, reliable and built to scale from day one.
+  summary: `**I like the moment a system breaks and nobody knows why yet.** That’s usually where I do my best work.
 
-I work across the entire stack, from polished interfaces in **React** and **Next.js** to resilient backends in **Node.js**, **Go** and **Python**, running on **PostgreSQL**, **Redis**, **Docker** and **AWS**. I think in systems first: clear boundaries, measurable performance and architecture that still makes sense a year from now.
+Tracing a slow page back to one missing index, or a flaky deploy back to a race condition nobody wrote down, is exactly the kind of puzzle I enjoy. It shaped how I build: understand the whole path end to end, then make it simple enough that the next person never has to dig. Fast matters. Understandable matters more.
 
-Right now I’m going deep on **Generative and Agentic AI**, building LLM-powered products, retrieval pipelines and autonomous agents that do real work on real data. Away from the editor I sharpen my fundamentals on LeetCode, with **700+ problems solved**, and write about what I learn along the way.
+Lately that curiosity has pulled me toward AI agents, systems that reason, call tools and fail in brand-new ways. Making them dependable enough to trust with real work is the problem I find most interesting right now.
 
-Building something ambitious? [Let’s talk](/contact)`,
+Got something that’s broken in a way nobody can explain? [Let’s talk](/contact)`,
 
   avatarUrl: "RajarshiImage.jpg",
   skills: [
