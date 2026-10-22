@@ -17,7 +17,7 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Motion �
 | `/about` | Bio, grouped skills, experience & education timelines, research |
 | `/projects` | Filterable project grid, 3D project folder |
 | `/projects/case-studies` | Deep-dive project write-ups with architecture diagrams |
-| `/blog` | MDX posts (+ Hashnode link) |
+| `/blog` | Live Hashnode articles (RSS, hourly) + optional MDX posts in `content/` |
 | `/contact` | Contact channels and message form |
 
 Press **Ctrl / ⌘ + K** anywhere for the command palette.
