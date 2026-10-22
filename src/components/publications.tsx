@@ -26,7 +26,7 @@ export function Publications() {
         </div>
         <br />
         <div className="flex flex-col gap-y-3 items-center justify-center">
-          <h2 className="text-gradient font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl inline-block text-center">
+          <h2 className="text-gradient font-display text-3xl font-semibold tracking-normal sm:text-4xl md:text-5xl inline-block text-center">
             Checkout My Latest Publications
           </h2>
           <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">

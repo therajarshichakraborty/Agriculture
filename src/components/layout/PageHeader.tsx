@@ -20,7 +20,7 @@ export function PageHeader({
       <Spotlight className="-top-40 left-0 md:-top-24 md:left-72" fill="var(--brand)" />
       <Reveal className="mx-auto flex max-w-4xl flex-col items-center gap-5 px-6 text-center">
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="text-gradient text-balance font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+        <h1 className="text-gradient text-balance font-display text-4xl font-semibold tracking-normal sm:text-5xl md:text-6xl">
           {title}
         </h1>
         {description && (

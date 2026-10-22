@@ -69,7 +69,7 @@ export function Hero() {
 
           <motion.h1
             {...fadeUp(0.2)}
-            className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl"
+            className="font-display text-3xl font-semibold tracking-normal text-foreground sm:text-4xl md:text-5xl"
           >
             I build as a{" "}
             <FlipWords words={roles} className="text-gradient-brand" />
