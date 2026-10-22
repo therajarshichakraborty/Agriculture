@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowUpRight, Download, Eye } from "lucide-react";
+import { Button } from "@/src/components/ui/button";
 import { BackgroundBeamsWithCollision } from "@/src/components/aceternity/background-beams-collision";
 import { FlipWords } from "@/src/components/aceternity/flip-words";
 import MultilingualGreeting from "@/src/components/multilingual-greeting";
@@ -39,7 +40,7 @@ export function Hero() {
             <span className="block">
               <FlipWords
                 words={roles}
-                className="text-brand"
+                gradient="linear-gradient(90deg, var(--color-cyan-400), var(--color-blue-500), var(--color-indigo-500))"
               />
             </span>
           </motion.h1>
@@ -52,22 +53,24 @@ export function Hero() {
           </motion.p>
 
           <motion.div {...fadeUp(0.3)} className="flex flex-wrap items-center gap-3">
-            <Link
-              href="/projects"
-              className="group relative inline-flex h-11 items-center gap-2 overflow-hidden rounded-xl bg-foreground px-5 text-sm font-medium text-background shadow-[0_8px_24px_-10px_var(--brand)] transition-transform active:scale-[0.98]"
+            <Button
+              className="gap-2 group font-semibold"
+              nativeButton={false}
+              render={<Link href="/projects" />}
             >
-              <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              View my work
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <a
-              href="/resume.pdf"
-              download="rajarshi-chakraborty-resume.pdf"
-              className="group inline-flex h-11 items-center gap-2 rounded-xl bg-background/70 px-5 text-sm font-medium text-foreground shadow-[0_0_0_1px_var(--border),0_2px_8px_-2px_rgba(0,0,0,0.08)] backdrop-blur transition-all hover:-translate-y-0.5 active:scale-[0.98]"
+              <Eye className="size-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
+              <span>View my work</span>
+            </Button>
+            <Button
+              variant="outline"
+              className="gap-2 group font-semibold bg-background text-foreground border border-input transition-all duration-300 ease-out hover:scale-[1.04] hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/5 dark:hover:shadow-white/5 active:scale-[0.98]"
+              nativeButton={false}
+              render={<a href="/resume.pdf" download="rajarshi-chakraborty-resume.pdf" />}
             >
-              <Download className="size-4 transition-transform group-hover:translate-y-0.5" />
-              Download résumé
-            </a>
+              <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+              <span>Download résumé</span>
+              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Button>
           </motion.div>
         </div>
 
