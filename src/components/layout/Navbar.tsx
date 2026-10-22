@@ -30,7 +30,12 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 24));
 
-  React.useEffect(() => setMenuOpen(false), [pathname]);
+  // Close the mobile menu on navigation (state adjusted during render).
+  const [lastPath, setLastPath] = React.useState(pathname);
+  if (pathname !== lastPath) {
+    setLastPath(pathname);
+    setMenuOpen(false);
+  }
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
