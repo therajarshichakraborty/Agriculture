@@ -18,7 +18,7 @@ export default function HomePage() {
       <About />
       <TechStack />
       <GithubActivity />
-      <Research />
+      {/* <Research /> */}
       <DSA />
       <HireMe />
     </>

@@ -17,8 +17,14 @@ export function Card3D({
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const spring = { stiffness: 180, damping: 18, mass: 0.4 };
-  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [intensity, -intensity]), spring);
-  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-intensity, intensity]), spring);
+  const rotateX = useSpring(
+    useTransform(y, [-0.5, 0.5], [intensity, -intensity]),
+    spring
+  );
+  const rotateY = useSpring(
+    useTransform(x, [-0.5, 0.5], [-intensity, intensity]),
+    spring
+  );
 
   function onMove(e: MouseEvent<HTMLDivElement>) {
     const rect = e.currentTarget.getBoundingClientRect();

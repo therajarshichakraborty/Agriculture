@@ -35,28 +35,34 @@ export function Education() {
             location={edu.location}
             period={edu.period}
           >
-            <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[15px] font-semibold text-foreground">
-              {edu.facts.map((fact, j) => (
-                <span key={fact} className="inline-flex items-center gap-2.5">
-                  {j > 0 && (
-                    <span
-                      aria-hidden="true"
-                      className="size-1 rounded-full bg-foreground"
-                    />
-                  )}
-                  {fact}
+            {edu.facts && edu.facts.length > 0 && (
+              <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[15px] font-semibold text-foreground">
+                {edu.facts.map((fact, j) => (
+                  <span key={fact} className="inline-flex items-center gap-2.5">
+                    {j > 0 && (
+                      <span
+                        aria-hidden="true"
+                        className="size-1 rounded-full bg-foreground"
+                      />
+                    )}
+                    {fact}
+                  </span>
+                ))}
+              </p>
+            )}
+            {edu.description && (
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
+                <Emphasis text={edu.description} />
+              </p>
+            )}
+            {edu.coursework && edu.coursework.length > 0 && (
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                <span className="mr-2 font-bold text-foreground">
+                  Coursework:
                 </span>
-              ))}
-            </p>
-            <p className="text-[15px] leading-relaxed text-muted-foreground">
-              <Emphasis text={edu.description} />
-            </p>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              <span className="mr-2 font-bold text-foreground">
-                Coursework:
-              </span>
-              {edu.coursework.join(" · ")}
-            </p>
+                {edu.coursework.join(" · ")}
+              </p>
+            )}
           </TimelineItem>
         ))}
       </Timeline>

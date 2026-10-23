@@ -7,7 +7,8 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import { Reveal } from "@/src/components/aceternity/section";
 
 /** Renders `**text**` spans as emphasized inline text. */
-export function Emphasis({ text }: { text: string }) {
+export function Emphasis({ text }: { text?: string }) {
+  if (!text) return null;
   return (
     <>
       {text.split(/\*\*(.+?)\*\*/g).map((part, i) =>

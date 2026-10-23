@@ -45,9 +45,7 @@ function Stat({ color, gradientClass, label, value, max, delay }: StatProps) {
     >
       <div className="flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
-          <span
-            className={`w-2.5 h-2.5 rounded-full ${color}`}
-          />
+          <span className={`w-2.5 h-2.5 rounded-full ${color}`} />
           <span className="text-zinc-600 dark:text-zinc-300 font-medium">
             {label}
           </span>

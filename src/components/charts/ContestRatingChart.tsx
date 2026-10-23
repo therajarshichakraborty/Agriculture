@@ -118,7 +118,12 @@ export default function ContestRatingChart({ data }: ContestChartData) {
               dataKey="rating"
               stroke={strokeColor}
               strokeWidth={2}
-              dot={{ r: 3, fill: "#fff", stroke: strokeColor, strokeWidth: 1.5 }}
+              dot={{
+                r: 3,
+                fill: "#fff",
+                stroke: strokeColor,
+                strokeWidth: 1.5
+              }}
               activeDot={{
                 r: 5,
                 fill: strokeColor,

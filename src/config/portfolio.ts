@@ -1,11 +1,4 @@
-// ============================================================
-// PORTFOLIO CONFIG: Rajarshi Chakraborty
-// ============================================================
-
 export const portfolio = {
-  // ----------------------------------------------------------
-  // Personal Info
-  // ----------------------------------------------------------
   name: "Rajarshi Chakraborty",
   initials: "RC",
   role: "Full-Stack & AI Engineer",
@@ -16,9 +9,6 @@ export const portfolio = {
   avatar: "https://github.com/therajarshichakraborty.png", // Direct link to GitHub avatar, with fallback in UI
   available: true, // "Available for work" badge
 
-  // ----------------------------------------------------------
-  // Contact & Social
-  // ----------------------------------------------------------
   email: "rajarshichakraborty2005@gmail.com",
   github: "https://github.com/therajarshichakraborty",
   githubHandle: "@therajarshichakraborty",
@@ -31,9 +21,6 @@ export const portfolio = {
   phone: "+91 8001950250",
   website: "https://rajarshis-portfolio.vercel.app",
 
-  // ----------------------------------------------------------
-  // Skills
-  // ----------------------------------------------------------
   skills: [
     "TypeScript",
     "JavaScript",
@@ -107,9 +94,6 @@ export const portfolio = {
     { name: "Git" }
   ],
 
-  // ----------------------------------------------------------
-  // Projects
-  // ----------------------------------------------------------
   projects: [
     {
       id: 1,
@@ -257,10 +241,6 @@ export const portfolio = {
       featured: false
     }
   ],
-
-  // ----------------------------------------------------------
-  // Experience (**text** is emphasized when rendered)
-  // ----------------------------------------------------------
   experience: [
     {
       company: "Brand Voy",
@@ -347,14 +327,75 @@ export const portfolio = {
         "Coordinated scheduling, venues and resources for **300+ participants a day** with a 30+ member volunteer team.",
         "Spotted bottlenecks in registration and check-in mid-event and fixed them on the spot, cutting average wait time by **25%**."
       ],
-      stack: ["Event Operations", "Team Management", "Logistics", "Coordination"]
+      stack: [
+        "Event Operations",
+        "Team Management",
+        "Logistics",
+        "Coordination"
+      ]
     }
   ],
 
-  // ----------------------------------------------------------
-  // Education (**text** is emphasized when rendered)
-  // ----------------------------------------------------------
   education: [
+    // {
+    //   institution: "Harvard Business School",
+    //   href: "https://www.hbs.edu/",
+    //   logo: "/hbs.png",
+    //   degree: "Master of Business Administration",
+    //   period: "2026 - 2028",
+    //   location: "Boston, MA, USA",
+    //   facts: [],
+    //   description: "I am persuing my MBA in Finance at Harvard Business School. I am also persuing my research under prof. Raghuram Rajan in finance and accounting division.",
+    //   coursework: [
+    //     "Advanced Asset Pricing",
+    //     "Corporate Finance Theory",
+    //     "Microeconomic Theory",
+    //     "Macroeconomic Theory",
+    //     "Econometrics",
+    //     "Behavioral Finance",
+    //     "Empirical Asset Pricing",
+    //     "Financial Economics Seminars",
+    //     "Advanced Corporate Finance",
+    //      "Financial Accounting & Reporting",
+    //      "Financial Analysis & Modeling",
+    //      "Econometrics",
+    //      "Machine Learning",
+    //      "Software Engineering",
+    //      "Finance",
+    //      "Decision Science",
+    //      "Data Science",
+    //      "Statistics",
+    //      "Accounting",
+    //      "Financial Accounting & Reporting",
+    //      "Optimization Models"
+    //   ]
+    // },
+    // {
+    //   institution: "University of Chicago Booth School of Business",
+    //   href: "https://www.chicagobooth.edu/",
+    //   logo: "/booth.png",
+    //   degree: "Masters in Business Administration - Finance",
+    //   period: "2027 - 2029",
+    //   location: "Chicago, Illinois, USA",
+    //   facts: ["GPA - 4.0", "Class of 2029"],
+    //   description:
+    //     "Pursuing MBA in Finance at the University of Chicago Booth School of Business. Persuing research under prof Raghuram Rajan in finance and accounting division.",
+    //   coursework: [
+    //     "Advanced Corporate Finance",
+    //     "Financial Accounting & Reporting",
+    //     "Financial Analysis & Modeling",
+    //     "Econometrics",
+    //     "Machine Learning",
+    //     "Software Engineering",
+    //     "Finance",
+    //     "Decision Science",
+    //     "Data Science",
+    //     "Statistics",
+    //     "Accounting",
+    //     "Financial Accounting & Reporting",
+    //     "Optimization Models"
+    //   ]
+    // },
     {
       institution: "Techno Main Salt Lake",
       href: "https://www.ticollege.ac.in/",

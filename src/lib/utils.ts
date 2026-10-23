@@ -15,4 +15,3 @@ export function formatDate(date: string | Date) {
     timeZone: "UTC"
   });
 }
-

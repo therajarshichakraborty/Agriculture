@@ -296,7 +296,10 @@ export default function ProjectsPage() {
   }, [searchQuery]);
 
   return (
-    <section id="projects-page" className="w-full pt-20 pb-16 md:pt-28 relative">
+    <section
+      id="projects-page"
+      className="w-full pt-20 pb-16 md:pt-28 relative"
+    >
       <div className="flex flex-col gap-y-10 max-w-5xl mx-auto px-4">
         {/* ── 1. Hero Header ── */}
         <div className="flex flex-col gap-y-3 items-center text-center">

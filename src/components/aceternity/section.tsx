@@ -27,7 +27,10 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn("relative mx-auto w-full max-w-6xl px-6 py-20 md:py-28", className)}
+      className={cn(
+        "relative mx-auto w-full max-w-6xl px-6 py-20 md:py-28",
+        className
+      )}
     >
       {(eyebrow || title || description) && (
         <Reveal
@@ -36,7 +39,9 @@ export function Section({
             align === "center" ? "items-center text-center" : "items-start"
           )}
         >
-          {eyebrow && <SectionLabel centered={align === "center"}>{eyebrow}</SectionLabel>}
+          {eyebrow && (
+            <SectionLabel centered={align === "center"}>{eyebrow}</SectionLabel>
+          )}
           {title && (
             <h2 className="max-w-3xl text-balance text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl">
               {title}

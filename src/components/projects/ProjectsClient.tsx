@@ -6,7 +6,10 @@ import { PROJECTS } from "@/src/data/projects";
 import { FilterBar } from "@/src/components/projects/FilterBar";
 import { ProjectCard } from "@/src/components/projects/ProjectCard";
 
-const categories = ["All", ...Array.from(new Set(PROJECTS.map((p) => p.category)))];
+const categories = [
+  "All",
+  ...Array.from(new Set(PROJECTS.map((p) => p.category)))
+];
 
 export function ProjectsClient() {
   const [activeCategory, setActiveCategory] = React.useState("All");

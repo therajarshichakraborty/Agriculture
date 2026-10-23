@@ -99,10 +99,23 @@ function MovingBorder({
         height="100%"
         aria-hidden
       >
-        <rect fill="none" width="100%" height="100%" rx={rx} ry={ry} ref={pathRef} />
+        <rect
+          fill="none"
+          width="100%"
+          height="100%"
+          rx={rx}
+          ry={ry}
+          ref={pathRef}
+        />
       </svg>
       <motion.div
-        style={{ position: "absolute", top: 0, left: 0, display: "inline-block", transform }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          display: "inline-block",
+          transform
+        }}
       >
         {children}
       </motion.div>

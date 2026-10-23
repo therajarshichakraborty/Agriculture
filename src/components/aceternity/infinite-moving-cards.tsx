@@ -27,7 +27,10 @@ export function InfiniteMovingCards({
   return (
     <div
       style={style}
-      className={cn("relative z-10 w-full overflow-hidden mask-fade-x", className)}
+      className={cn(
+        "relative z-10 w-full overflow-hidden mask-fade-x",
+        className
+      )}
     >
       <ul
         className={cn(

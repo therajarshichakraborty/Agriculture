@@ -83,14 +83,22 @@ export function Footer() {
           {portfolio.shortBio}
         </motion.p>
 
-        <motion.ul variants={rise} className="mt-6 flex items-center justify-center gap-2.5">
+        <motion.ul
+          variants={rise}
+          className="mt-6 flex items-center justify-center gap-2.5"
+        >
           {socials.map((social, i) => (
             <motion.li
               key={social.name}
               initial={{ opacity: 0, scale: 0.6 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 320, damping: 18, delay: 0.25 + i * 0.07 }}
+              transition={{
+                type: "spring",
+                stiffness: 320,
+                damping: 18,
+                delay: 0.25 + i * 0.07
+              }}
             >
               <a
                 href={social.url}
@@ -148,7 +156,11 @@ export function Footer() {
             initial={{ opacity: 0, y: "40%" }}
             whileInView={{ opacity: 1, y: "0%" }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: i * 0.06, ease: [0.21, 0.47, 0.32, 0.98] }}
+            transition={{
+              duration: 0.7,
+              delay: i * 0.06,
+              ease: [0.21, 0.47, 0.32, 0.98]
+            }}
             className="-mx-[0.085em] inline-block bg-linear-to-b from-foreground/15 to-foreground/[0.03] bg-clip-text px-[0.06em] py-[0.04em] text-[clamp(4rem,15vw,13.5rem)] font-bold leading-none text-transparent transition-all duration-500 hover:-translate-y-2 hover:from-red-500 hover:via-pink-500 hover:to-violet-500"
           >
             {letter}

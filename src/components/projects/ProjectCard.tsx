@@ -33,7 +33,9 @@ export function ProjectCard({ project }: { project: ProjectData }) {
 
         <div className="flex flex-1 flex-col gap-3 p-5">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight">{project.title}</h3>
+            <h3 className="text-lg font-semibold tracking-tight">
+              {project.title}
+            </h3>
             <p className="text-sm text-muted-foreground">{project.tagline}</p>
           </div>
           <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
